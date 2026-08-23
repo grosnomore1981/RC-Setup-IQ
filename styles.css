@@ -556,6 +556,7 @@ header h1 {
     body {
 
         padding: 15px;
+        background-attachment: scroll;
     }
 
     header h1 {
