@@ -318,8 +318,6 @@ header h1 {
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-    min-height: 100vh;
-
     padding: 25px;
 
     z-index: 9999;
@@ -556,7 +554,9 @@ header h1 {
     body {
 
         padding: 15px;
-        background-attachment: fixed;
+        background-size: 120%;
+        background-position: top center;
+
     }
 
     header h1 {
