@@ -17,6 +17,23 @@ body {
 
     font-family: Arial, Helvetica, sans-serif;
 
+    min-height: 100vh;
+
+    padding: 25px;
+}
+
+#backgroundLayer {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: -1;
+
     background:
         linear-gradient(
             rgb(255, 255, 255),
@@ -25,13 +42,8 @@ body {
         url("images/background.png");
 
     background-size: cover;
-    background-position: top center;
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-
-    min-height: 100vh;
-
-    padding: 25px;
 }
 
 /* ==========================================================
