@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RC SetupIQ</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <!-- HOME PAGE -->
+
+    <div id="homePage">
+
+        <div class="container">
+
+            <header>
+
+                <div class="logoContainer">
+
+                    <img
+                        src="images/IQemblem.png"
+                        alt="RC Setup IQ Logo"
+                        class="appLogo"
+                    >
+
+
+                </div>
+
+                <p class="subtitle">
+                    Learn how setup adjustment affects your vehicle.
+                </p>
+
+            </header>
+
+            <div class="homeCards">
+
+                <div class="homeCard" id="handlingGuideCard">
+
+                    <h2>Handling Guide</h2>
+
+                    <p>
+                        Diagnose handling issues and find recommended adjustments.
+                    </p>
+
+                </div>
+
+                <div class="homeCard" id="setupDatabaseCard">
+
+                    <h2>Setup Database</h2>
+
+                    <p>
+                        Learn what each setup adjustment does and how it affects handling.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- HANDLING GUIDE PAGE -->
+
+
+
+    <div id="handlingGuidePage">
+
+        <div class="container">
+
+            <header>
+
+                    <div class="logoContainer">
+
+                    <img
+                        src="images/IQemblem.png"
+                        alt="RC Setup IQ Logo"
+                        class="appLogo"
+                    >
+
+                </div>
+
+                <h1>Handling Guide</h1><div class="logoContainer"></div>
+
+                 <p class="subtitle">
+                    Diagnose handling issues and find recommended adjustments.
+                    </p>
+
+            </header>
+
+            <div class="pageButtons">
+
+                <button id="handlingGuideBackButton" class="homeButton">
+                    ❮ Back
+                </button>
+
+                <button id="handlingGuideHomeButton" class="homeButton">
+                    Home
+                </button>
+
+            </div>
+
+            <div id="breadcrumb"></div>
+
+            <div id="handlingGuideContainer"></div>
+
+        </div>
+
+    </div>
+
+    <!-- MAIN PAGE -->
+
+    <div id="mainPage">
+
+        <div class="container">
+
+            <header>
+
+                <div class="logoContainer">
+
+                    <img
+                        src="images/IQemblem.png"
+                        alt="RC Setup IQ Logo"
+                        class="appLogo"
+                    >
+
+
+                </div>
+
+                 <h1>Setup Database</h1><div class="logoContainer"></div>
+
+                 <p class="subtitle">
+                    Learn what each setup adjustment does and how it affects handling.
+                    </p>
+
+            </header>
+
+            <button id="homeButton" class="homeButton">
+                Home
+            </button>
+
+            <div class="searchContainer">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search Settings..."
+                >
+
+            </div>
+
+            <div id="settingsContainer"></div>
+
+        </div>
+
+    </div>
+
+    <!-- DETAIL PAGE -->
+
+    <div id="detailPage">
+
+        <div class="detailHeader">
+
+            <button id="backButton">
+
+                ❮ Back
+
+            </button>
+
+            <h2 id="detailTitle"></h2>
+
+        </div>
+
+        <div id="detailContent"></div>
+
+    </div>
+
+    <script type="module" src="app.js"></script>
+
+</body>
+
+</html>
