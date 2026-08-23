@@ -27,7 +27,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
 
     min-height: 100vh;
 
@@ -556,7 +556,7 @@ header h1 {
     body {
 
         padding: 15px;
-        background-attachment: fixed;
+        background-attachment: scroll;
     }
 
     header h1 {
