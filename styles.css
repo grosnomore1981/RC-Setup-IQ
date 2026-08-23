@@ -24,7 +24,7 @@ body {
         ),
         url("images/background.png");
 
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -556,7 +556,7 @@ header h1 {
     body {
 
         padding: 15px;
-        background-attachment: scroll;
+        background-attachment: fixed;
     }
 
     header h1 {
