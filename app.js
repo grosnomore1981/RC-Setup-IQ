@@ -685,6 +685,33 @@ function updateBreadcrumb() {
 
 }
 
+function handleSwipe() {
+
+    const swipeDistance =
+        touchEndX - touchStartX;
+
+    if (swipeDistance > 100) {
+
+        if (
+            detailPage.style.display === "block"
+        ) {
+
+            backButton.click();
+
+        }
+
+        else if (
+            handlingGuidePage.style.display === "block"
+        ) {
+
+            handlingGuideBackButton.click();
+
+        }
+
+    }
+
+}
+
 /* ==========================================================
    Initial Load
 ========================================================== */
