@@ -713,6 +713,29 @@ function handleSwipe() {
 }
 
 /* ==========================================================
+   Swipe Navigation
+========================================================== */
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener("touchstart", (event) => {
+
+    touchStartX =
+        event.changedTouches[0].screenX;
+
+});
+
+document.addEventListener("touchend", (event) => {
+
+    touchEndX =
+        event.changedTouches[0].screenX;
+
+    handleSwipe();
+
+});
+
+/* ==========================================================
    Initial Load
 ========================================================== */
 
