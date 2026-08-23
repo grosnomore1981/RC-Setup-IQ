@@ -32,6 +32,54 @@ const handlingGuideBackButton = document.getElementById("handlingGuideBackButton
 
 const handlingGuideContainer = document.getElementById("handlingGuideContainer");
 
+const setupNotesCard = document.getElementById("setupNotesCard");
+
+const setupNotesPage = document.getElementById("setupNotesPage");
+
+const notesBackButton = document.getElementById("notesBackButton");
+
+const notesHomeButton = document.getElementById("notesHomeButton");
+
+const sessionNameInput = document.getElementById("sessionNameInput");
+
+const vehicleInput = document.getElementById("vehicleInput");
+
+const trackInput = document.getElementById("trackInput");
+
+const dateInput = document.getElementById("dateInput");
+
+const conditionsInput = document.getElementById("conditionsInput");
+
+const adjustmentsInput = document.getElementById("adjustmentsInput");
+
+const resultInput = document.getElementById("resultInput");
+
+const ratingInput = document.getElementById("ratingInput");
+
+const saveNoteButton = document.getElementById("saveNoteButton");
+
+const deleteNoteButton = document.getElementById("deleteNoteButton");
+
+const clearFieldsButton = document.getElementById("clearFieldsButton");
+
+const newNoteButton = document.getElementById("newNoteButton");
+
+const savedNotesContainer = document.getElementById("savedNotesContainer");
+
+const vehicleList = document.getElementById("vehicleList");
+
+const sessionNameList = document.getElementById("sessionNameList");
+
+const trackList = document.getElementById("trackList");
+
+const conditionsList = document.getElementById("conditionsList");
+
+const deleteModal = document.getElementById("deleteModal"); 
+
+const cancelDeleteButton = document.getElementById("cancelDeleteButton");
+
+const confirmDeleteButton = document.getElementById("confirmDeleteButton");
+
 const breadcrumb = document.getElementById("breadcrumb");
 
 let selectedArea = null;
@@ -45,6 +93,385 @@ let previousPage = null;
 let activeTile = null;
 
 let handlingGuideHistory = [];
+
+/* ==========================================================
+   Setup Notes Variables
+========================================================== */
+
+let notes = [];
+
+let currentNoteId = null;
+
+/* ==========================================================
+   Setup Notes Functions
+========================================================== */
+
+function saveNotesToStorage() {
+
+    localStorage.setItem(
+        "setupNotes",
+        JSON.stringify(notes)
+    );
+
+}
+
+function loadNotesFromStorage() {
+
+    notes =
+        JSON.parse(
+            localStorage.getItem("setupNotes")
+        ) || [];
+
+}
+
+function renderNotes() {
+
+    savedNotesContainer.innerHTML = "";
+
+    notes.forEach(note => {
+
+        const noteCard =
+            document.createElement("div");
+
+        noteCard.className = "settingTile";
+
+        if (note.id === currentNoteId) {
+
+            noteCard.classList.add("active");
+
+        }
+
+        noteCard.innerHTML = `
+            <h3>${note.sessionName}</h3>
+            <p>${note.vehicle}</p>
+            <p>${note.date}</p>
+        `;
+
+        noteCard.addEventListener(
+            "click",
+            () => {
+
+                openNote(note);
+
+            }
+        );
+
+        savedNotesContainer.appendChild(
+            noteCard
+        );
+
+    });
+
+}
+
+function openNote(note) {
+
+    currentNoteId = note.id;
+
+    sessionNameInput.value =
+        note.sessionName;
+
+    vehicleInput.value =
+        note.vehicle;
+
+    trackInput.value =
+        note.track;
+
+    dateInput.value =
+        note.date;
+
+    conditionsInput.value =
+        note.conditions;
+
+    adjustmentsInput.value =
+        note.adjustments;
+
+    resultInput.value =
+        note.result;
+
+    ratingInput.value =
+        note.rating;
+
+    updateSaveButton();
+
+    renderNotes();    
+
+}
+
+function saveNote() {
+
+     if (!sessionNameInput.value.trim()) {
+
+        alert("Please enter a Session Name before saving.");
+
+        return;
+
+    }
+
+const note = {
+
+    id:
+        currentNoteId ||
+        Date.now(),
+
+    sessionName:
+        sessionNameInput.value,
+
+    vehicle:
+        vehicleInput.value,
+
+    track:
+        trackInput.value,
+
+    date:
+        dateInput.value,
+
+    conditions:
+        conditionsInput.value,
+
+    adjustments:
+        adjustmentsInput.value,
+
+    result:
+        resultInput.value,
+
+    rating:
+        ratingInput.value
+
+};
+
+if (currentNoteId) {
+
+    const index =
+        notes.findIndex(
+            note =>
+                note.id === currentNoteId
+        );
+
+    notes[index] = note;
+
+}
+
+else {
+
+    notes.push(note);
+
+}
+
+saveNotesToStorage();
+
+renderNotes();
+
+updateAutocompleteLists();
+
+}
+
+function clearFields() {
+
+    sessionNameInput.value = "";
+
+    vehicleInput.value = "";
+
+    trackInput.value = "";
+
+    dateInput.value = "";
+
+    conditionsInput.value = "";
+
+    adjustmentsInput.value = "";
+
+    resultInput.value = "";
+
+    ratingInput.value = "";
+
+}
+
+function newNote() {
+
+    currentNoteId = null;
+
+    sessionNameInput.value = "";
+
+    vehicleInput.value = "";
+
+    trackInput.value = "";
+
+    conditionsInput.value = "";
+
+    adjustmentsInput.value = "";
+
+    resultInput.value = "";
+
+    ratingInput.value = "";
+
+    dateInput.value =
+        new Date()
+            .toISOString()
+            .split("T")[0];
+
+    updateSaveButton();
+
+    renderNotes();        
+
+}
+
+function deleteNote() {
+
+    if (!currentNoteId) {
+
+        alert(
+            "Open a note before deleting."
+        );
+
+        return;
+
+    }
+
+    deleteModal.style.display =
+    "flex";
+
+    notes = notes.filter(
+        note =>
+            note.id !== currentNoteId
+    );
+
+    saveNotesToStorage();
+
+    renderNotes();
+
+    updateAutocompleteLists();
+
+    currentNoteId = null;
+
+    updateSaveButton();
+
+    clearFields();
+
+}
+
+function performDelete() {
+
+    notes = notes.filter(
+        note =>
+            note.id !== currentNoteId
+    );
+
+    saveNotesToStorage();
+
+    renderNotes();
+
+    updateAutocompleteLists();
+
+    currentNoteId = null;
+
+    newNote();
+
+    deleteModal.style.display =
+        "none";
+
+}
+
+function updateAutocompleteLists() {
+
+    vehicleList.innerHTML = "";
+
+    sessionNameList.innerHTML = "";
+
+    trackList.innerHTML = "";
+
+    conditionsList.innerHTML = "";
+
+    const vehicles =
+        [...new Set(
+            notes
+                .map(note => note.vehicle)
+                .filter(item => item.trim())
+        )];
+
+    const sessionNames =
+        [...new Set(
+            notes
+                .map(note => note.sessionName)
+                .filter(item => item.trim())
+        )];
+
+    const tracks =
+        [...new Set(
+            notes
+                .map(note => note.track)
+                .filter(item => item.trim())
+        )];
+
+    const conditions =
+        [...new Set(
+            notes
+                .map(note => note.conditions)
+                .filter(item => item.trim())
+        )];
+
+    vehicles.forEach(item => {
+
+        const option =
+            document.createElement("option");
+
+        option.value = item;
+
+        vehicleList.appendChild(option);
+
+    });
+
+    sessionNames.forEach(item => {
+
+        const option =
+            document.createElement("option");
+
+        option.value = item;
+
+        sessionNameList.appendChild(option);
+
+    });
+
+    tracks.forEach(item => {
+
+        const option =
+            document.createElement("option");
+
+        option.value = item;
+
+        trackList.appendChild(option);
+
+    });
+
+    conditions.forEach(item => {
+
+        const option =
+            document.createElement("option");
+
+        option.value = item;
+
+        conditionsList.appendChild(option);
+
+    });
+
+}
+
+function updateSaveButton() {
+
+    if (currentNoteId) {
+
+        saveNoteButton.textContent =
+            "Update Note";
+
+    }
+
+    else {
+
+        saveNoteButton.textContent =
+            "Save New Note";
+
+    }
+
+}
 
 /* ==========================================================
    Render Categories
@@ -539,6 +966,20 @@ searchInput.addEventListener("input", () => {
 
 });
 
+function showSetupNotesPage() {
+
+    homePage.style.display = "none";
+
+    mainPage.style.display = "none";
+
+    detailPage.style.display = "none";
+
+    handlingGuidePage.style.display = "none";
+
+    setupNotesPage.style.display = "block";
+
+}
+
 /* ==========================================================
    Home Page Navigation
 ========================================================== */
@@ -550,6 +991,11 @@ setupDatabaseCard.addEventListener("click", () => {
     mainPage.style.display = "block";
 
 });
+
+setupNotesCard.addEventListener(
+    "click",
+    showSetupNotesPage
+);
 
 handlingGuideCard.addEventListener("click", () => {
 
@@ -576,6 +1022,32 @@ handlingGuideHomeButton.addEventListener("click", () => {
     homePage.style.display = "block";
 
 });
+
+notesBackButton.addEventListener(
+    "click",
+    () => {
+
+        setupNotesPage.style.display =
+            "none";
+
+        homePage.style.display =
+            "block";
+
+    }
+);
+
+notesHomeButton.addEventListener(
+    "click",
+    () => {
+
+        setupNotesPage.style.display =
+            "none";
+
+        homePage.style.display =
+            "block";
+
+    }
+);
 
 handlingGuideBackButton.addEventListener(
     "click",
@@ -619,6 +1091,29 @@ handlingGuideBackButton.addEventListener(
         previousScreen();
 
     }
+);
+
+saveNoteButton.addEventListener("click", saveNote);
+
+clearFieldsButton.addEventListener("click", clearFields);
+
+newNoteButton.addEventListener("click", newNote);
+
+deleteNoteButton.addEventListener("click", deleteNote);
+
+cancelDeleteButton.addEventListener(
+    "click",
+    () => {
+
+        deleteModal.style.display =
+            "none";
+
+    }
+);
+
+confirmDeleteButton.addEventListener(
+    "click",
+    performDelete
 );
 
 /* ==========================================================
@@ -740,6 +1235,14 @@ document.addEventListener("touchend", (event) => {
 ========================================================== */
 
 renderSettings();
+
+loadNotesFromStorage();
+
+renderNotes();
+
+updateSaveButton();
+
+updateAutocompleteLists();
 
 homePage.style.display = "block";
 

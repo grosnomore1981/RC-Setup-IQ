@@ -64,6 +64,16 @@
 
                 </div>
 
+                <div class="homeCard" id="setupNotesCard">
+
+                    <h2>Setup Notes</h2>
+
+                    <p>
+                        Save setup changes, track conditions, and results.
+                    </p>
+
+                </div>
+
             </div>
 
         </div>
@@ -182,6 +192,162 @@
         </div>
 
         <div id="detailContent"></div>
+
+    </div>
+
+    <!-- SETUP NOTES PAGE -->
+
+    <div id="setupNotesPage" style="display:none;">
+
+        <div class="container">
+
+            <header>
+
+                <div class="logoContainer">
+
+                    <img
+                        src="images/IQemblem.png"
+                        alt="RC Setup IQ Logo"
+                        class="appLogo"
+                    >
+
+                </div>
+
+                <h1>Setup Notes</h1>
+
+                <p class="subtitle">
+                    Save setup changes, track conditions, and results.
+                </p>
+
+            </header>
+
+            <div class="pageButtons">
+
+                <button id="notesBackButton" class="homeButton">
+                    ❮ Back
+                </button>
+
+                <button id="notesHomeButton" class="homeButton">
+                    Home
+                </button>
+
+            </div>
+
+            <div class="notesForm">
+
+                <label>Session Name</label>
+                <input
+                    type="text"
+                    id="sessionNameInput"
+                    list="sessionNameList"
+                >
+                <datalist id="sessionNameList"></datalist>
+
+                <label>Vehicle</label>
+                <input
+                    type="text"
+                    id="vehicleInput"
+                    list="vehicleList"
+                >
+                <datalist id="vehicleList"></datalist>
+
+                <label>Track</label>
+                <input
+                    type="text"
+                    id="trackInput"
+                    list="trackList"
+                >
+                <datalist id="trackList"></datalist>
+
+                <label>Date</label>
+                <input
+                    type="date"
+                    id="dateInput"
+                >
+
+                <label>Conditions</label>
+                <input
+                    type="text"
+                    id="conditionsInput"
+                    list="conditionsList"
+                >
+                <datalist id="conditionsList"></datalist>
+
+                <label>Adjustments Made</label>
+                <textarea
+                    id="adjustmentsInput"
+                    rows="6"
+                ></textarea>
+
+                <label>Result</label>
+                <textarea
+                    id="resultInput"
+                    rows="6"
+                ></textarea>
+
+                <label>Overall Rating (1-10)</label>
+                <input
+                    type="number"
+                    id="ratingInput"
+                    min="1"
+                    max="10"
+                >
+
+                <div class="notesButtonContainer">
+
+                    <button id="newNoteButton" class="notesButton">
+                        New Note
+                    </button>
+
+                    <button id="saveNoteButton" class="notesButton">
+                        Save New Note
+                    </button>
+
+                    <button id="clearFieldsButton" class="notesButton">
+                        Clear Form
+                    </button>
+
+                    <button id="deleteNoteButton" class="notesButton">
+                        Delete Note
+                    </button>
+
+                </div>
+
+            </div>
+
+            <h2>Saved Notes</h2>
+
+            <div id="savedNotesContainer"></div>
+
+        </div>
+
+    </div>
+
+    <div id="deleteModal" class="modalOverlay">
+
+        <div class="detailCard modalCard">
+
+            <h2>Delete Note?</h2>
+
+            <p>
+                This action cannot be undone.
+            </p>
+
+            <div class="modalButtons">
+
+                <button id="cancelDeleteButton"
+                        class="notesButton">
+                    Cancel
+                </button>
+
+                <button id="confirmDeleteButton"
+                        class="notesButton">
+                    Delete
+                </button>
+
+            </div>
+
+        </div>
 
     </div>
 
