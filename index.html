@@ -100,7 +100,7 @@
 
                 </div>
 
-                <h1>Handling Guide</h1><div class="logoContainer"></div>
+                <h1>Handling Guide</h1>
 
                  <p class="subtitle">
                     Diagnose handling issues and find recommended adjustments.
@@ -147,7 +147,7 @@
 
                 </div>
 
-                 <h1>Setup Database</h1><div class="logoContainer"></div>
+                 <h1>Setup Database</h1>
 
                  <p class="subtitle">
                     Learn what each setup adjustment does and how it affects handling.
@@ -179,25 +179,29 @@
 
     <div id="detailPage">
 
-        <div class="detailHeader">
+        <div class="container">
 
-            <button id="backButton">
+            <div class="detailHeader">
 
-                ❮ Back
+                <button id="backButton">
 
-            </button>
+                    ❮ Back
 
-            <h2 id="detailTitle"></h2>
+                </button>
 
-        </div>
+                <h2 id="detailTitle"></h2>
 
-        <div id="detailContent"></div>
+            </div>
+
+            <div id="detailContent"></div>
+         
+        </div>    
 
     </div>
 
     <!-- SETUP NOTES PAGE -->
 
-    <div id="setupNotesPage" style="display:none;">
+    <div id="setupNotesPage">
 
         <div class="container">
 
@@ -223,10 +227,6 @@
 
             <div class="pageButtons">
 
-                <button id="notesBackButton" class="homeButton">
-                    ❮ Back
-                </button>
-
                 <button id="notesHomeButton" class="homeButton">
                     Home
                 </button>
@@ -239,7 +239,9 @@
                 <input
                     type="text"
                     id="sessionNameInput"
+                    class="glassInput"
                     list="sessionNameList"
+                    placeholder="Ex: Club Race"
                 >
                 <datalist id="sessionNameList"></datalist>
 
@@ -247,6 +249,7 @@
                 <input
                     type="text"
                     id="vehicleInput"
+                    class="glassInput"
                     list="vehicleList"
                 >
                 <datalist id="vehicleList"></datalist>
@@ -255,6 +258,7 @@
                 <input
                     type="text"
                     id="trackInput"
+                    class="glassInput"
                     list="trackList"
                 >
                 <datalist id="trackList"></datalist>
@@ -262,6 +266,7 @@
                 <label>Date</label>
                 <input
                     type="date"
+                    class="glassInput"
                     id="dateInput"
                 >
 
@@ -269,29 +274,25 @@
                 <input
                     type="text"
                     id="conditionsInput"
+                    class="glassInput"
                     list="conditionsList"
+                    placeholder="Ex: Smooth Medium Grip"
                 >
                 <datalist id="conditionsList"></datalist>
 
                 <label>Adjustments Made</label>
                 <textarea
                     id="adjustmentsInput"
+                    class="glassInput"
                     rows="6"
                 ></textarea>
 
                 <label>Result</label>
                 <textarea
                     id="resultInput"
+                    class="glassInput"
                     rows="6"
                 ></textarea>
-
-                <label>Overall Rating (1-10)</label>
-                <input
-                    type="number"
-                    id="ratingInput"
-                    min="1"
-                    max="10"
-                >
 
                 <div class="notesButtonContainer">
 
@@ -312,6 +313,17 @@
                     </button>
 
                 </div>
+
+            </div>
+
+            <div class="searchContainer">
+
+                <input
+                    type="text"
+                    id="notesSearchInput"
+                    class="glassInput"
+                    placeholder="Search Notes..."
+                >
 
             </div>
 

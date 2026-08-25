@@ -36,8 +36,6 @@ const setupNotesCard = document.getElementById("setupNotesCard");
 
 const setupNotesPage = document.getElementById("setupNotesPage");
 
-const notesBackButton = document.getElementById("notesBackButton");
-
 const notesHomeButton = document.getElementById("notesHomeButton");
 
 const sessionNameInput = document.getElementById("sessionNameInput");
@@ -55,6 +53,8 @@ const adjustmentsInput = document.getElementById("adjustmentsInput");
 const resultInput = document.getElementById("resultInput");
 
 const ratingInput = document.getElementById("ratingInput");
+
+const notesSearchInput = document.getElementById("notesSearchInput");
 
 const saveNoteButton = document.getElementById("saveNoteButton");
 
@@ -88,7 +88,7 @@ let selectedIssue = null;
 
 let selectedGrip = null;
 
-let previousPage = null;
+let scrollHistory = [];
 
 let activeTile = null;
 
@@ -124,11 +124,37 @@ function loadNotesFromStorage() {
 
 }
 
-function renderNotes() {
+function renderNotes(filter = "") {
 
     savedNotesContainer.innerHTML = "";
 
-    notes.forEach(note => {
+    const filteredNotes =
+        notes.filter(note => {
+
+            const searchText = `
+                ${note.sessionName}
+                ${note.vehicle}
+                ${note.track}
+                ${note.conditions}
+            `.toLowerCase();
+
+            return searchText.includes(
+                filter.toLowerCase()
+            );
+
+        });
+
+        if (filteredNotes.length === 0) {
+
+            savedNotesContainer.innerHTML = `
+                <p>No matching notes found.</p>
+            `;
+
+            return;
+
+        }
+    
+        filteredNotes.forEach(note => {
 
         const noteCard =
             document.createElement("div");
@@ -144,6 +170,7 @@ function renderNotes() {
         noteCard.innerHTML = `
             <h3>${note.sessionName}</h3>
             <p>${note.vehicle}</p>
+            <p>${note.track}</p>
             <p>${note.date}</p>
         `;
 
@@ -189,9 +216,6 @@ function openNote(note) {
     resultInput.value =
         note.result;
 
-    ratingInput.value =
-        note.rating;
-
     updateSaveButton();
 
     renderNotes();    
@@ -235,9 +259,6 @@ const note = {
     result:
         resultInput.value,
 
-    rating:
-        ratingInput.value
-
 };
 
 if (currentNoteId) {
@@ -269,20 +290,12 @@ updateAutocompleteLists();
 function clearFields() {
 
     sessionNameInput.value = "";
-
     vehicleInput.value = "";
-
     trackInput.value = "";
-
     dateInput.value = "";
-
     conditionsInput.value = "";
-
     adjustmentsInput.value = "";
-
     resultInput.value = "";
-
-    ratingInput.value = "";
 
 }
 
@@ -290,19 +303,7 @@ function newNote() {
 
     currentNoteId = null;
 
-    sessionNameInput.value = "";
-
-    vehicleInput.value = "";
-
-    trackInput.value = "";
-
-    conditionsInput.value = "";
-
-    adjustmentsInput.value = "";
-
-    resultInput.value = "";
-
-    ratingInput.value = "";
+    clearFields();
 
     dateInput.value =
         new Date()
@@ -311,7 +312,7 @@ function newNote() {
 
     updateSaveButton();
 
-    renderNotes();        
+    renderNotes();
 
 }
 
@@ -328,24 +329,7 @@ function deleteNote() {
     }
 
     deleteModal.style.display =
-    "flex";
-
-    notes = notes.filter(
-        note =>
-            note.id !== currentNoteId
-    );
-
-    saveNotesToStorage();
-
-    renderNotes();
-
-    updateAutocompleteLists();
-
-    currentNoteId = null;
-
-    updateSaveButton();
-
-    clearFields();
+        "flex";
 
 }
 
@@ -481,9 +465,17 @@ function renderSettings(filter = "") {
 
     settingsContainer.innerHTML = "";
 
-    const filteredSettings = setupDatabase.filter(setting =>
-        setting.name.toLowerCase().includes(filter.toLowerCase())
-    );
+    const filteredSettings = setupDatabase.filter(setting => {
+
+        if (setting.showInDatabase === false) {
+            return false;
+        }
+
+        return setting.name
+            .toLowerCase()
+            .includes(filter.toLowerCase());
+
+    });
 
     const categories = [...new Set(
         filteredSettings.map(setting => setting.category)
@@ -593,14 +585,38 @@ function renderTradeOffs(items) {
 
 function openDetailPage() {
 
+    scrollHistory.push(
+        window.scrollY
+    );
+
+    detailPage.style.display = "";
+
     detailPage.classList.add("show");
 
     window.scrollTo(0, 0);
+
 }
 
 function closeDetailPage() {
 
     detailPage.classList.remove("show");
+
+    const previousScroll =
+        scrollHistory.pop();
+
+    if (previousScroll !== undefined) {
+
+        setTimeout(() => {
+
+            window.scrollTo(
+                0,
+                previousScroll
+            );
+
+        }, 0);
+
+    }
+
 }
 
 /* ==========================================================
@@ -683,12 +699,14 @@ function renderIssueSelection() {
 
         {
             id: "reduceUndersteer",
-            name: "Understeer (Push)"
+            name: "Understeer (Push)",
+            description: "Front end slides wide in corners."
         },
 
         {
             id: "reduceOversteer",
-            name: "Oversteer (Loose)"
+            name: "Oversteer (Loose)",
+            description: "Rear end slides out in corners."
         }
 
     ];
@@ -701,6 +719,10 @@ function renderIssueSelection() {
 
         card.innerHTML = `
             <h2>${issue.name}</h2>
+
+            <p class="issueDescription">
+                ${issue.description}
+            </p>
         `;
 
         card.addEventListener("click", () => {
@@ -844,8 +866,6 @@ function renderRecommendations() {
 
         card.addEventListener("click", () => {
 
-           previousPage = "handlingGuideRecommendations";
-
         openSettingFromRecommendation(
             recommendation.setting
         );
@@ -939,6 +959,30 @@ function displaySetting(setting) {
             ${renderList("Drawbacks", setting.decrease.drawbacks)}
         ` : ""}
 
+        ${setting.adjustments
+            ? setting.adjustments.map(adjustment => `
+
+                <h3>${adjustment.title}</h3>
+
+                ${renderList(
+                    "Effects",
+                    adjustment.effects
+                )}
+
+                ${renderList(
+                    "Benefits",
+                    adjustment.benefits
+                )}
+
+                ${renderList(
+                    "Drawbacks",
+                    adjustment.drawbacks
+                )}
+
+            `).join("")
+            : ""
+        }
+
         ${renderList("Common Uses", setting.commonUses)}
 
         ${renderTradeOffs(setting.tradeOffs)}
@@ -972,7 +1016,7 @@ function showSetupNotesPage() {
 
     mainPage.style.display = "none";
 
-    detailPage.style.display = "none";
+    closeDetailPage();
 
     handlingGuidePage.style.display = "none";
 
@@ -999,6 +1043,8 @@ setupNotesCard.addEventListener(
 
 handlingGuideCard.addEventListener("click", () => {
 
+    handlingGuideHistory = [];
+
     renderHandlingGuideAreas();
 
     homePage.style.display = "none";
@@ -1023,19 +1069,6 @@ handlingGuideHomeButton.addEventListener("click", () => {
 
 });
 
-notesBackButton.addEventListener(
-    "click",
-    () => {
-
-        setupNotesPage.style.display =
-            "none";
-
-        homePage.style.display =
-            "block";
-
-    }
-);
-
 notesHomeButton.addEventListener(
     "click",
     () => {
@@ -1056,7 +1089,17 @@ handlingGuideBackButton.addEventListener(
         const previousScreen =
             handlingGuideHistory.pop();
 
-        if (!previousScreen) return;
+        if (!previousScreen) {
+
+            handlingGuidePage.style.display =
+                "none";
+
+            homePage.style.display =
+                "block";
+
+            return;
+
+        }
 
         if (
             previousScreen ===
@@ -1114,6 +1157,17 @@ cancelDeleteButton.addEventListener(
 confirmDeleteButton.addEventListener(
     "click",
     performDelete
+);
+
+notesSearchInput.addEventListener(
+    "input",
+    () => {
+
+        renderNotes(
+            notesSearchInput.value
+        );
+
+    }
 );
 
 /* ==========================================================
@@ -1188,7 +1242,7 @@ function handleSwipe() {
     if (swipeDistance > 100) {
 
         if (
-            detailPage.style.display === "block"
+    detailPage.classList.contains("show")
         ) {
 
             backButton.click();

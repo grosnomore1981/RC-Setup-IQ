@@ -7,38 +7,40 @@ export const setupDatabase = [
 
     category: "Ride Height",
 
-    increaseTitle: "Raise Ride Height",
-    decreaseTitle: "Lower Ride Height",
+    increaseTitle: "Raise Front Ride Height",
+    decreaseTitle: "Lower Front Ride Height",
 
     whatItIs:
-        "Front ride height is the distance between the front of the chassis and the ground when the vehicle is at its natural settled position. Ride height is one of the most important baseline setup adjustments because it influences vehicle attitude, weight transfer, and many other suspension settings.",
+        "Front Ride Height is the distance between the front of the chassis and the ground when the vehicle is at its natural settled position. Changing front ride height alters chassis attitude, front weight transfer characteristics, and steering balance.",
 
     whyItMatters:
-        "Front ride height affects steering balance, stability, weight transfer, rollover resistance, bump handling, jump handling, and overall vehicle balance. Small changes can significantly alter how aggressive or forgiving the vehicle feels to drive.",
+        "Front ride height influences steering aggressiveness, front grip, stability, weight transfer, and overall vehicle balance. Small changes can significantly alter how responsive or forgiving the front end feels.",
 
     increase: {
 
         effects: [
             "Raises the front of the chassis",
-            "Can increase front weight transfer",
-            "Can improve bump handling",
-            "Can improve rough-track performance",
-            "Can increase vehicle stability in difficult conditions",
-            "Can smooth steering response"
+            "Increases front weight transfer",
+            "Generally increases front grip",
+            "Generally smooths steering response",
+            "Can improve corner entry stability",
+            "Can make the vehicle feel calmer",
+            "Can improve consistency in low-grip conditions"
         ],
 
         benefits: [
-            "Better performance on rough tracks",
-            "Improved handling over bumps",
-            "More forgiving handling characteristics",
-            "Increased ground clearance"
+            "Increased front traction",
+            "Improved corner entry stability",
+            "More forgiving handling",
+            "Improved consistency",
+            "Can improve performance on lower-grip tracks"
         ],
 
         drawbacks: [
-            "Can increase rollover tendency",
-            "May reduce steering aggressiveness",
-            "May reduce corner speed potential",
-            "May feel less responsive on smooth tracks"
+            "Reduces steering aggressiveness",
+            "Can slow initial turn-in",
+            "May reduce responsiveness",
+            "Can make the vehicle feel less precise"
         ]
     },
 
@@ -46,37 +48,40 @@ export const setupDatabase = [
 
         effects: [
             "Lowers the front of the chassis",
-            "Lowers the vehicle center of gravity",
-            "Can increase steering aggressiveness",
-            "Can improve corner speed potential",
-            "Can make the vehicle feel more responsive",
-            "Generally improves stability on smooth tracks"
+            "Reduces front weight transfer",
+            "Generally increases steering aggressiveness",
+            "Generally increases steering response",
+            "Can improve turn-in speed",
+            "Can make the vehicle react more quickly",
+            "Can increase front-end precision"
         ],
 
         benefits: [
-            "Improved corner speed",
-            "More aggressive steering response",
-            "Reduced rollover tendency",
-            "Improved performance on smooth tracks"
+            "Improved steering response",
+            "Faster turn-in",
+            "More aggressive front-end feel",
+            "Improved precision",
+            "Can improve performance on high-grip tracks"
         ],
 
         drawbacks: [
-            "May handle rough tracks worse",
-            "Can become difficult to drive if lowered too far",
-            "Reduced ground clearance",
-            "May bottom out on rough surfaces"
+            "Can reduce front grip",
+            "Can reduce stability",
+            "May make the vehicle feel nervous",
+            "Can make the vehicle less forgiving"
         ]
     },
 
     tradeOffs: [
-        "Lower front ride height generally improves stability and corner speed but reduces rough-track capability.",
-        "Higher front ride height generally improves rough-track handling but can increase rollover tendency.",
-        "Lower front ride height typically produces a more aggressive feel, while higher front ride height typically produces a more forgiving feel."
+        "Higher front ride height generally increases front grip and stability but reduces steering aggressiveness.",
+        "Lower front ride height generally increases steering response and precision but reduces front grip.",
+        "Front ride height is often used to fine-tune steering balance after tires, springs, and ride height baseline settings are established.",
+        "Small front ride height changes can produce noticeable handling differences."
     ],
 
     quickSummary:
-        "Lower front ride height generally improves stability, steering response, and corner speed on smooth tracks. Higher front ride height generally improves bump handling, rough-track performance, and forgiveness, but may reduce steering aggressiveness and increase rollover tendency."
-    },
+        "Higher Front Ride Height generally increases front grip, stability, and forgiveness but reduces steering aggressiveness. Lower Front Ride Height generally increases steering response, turn-in speed, and precision but reduces front grip and stability."
+},
 
    {
     id: "rearRideHeight",
@@ -85,37 +90,40 @@ export const setupDatabase = [
 
     category: "Ride Height",
 
-    increaseTitle: "Raise Ride Height",
-    decreaseTitle: "Lower Ride Height",
+    increaseTitle: "Raise Rear Ride Height",
+    decreaseTitle: "Lower Rear Ride Height",
 
     whatItIs:
-        "Rear ride height is the distance between the rear of the chassis and the ground when the vehicle is at its natural settled position. Together with front ride height, it establishes the vehicle's overall ride height and rake.",
+        "Rear Ride Height is the distance between the rear of the chassis and the ground when the vehicle is at its natural settled position. Changing rear ride height alters chassis attitude, rear weight transfer characteristics, and overall vehicle rotation.",
 
     whyItMatters:
-        "Rear ride height affects vehicle balance, weight transfer, stability, rollover resistance, bump handling, jump handling, and rear grip characteristics. Small changes can significantly alter how stable, responsive, or forgiving the vehicle feels to drive.",
+        "Rear ride height influences rear grip, stability, vehicle rotation, steering balance, and overall handling responsiveness. Small changes can significantly alter how aggressive or planted the vehicle feels.",
 
     increase: {
 
         effects: [
             "Raises the rear of the chassis",
-            "Can increase rear weight transfer",
-            "Can improve bump handling",
-            "Can improve rough-track performance",
-            "Can increase rear grip characteristics",
-            "Can make the vehicle feel more forgiving"
+            "Increases rear weight transfer",
+            "Generally increases vehicle rotation",
+            "Generally increases steering",
+            "Can free up the rear end",
+            "Can improve direction changes",
+            "Can make the vehicle feel more responsive"
         ],
 
         benefits: [
-            "Better performance on rough tracks",
-            "Improved handling over bumps",
-            "More forgiving handling characteristics",
-            "Increased ground clearance"
+            "Improved rotation",
+            "More steering",
+            "Quicker direction changes",
+            "Improved responsiveness",
+            "Can reduce rear push"
         ],
 
         drawbacks: [
-            "Can increase rollover tendency",
-            "May reduce corner speed potential",
-            "May feel less responsive on smooth tracks"
+            "Can reduce rear stability",
+            "Can reduce rear traction",
+            "May make the vehicle feel nervous",
+            "Can make the vehicle harder to drive consistently"
         ]
     },
 
@@ -123,37 +131,40 @@ export const setupDatabase = [
 
         effects: [
             "Lowers the rear of the chassis",
-            "Lowers the vehicle center of gravity",
-            "Can improve corner speed potential",
-            "Can make the vehicle feel more responsive",
-            "Generally improves stability on smooth tracks",
-            "Reduces ground clearance"
+            "Reduces rear weight transfer",
+            "Generally increases rear grip",
+            "Generally increases stability",
+            "Generally reduces vehicle rotation",
+            "Can improve forward traction",
+            "Can make the vehicle feel more planted"
         ],
 
         benefits: [
-            "Improved corner speed",
-            "Reduced rollover tendency",
-            "Improved performance on smooth tracks",
-            "More aggressive vehicle response"
+            "Increased rear traction",
+            "Improved stability",
+            "More forgiving handling",
+            "Improved consistency",
+            "Can improve performance on lower-grip tracks"
         ],
 
         drawbacks: [
-            "May handle rough tracks worse",
-            "Can become difficult to drive if lowered too far",
-            "May bottom out on rough surfaces",
-            "Can reduce compliance over bumps"
+            "Reduces steering",
+            "Reduces vehicle rotation",
+            "Can make the vehicle feel slower to change direction",
+            "May increase rear push"
         ]
     },
 
     tradeOffs: [
-        "Lower rear ride height generally improves stability and corner speed but reduces rough-track capability.",
-        "Higher rear ride height generally improves rough-track handling but can increase rollover tendency.",
-        "Lower rear ride height typically produces a more aggressive feel, while higher rear ride height typically produces a more forgiving feel."
+        "Higher rear ride height generally increases steering and rotation but reduces rear grip and stability.",
+        "Lower rear ride height generally increases rear grip and stability but reduces steering and rotation.",
+        "Rear ride height is often used to fine-tune vehicle balance after major setup changes have been completed.",
+        "Small rear ride height changes can produce noticeable handling differences."
     ],
 
     quickSummary:
-        "Lower rear ride height generally improves stability, responsiveness, and corner speed on smooth tracks. Higher rear ride height generally improves bump handling, rough-track performance, and forgiveness, but may increase rollover tendency and reduce responsiveness."
-    },
+        "Higher Rear Ride Height generally increases steering, rotation, and responsiveness but reduces rear grip and stability. Lower Rear Ride Height generally increases rear traction, stability, and consistency but reduces steering and vehicle rotation."
+},
 
     {
     id: "frontToe",
@@ -706,509 +717,241 @@ export const setupDatabase = [
     },
 
     {
-    id: "frontRollCenterLink",
+    id: "frontCamberLink",
 
-    name: "Front Roll Center Link",
+    name: "Front Camber Link",
 
     category: "Geometry",
 
-    increaseTitle: "Raise Front Camber Link",
-    decreaseTitle: "Lower Front Camber Link",
-
     whatItIs:
-        "The Front Roll Center Link is the front upper camber link that connects the chassis or shock tower to the steering knuckle. Changes to the link's angle, length, and mounting positions influence front roll center height, camber gain, chassis roll characteristics, and steering behavior.",
+        "The Front Camber Link and its mounting positions influence front roll center height, camber gain, chassis roll, steering response, and front grip generation.",
 
     whyItMatters:
-        "The Front Roll Center Link affects how the front suspension generates grip during cornering. It influences roll center height, camber gain, chassis roll, steering response, cornering balance, and overall front-end feel. Because multiple suspension characteristics change simultaneously, it is considered an advanced geometry adjustment.",
+        "Changing the front camber link mounting positions is one of the primary methods of tuning front roll center height and front-end behavior.",
 
-    increase: {
+    adjustments: [
 
-        effects: [
-            "Generally increases camber gain",
-            "Generally increases roll center height",
-            "Generally reduces chassis roll",
-            "Generally increases steering responsiveness",
-            "Generally increases corner entry aggressiveness",
-            "Can increase side bite",
-            "Can make the front end react more quickly"
-        ],
+        {
+            title: "Raise Inside",
 
-        benefits: [
-            "Improved steering response",
-            "More precise front-end feel",
-            "Reduced chassis roll",
-            "Can improve performance on smooth high-grip tracks",
-            "Can reduce traction roll tendency"
-        ],
+            effects: [
+                "Lowers front roll center",
+                "Reduces camber gain",
+                "Increases chassis roll",
+                "Generally increases front grip",
+                "Generally smooths steering response"
+            ],
 
-        drawbacks: [
-            "Can reduce front grip on low-grip surfaces",
-            "Can make the vehicle feel nervous or edgy",
-            "Can reduce forgiveness",
-            "May reduce consistency in difficult conditions"
-        ]
-    },
+            benefits: [
+                "Increased front traction",
+                "Improved consistency",
+                "More forgiving handling"
+            ],
 
-    decrease: {
+            drawbacks: [
+                "Reduced steering response",
+                "Less aggressive corner entry"
+            ]
+        },
 
-        effects: [
-            "Generally reduces camber gain",
-            "Generally lowers roll center height",
-            "Generally increases chassis roll",
-            "Generally smooths steering response",
-            "Generally increases front grip",
-            "Can improve stability",
-            "Can make the front end feel calmer"
-        ],
+        {
+            title: "Lower Inside",
 
-        benefits: [
-            "Increased front traction",
-            "Improved consistency",
-            "More forgiving handling",
-            "Can improve performance on low-grip tracks",
-            "Can make the vehicle easier to drive"
-        ],
+            effects: [
+                "Raises front roll center",
+                "Increases camber gain",
+                "Reduces chassis roll",
+                "Generally increases steering response",
+                "Generally increases side bite"
+            ],
 
-        drawbacks: [
-            "Reduced steering response",
-            "Less aggressive corner entry",
-            "Can feel slower to react",
-            "May increase traction roll tendency on high-grip tracks"
-        ]
-    },
+            benefits: [
+                "Improved steering response",
+                "More aggressive corner entry",
+                "Increased front-end precision"
+            ],
+
+            drawbacks: [
+                "Reduced front traction",
+                "Can feel nervous on low grip"
+            ]
+        },
+
+        {
+            title: "Raise Outside",
+
+            effects: [
+                "Raises front roll center",
+                "Increases camber gain",
+                "Reduces chassis roll",
+                "Generally increases steering response",
+                "Generally increases front-end precision"
+            ],
+
+            benefits: [
+                "Improved steering response",
+                "Reduced chassis roll",
+                "Can reduce traction roll"
+            ],
+
+            drawbacks: [
+                "Can reduce front grip",
+                "Can reduce forgiveness"
+            ]
+        },
+
+        {
+            title: "Lower Outside",
+
+            effects: [
+                "Lowers front roll center",
+                "Reduces camber gain",
+                "Increases chassis roll",
+                "Generally increases front grip",
+                "Generally smooths steering response"
+            ],
+
+            benefits: [
+                "Increased front traction",
+                "Improved consistency",
+                "More forgiving handling"
+            ],
+
+            drawbacks: [
+                "Reduced steering response",
+                "May increase traction roll"
+            ]
+        }
+
+    ],
 
     tradeOffs: [
-        "More aggressive front roll center link geometry generally increases roll center height and steering response while reducing chassis roll.",
-        "Less aggressive front roll center link geometry generally lowers roll center height and increases front grip while reducing steering response.",
-        "Changes to the front roll center link affect roll center height and camber gain simultaneously.",
-        "Front roll center link adjustments are typically considered advanced geometry changes."
+        "Higher roll center generally increases steering response but reduces front grip.",
+        "Lower roll center generally increases front grip but reduces steering response.",
+        "Changes affect both roll center height and camber gain simultaneously."
     ],
 
     quickSummary:
-        "More aggressive front roll center link geometry generally produces a flatter, more responsive front end with increased steering response and reduced chassis roll. Less aggressive geometry generally produces a calmer, more forgiving front end with increased grip and consistency."
+        "Lower Inside or Raise Outside generally increases steering response. Raise Inside or Lower Outside generally increases front grip and forgiveness."
     },
 
     {
-    id: "frontInnerRollCenterMount",
+    id: "rearCamberLink",
 
-    name: "Front Inner Roll Center Mount",
-
-    category: "Geometry",
-
-    increaseTitle: "Raise Front Inner Camber Link Mount",
-    decreaseTitle: "Lower Front Inner Camber Link Mount",
-
-    whatItIs:
-        "The Front Inner Roll Center Mount is the chassis or shock tower mounting position of the front upper camber link. Adjusting this mounting position changes front roll center height, camber gain, chassis roll characteristics, and steering behavior.",
-
-    whyItMatters:
-        "The Front Inner Roll Center Mount influences front grip generation, steering response, chassis roll, camber gain, stability, and rollover resistance. Because it affects several suspension characteristics simultaneously, it is considered an advanced geometry adjustment.",
-
-    increase: {
-
-        effects: [
-            "Raises the inner camber link mounting position",
-            "Lowers front roll center",
-            "Reduces camber gain",
-            "Allows more chassis roll",
-            "Generally increases front grip",
-            "Generally produces smoother steering response",
-            "Can improve consistency on lower-grip surfaces"
-        ],
-
-        benefits: [
-            "Increased front traction",
-            "More forgiving handling",
-            "Improved consistency",
-            "Can improve performance on low-grip tracks",
-            "Can make the vehicle easier to drive"
-        ],
-
-        drawbacks: [
-            "Reduced steering response",
-            "Less aggressive corner entry",
-            "Can feel slower to react",
-            "May increase traction roll tendency on high-grip surfaces"
-        ]
-    },
-
-    decrease: {
-
-        effects: [
-            "Lowers the inner camber link mounting position",
-            "Raises front roll center",
-            "Increases camber gain",
-            "Reduces chassis roll",
-            "Generally increases steering response",
-            "Generally increases side bite",
-            "Can reduce traction roll tendency"
-        ],
-
-        benefits: [
-            "Improved steering response",
-            "More aggressive corner entry",
-            "Increased front-end precision",
-            "Reduced chassis roll",
-            "Can improve performance on high-grip tracks"
-        ],
-
-        drawbacks: [
-            "Reduced front traction",
-            "Can feel nervous or edgy",
-            "May reduce consistency on low-grip surfaces",
-            "Can make the vehicle harder to drive"
-        ]
-    },
-
-    tradeOffs: [
-        "A higher inner mount lowers the roll center and generally increases front grip, but reduces steering response.",
-        "A lower inner mount raises the roll center and generally increases steering response, but reduces front grip.",
-        "Changes to the inner mount affect both roll center height and camber gain simultaneously.",
-        "This adjustment is often most effective after tires, ride height, springs, and basic geometry settings have already been optimized."
-    ],
-
-    quickSummary:
-        "A higher Front Inner Roll Center Mount generally increases front grip, chassis roll, and consistency while reducing steering response. A lower Front Inner Roll Center Mount generally increases steering response, precision, and side bite while reducing front grip and overall forgiveness."
-    },
-
-    {
-    id: "frontOuterRollCenterMount",
-
-    name: "Front Outer Roll Center Mount",
+    name: "Rear Camber Link",
 
     category: "Geometry",
 
-     increaseTitle: "Raise Front Outer Camber Link Mount",
-     decreaseTitle: "Lower Front Outer Camber Link Mount",
-
     whatItIs:
-        "The Front Outer Roll Center Mount is the outer mounting position of the front upper camber link located at the steering knuckle or C-hub. Adjusting this position changes front roll center height, camber gain, chassis roll characteristics, and steering behavior.",
+        "The Rear Camber Link and its mounting positions influence rear roll center height, camber gain, chassis roll, rear grip generation, stability, and vehicle rotation.",
 
     whyItMatters:
-        "The Front Outer Roll Center Mount influences front grip generation, chassis roll, steering response, rollover resistance, and overall front-end feel. Because it directly affects roll center height and camber gain, it is considered an advanced geometry adjustment.",
+        "Changing the rear camber link mounting positions is one of the primary methods of tuning rear roll center height and rear-end behavior.",
 
-    increase: {
+    adjustments: [
 
-        effects: [
-            "Raises the outer camber link position",
-            "Raises front roll center",
-            "Increases camber gain",
-            "Reduces chassis roll",
-            "Generally increases steering response",
-            "Generally increases front-end precision",
-            "Can reduce traction roll tendency",
-            "Can make the vehicle react more quickly"
-        ],
+        {
+            title: "Raise Inside",
 
-        benefits: [
-            "Improved steering response",
-            "More precise front-end feel",
-            "Reduced chassis roll",
-            "Can improve performance on smooth high-grip tracks",
-            "Can reduce traction rolling"
-        ],
+            effects: [
+                "Lowers rear roll center",
+                "Reduces camber gain",
+                "Increases chassis roll",
+                "Generally increases rear grip",
+                "Generally increases stability"
+            ],
 
-        drawbacks: [
-            "Can reduce front grip on low-grip surfaces",
-            "Can make the vehicle feel nervous or edgy",
-            "May reduce forgiveness",
-            "Can reduce consistency in difficult conditions"
-        ]
-    },
+            benefits: [
+                "Increased rear traction",
+                "Improved rear stability",
+                "Improved consistency"
+            ],
 
-    decrease: {
+            drawbacks: [
+                "Reduced rotation",
+                "Reduced responsiveness"
+            ]
+        },
 
-        effects: [
-            "Lowers the outer camber link position",
-            "Lowers front roll center",
-            "Reduces camber gain",
-            "Increases chassis roll",
-            "Generally increases front grip",
-            "Generally smooths steering response",
-            "Can improve stability",
-            "Can make the vehicle feel calmer"
-        ],
+        {
+            title: "Lower Inside",
 
-        benefits: [
-            "Increased front traction",
-            "Improved consistency",
-            "More forgiving handling",
-            "Can improve performance on lower-grip tracks",
-            "Can make the vehicle easier to drive"
-        ],
+            effects: [
+                "Raises rear roll center",
+                "Increases camber gain",
+                "Reduces chassis roll",
+                "Generally increases rotation",
+                "Generally increases responsiveness"
+            ],
 
-        drawbacks: [
-            "Reduced steering response",
-            "Less aggressive corner entry",
-            "Can feel slower to react",
-            "May increase traction roll tendency on high-grip tracks"
-        ]
-    },
+            benefits: [
+                "Improved rotation",
+                "Quicker direction changes",
+                "Can reduce rear push"
+            ],
+
+            drawbacks: [
+                "Reduced rear traction",
+                "Can reduce stability"
+            ]
+        },
+
+        {
+            title: "Raise Outside",
+
+            effects: [
+                "Raises rear roll center",
+                "Increases camber gain",
+                "Reduces chassis roll",
+                "Generally increases rotation",
+                "Generally increases responsiveness"
+            ],
+
+            benefits: [
+                "Improved rotation",
+                "Reduced chassis roll",
+                "Quicker direction changes"
+            ],
+
+            drawbacks: [
+                "Reduced rear traction",
+                "Can make the rear feel nervous"
+            ]
+        },
+
+        {
+            title: "Lower Outside",
+
+            effects: [
+                "Lowers rear roll center",
+                "Reduces camber gain",
+                "Increases chassis roll",
+                "Generally increases rear grip",
+                "Generally increases stability"
+            ],
+
+            benefits: [
+                "Increased rear traction",
+                "Improved stability",
+                "More forgiving handling"
+            ],
+
+            drawbacks: [
+                "Reduced rotation",
+                "Can increase rear push"
+            ]
+        }
+
+    ],
 
     tradeOffs: [
-        "A higher outer mount generally raises roll center, increases steering response, and reduces chassis roll.",
-        "A lower outer mount generally lowers roll center, increases front grip, and produces a more forgiving vehicle.",
-        "Changes to the outer mount affect roll center height and camber gain simultaneously.",
-        "Front outer camber link adjustments are typically considered advanced geometry changes."
+        "Higher roll center generally increases rotation but reduces rear grip.",
+        "Lower roll center generally increases rear grip but reduces rotation.",
+        "Changes affect both roll center height and camber gain simultaneously."
     ],
 
     quickSummary:
-        "A higher Front Outer Roll Center Mount generally creates a flatter, more responsive front end with increased steering response and reduced chassis roll. A lower Front Outer Roll Center Mount generally creates a calmer, more forgiving front end with increased front grip and consistency."
-    },
-
-    {
-    id: "rearRollCenterLink",
-
-    name: "Rear Roll Center Link",
-
-    category: "Geometry",
-
-    increaseTitle: "Raise Rear Camber Link",
-    decreaseTitle: "Lower Rear Camber Link",
-
-    whatItIs:
-        "The Rear Roll Center Link is the rear upper camber link that connects the shock tower or chassis to the rear hub carrier. Changes to the link's angle, length, and mounting positions influence rear roll center height, camber gain, chassis roll characteristics, rear grip generation, and vehicle rotation.",
-
-    whyItMatters:
-        "The Rear Roll Center Link affects how the rear suspension generates grip during cornering and acceleration. It influences rear roll center height, camber gain, chassis roll, rear stability, rotation, corner speed, and overall rear-end feel. Because multiple suspension characteristics change simultaneously, it is considered an advanced geometry adjustment.",
-
-    increase: {
-
-        effects: [
-            "Generally increases roll center height",
-            "Generally increases camber gain",
-            "Generally reduces chassis roll",
-            "Generally increases vehicle rotation",
-            "Generally increases rear responsiveness",
-            "Can improve direction changes",
-            "Can reduce rear grip generation",
-            "Can make the vehicle feel freer through corners"
-        ],
-
-        benefits: [
-            "Improved rotation",
-            "Quicker direction changes",
-            "Reduced chassis roll",
-            "Can improve performance on smooth high-grip tracks",
-            "Can reduce rear push"
-        ],
-
-        drawbacks: [
-            "Can reduce rear traction",
-            "Can reduce stability",
-            "Can make the rear end feel nervous",
-            "May make the vehicle harder to drive consistently"
-        ]
-    },
-
-    decrease: {
-
-        effects: [
-            "Generally lowers roll center height",
-            "Generally reduces camber gain",
-            "Generally increases chassis roll",
-            "Generally increases rear grip generation",
-            "Generally increases stability",
-            "Generally reduces rotation",
-            "Can improve rear traction",
-            "Can make the vehicle feel more planted"
-        ],
-
-        benefits: [
-            "Increased rear traction",
-            "Improved stability",
-            "More forgiving handling",
-            "Improved consistency",
-            "Can improve performance on lower-grip tracks"
-        ],
-
-        drawbacks: [
-            "Reduced rotation",
-            "Reduced responsiveness",
-            "Can make the vehicle feel slower to change direction",
-            "May increase rear push"
-        ]
-    },
-
-    tradeOffs: [
-        "More aggressive rear roll center link geometry generally increases rotation and responsiveness but reduces rear grip and stability.",
-        "Less aggressive rear roll center link geometry generally increases rear grip and stability but reduces rotation.",
-        "Changes to the rear roll center link affect roll center height and camber gain simultaneously.",
-        "Rear roll center link adjustments are typically considered advanced geometry changes."
-    ],
-
-    quickSummary:
-        "More aggressive Rear Roll Center Link geometry generally creates a flatter, more responsive rear end with increased rotation and reduced rear grip. Less aggressive geometry generally creates a more planted, stable rear end with increased traction and consistency."
-    },
-
-    {
-    id: "rearInnerRollCenterMount",
-
-    name: "Rear Inner Roll Center Mount",
-
-    category: "Geometry",
-
-     increaseTitle: "Raise Rear Inner Camber Link Mount",
-     decreaseTitle: "Lower Rear Inner Camber Link Mount",
-
-    whatItIs:
-        "The Rear Inner Roll Center Mount is the inner mounting position of the rear upper camber link located on the shock tower or chassis. Adjusting this position changes rear roll center height, camber gain, chassis roll characteristics, rear grip generation, and vehicle rotation.",
-
-    whyItMatters:
-        "The Rear Inner Roll Center Mount influences rear traction, stability, rotation, corner speed, chassis roll, and overall rear-end behavior. Because it directly affects both roll center height and camber gain, it is considered an advanced geometry adjustment.",
-
-    increase: {
-
-        effects: [
-            "Raises the inner camber link mounting position",
-            "Lowers rear roll center",
-            "Reduces camber gain",
-            "Increases chassis roll",
-            "Generally increases rear grip",
-            "Generally increases rear stability",
-            "Can improve forward traction",
-            "Can make the vehicle feel more planted"
-        ],
-
-        benefits: [
-            "Increased rear traction",
-            "Improved rear stability",
-            "More forgiving handling",
-            "Improved consistency",
-            "Can improve performance on lower-grip tracks"
-        ],
-
-        drawbacks: [
-            "Reduces vehicle rotation",
-            "Reduces responsiveness",
-            "Can make the vehicle feel slower to change direction",
-            "May increase rear push"
-        ]
-    },
-
-    decrease: {
-
-        effects: [
-            "Lowers the inner camber link mounting position",
-            "Raises rear roll center",
-            "Increases camber gain",
-            "Reduces chassis roll",
-            "Generally increases rotation",
-            "Generally increases responsiveness",
-            "Can free up the rear end",
-            "Can make the vehicle react more quickly"
-        ],
-
-        benefits: [
-            "Improved rotation",
-            "Quicker direction changes",
-            "Reduced chassis roll",
-            "Can improve performance on smooth high-grip tracks",
-            "Can reduce rear push"
-        ],
-
-        drawbacks: [
-            "Can reduce rear traction",
-            "Can reduce stability",
-            "Can make the rear end feel nervous",
-            "May make the vehicle harder to drive consistently"
-        ]
-    },
-
-    tradeOffs: [
-        "A higher inner mount generally lowers rear roll center, increases rear grip, and improves stability.",
-        "A lower inner mount generally raises rear roll center, increases rotation, and reduces rear grip.",
-        "Changes to the inner mount affect roll center height and camber gain simultaneously.",
-        "Rear inner camber link adjustments are typically considered advanced geometry changes."
-    ],
-
-    quickSummary:
-        "A higher Rear Inner Roll Center Mount generally creates a more planted and stable rear end with increased traction and consistency. A lower Rear Inner Roll Center Mount generally creates a flatter, more responsive rear end with increased rotation and reduced rear grip."
-    },
-
-    {
-    id: "rearOuterRollCenterMount",
-
-    name: "Rear Outer Roll Center Mount",
-
-    category: "Geometry",
-
-     increaseTitle: "Raise Rear Outer Camber Link Mount",
-     decreaseTitle: "Lower Rear Outer Camber Link Mount",
-
-    whatItIs:
-        "The Rear Outer Roll Center Mount is the outer mounting position of the rear upper camber link located at the rear hub carrier. Adjusting this position changes rear roll center height, camber gain, chassis roll characteristics, rear grip generation, and vehicle rotation.",
-
-    whyItMatters:
-        "The Rear Outer Roll Center Mount influences rear traction, stability, rotation, corner speed, chassis roll, and overall rear-end behavior. Because it directly affects both roll center height and camber gain, it is considered an advanced geometry adjustment.",
-
-    increase: {
-
-        effects: [
-            "Raises the outer camber link position",
-            "Raises rear roll center",
-            "Increases camber gain",
-            "Reduces chassis roll",
-            "Generally increases vehicle rotation",
-            "Generally increases rear responsiveness",
-            "Can reduce rear grip generation",
-            "Can make the vehicle feel freer through corners"
-        ],
-
-        benefits: [
-            "Improved rotation",
-            "Quicker direction changes",
-            "Reduced chassis roll",
-            "Can improve performance on smooth high-grip tracks",
-            "Can reduce rear push"
-        ],
-
-        drawbacks: [
-            "Can reduce rear traction",
-            "Can reduce rear stability",
-            "Can make the rear end feel nervous",
-            "May make the vehicle harder to drive consistently"
-        ]
-    },
-
-    decrease: {
-
-        effects: [
-            "Lowers the outer camber link position",
-            "Lowers rear roll center",
-            "Reduces camber gain",
-            "Increases chassis roll",
-            "Generally increases rear grip generation",
-            "Generally increases rear stability",
-            "Can improve forward traction",
-            "Can make the vehicle feel more planted"
-        ],
-
-        benefits: [
-            "Increased rear traction",
-            "Improved rear stability",
-            "More forgiving handling",
-            "Improved consistency",
-            "Can improve performance on lower-grip tracks"
-        ],
-
-        drawbacks: [
-            "Reduces vehicle rotation",
-            "Reduces responsiveness",
-            "Can make the vehicle feel slower to change direction",
-            "May increase rear push"
-        ]
-    },
-
-    tradeOffs: [
-        "A higher outer mount generally raises rear roll center, increases rotation, and reduces rear grip.",
-        "A lower outer mount generally lowers rear roll center, increases rear grip, and improves stability.",
-        "Changes to the outer mount affect roll center height and camber gain simultaneously.",
-        "Rear outer camber link adjustments are typically considered advanced geometry changes."
-    ],
-
-    quickSummary:
-        "A higher Rear Outer Roll Center Mount generally creates a flatter, more responsive rear end with increased rotation and reduced rear grip. A lower Rear Outer Roll Center Mount generally creates a more planted and stable rear end with increased traction and consistency."
+        "Lower Inside or Raise Outside generally increases rotation. Raise Inside or Lower Outside generally increases rear grip and stability."
     },
 
     {
@@ -1648,11 +1391,14 @@ export const setupDatabase = [
 
     category: "Suspension",
 
+    increaseTitle: "Use More Front Droop",
+    decreaseTitle: "Use Less Front Droop",
+
     whatItIs:
         "Front droop is the amount of suspension extension available from the vehicle's normal ride height. Increasing droop allows the front suspension to extend further, while decreasing droop limits suspension extension.",
 
     whyItMatters:
-        "Front droop affects front traction, bump handling, jump landings, chassis roll, steering feel, stability, and overall vehicle responsiveness. It influences how well the front tires maintain contact with the track over uneven surfaces and during weight transfer.",
+        "Front droop affects front traction, steering response, chassis roll, bump handling, jump landings, stability, and overall vehicle balance. It influences how effectively the front tires maintain contact with the track during weight transfer and over uneven surfaces.",
 
     increase: {
 
@@ -1661,26 +1407,26 @@ export const setupDatabase = [
             "Generally increases front traction",
             "Allows the front tires to maintain contact with the track longer",
             "Increases chassis roll potential",
-            "Can improve bump handling",
-            "Can improve jump landings",
-            "Can make the vehicle feel softer",
-            "Can make steering response slower"
+            "Improves bump handling",
+            "Improves jump landings",
+            "Makes the front suspension more compliant",
+            "Generally slows steering response"
         ],
 
         benefits: [
-            "Improved front grip",
-            "Better bump handling",
-            "Improved jump landing performance",
-            "Better performance on rough tracks",
-            "Can improve stability in low-grip conditions"
+            "Increased front grip",
+            "Improved bump handling",
+            "Better jump landing performance",
+            "Improved performance on rough tracks",
+            "More forgiving handling characteristics"
         ],
 
         drawbacks: [
-            "Can increase chassis roll",
-            "Can reduce steering responsiveness",
-            "May make the vehicle feel less precise",
+            "Increased chassis roll",
+            "Reduced steering responsiveness",
+            "Reduced steering precision",
             "Can make weight transfer feel slower",
-            "Too much droop can make the vehicle difficult to control"
+            "Too much droop can make the vehicle feel lazy"
         ]
     },
 
@@ -1691,41 +1437,40 @@ export const setupDatabase = [
             "Generally reduces front traction",
             "Reduces chassis roll potential",
             "Increases steering responsiveness",
-            "Can improve precision",
-            "Can make the vehicle feel more direct",
-            "Can reduce rollover tendency",
-            "May reduce bump and landing performance"
+            "Improves steering precision",
+            "Makes the vehicle feel more direct",
+            "Reduces rollover tendency",
+            "Can reduce bump and landing performance"
         ],
 
         benefits: [
-            "More responsive handling",
+            "More responsive steering",
             "Improved precision",
             "Reduced chassis movement",
-            "Often beneficial on smooth high-grip tracks",
-            "Can improve high-speed stability"
+            "Improved performance on smooth high-grip tracks",
+            "More direct vehicle response"
         ],
 
         drawbacks: [
             "Reduced front grip",
-            "Can worsen bump handling",
-            "Can worsen jump landings",
-            "May reduce performance on rough tracks",
+            "Reduced bump handling",
+            "Reduced jump landing performance",
+            "Reduced performance on rough tracks",
             "Can make the vehicle less forgiving"
         ]
     },
 
     tradeOffs: [
-        "More front droop generally increases traction and compliance but reduces responsiveness.",
-        "Less front droop generally increases responsiveness and precision but reduces traction and compliance.",
-        "More droop typically benefits rough, loose, and jump-filled tracks.",
-        "Less droop typically benefits smoother, higher-grip tracks.",
-        "Extremely rough or unusual track conditions may require testing because droop effects can become track dependent.",
-        "Droop should be checked regularly because it can change over time through suspension wear and setup adjustments."
+        "More front droop generally increases front grip and compliance but reduces steering response and precision.",
+        "Less front droop generally increases steering response and precision but reduces front grip and compliance.",
+        "More front droop typically benefits rough, loose, and low-grip conditions.",
+        "Less front droop typically benefits smooth, high-grip conditions.",
+        "Front droop primarily adjusts the balance between front traction and steering responsiveness."
     ],
 
     quickSummary:
-        "More Front Droop generally provides more traction, improved bump handling, better jump landings, and a softer feel. Less Front Droop generally provides quicker response, greater precision, and reduced chassis movement, but can reduce traction and rough-track performance."
-    },
+        "More Front Droop generally increases front grip, compliance, and rough-track performance but reduces steering response and precision. Less Front Droop generally increases steering responsiveness and precision but reduces front grip and bump-handling capability."
+},
 
     {
     id: "frontAntiRollBar",
@@ -2253,11 +1998,14 @@ export const setupDatabase = [
 
     category: "Suspension",
 
+    increaseTitle: "Use More Rear Droop",
+    decreaseTitle: "Use Less Rear Droop",
+
     whatItIs:
         "Rear droop is the amount of suspension extension available from the vehicle's normal ride height. Increasing droop allows the rear suspension to extend further, while decreasing droop limits suspension extension.",
 
     whyItMatters:
-        "Rear droop affects rear traction, braking stability, weight transfer, bump handling, jump landings, chassis roll, and overall vehicle responsiveness. It influences how well the rear tires maintain contact with the track over uneven surfaces and during weight transfer.",
+        "Rear droop affects rear traction, stability, braking behavior, chassis roll, bump handling, jump landings, and overall vehicle balance. It influences how effectively the rear tires maintain contact with the track during weight transfer and over uneven surfaces.",
 
     increase: {
 
@@ -2266,26 +2014,26 @@ export const setupDatabase = [
             "Generally increases rear traction",
             "Allows the rear tires to maintain contact with the track longer",
             "Increases chassis roll potential",
-            "Can improve bump handling",
-            "Can improve jump landings",
-            "Increases forward weight transfer under braking",
-            "Can make the vehicle more responsive but less stable"
+            "Improves bump handling",
+            "Improves jump landings",
+            "Makes the rear suspension more compliant",
+            "Generally increases weight transfer"
         ],
 
         benefits: [
-            "Improved rear grip",
-            "Better bump handling",
-            "Improved jump landing performance",
-            "Better performance on rough tracks",
-            "Can improve stability in low-grip conditions"
+            "Increased rear grip",
+            "Improved bump handling",
+            "Better jump landing performance",
+            "Improved performance on rough tracks",
+            "More forgiving handling characteristics"
         ],
 
         drawbacks: [
-            "Can increase chassis roll",
-            "May reduce braking stability",
-            "Can make weight transfer more aggressive",
-            "May make the vehicle less precise",
-            "Too much droop can make the vehicle difficult to control"
+            "Increased chassis roll",
+            "Reduced stability during aggressive weight transfer",
+            "Can make the vehicle feel less precise",
+            "Can increase rear grip to the point of reducing rotation",
+            "Too much droop can make the vehicle feel lazy"
         ]
     },
 
@@ -2295,42 +2043,41 @@ export const setupDatabase = [
             "Reduces available suspension extension",
             "Generally reduces rear traction",
             "Reduces chassis roll potential",
-            "Reduces forward weight transfer under braking",
-            "Can improve braking stability",
-            "Can make the vehicle feel more precise",
-            "Can reduce rollover tendency",
-            "May reduce bump and landing performance"
+            "Increases stability during weight transfer",
+            "Improves precision",
+            "Makes the vehicle feel more direct",
+            "Reduces rollover tendency",
+            "Can reduce bump and landing performance"
         ],
 
         benefits: [
-            "Improved braking stability",
-            "More precise handling",
+            "Improved stability",
+            "Improved precision",
             "Reduced chassis movement",
-            "Often beneficial on smooth high-grip tracks",
-            "Can improve high-speed stability"
+            "Improved performance on smooth high-grip tracks",
+            "More direct vehicle response"
         ],
 
         drawbacks: [
             "Reduced rear grip",
-            "Can worsen bump handling",
-            "Can worsen jump landings",
-            "May reduce performance on rough tracks",
+            "Reduced bump handling",
+            "Reduced jump landing performance",
+            "Reduced performance on rough tracks",
             "Can make the vehicle less forgiving"
         ]
     },
 
     tradeOffs: [
-        "More rear droop generally increases traction and compliance but reduces stability under braking.",
-        "Less rear droop generally increases stability and precision but reduces traction and compliance.",
-        "More droop typically benefits rough, loose, and jump-filled tracks.",
-        "Less droop typically benefits smoother, higher-grip tracks.",
-        "Extremely rough or unusual track conditions may require testing because droop effects can become track dependent.",
-        "Droop should be checked regularly because it can change over time through suspension wear and setup adjustments."
+        "More rear droop generally increases rear grip and compliance but reduces precision and stability during aggressive weight transfer.",
+        "Less rear droop generally increases precision and stability but reduces rear grip and compliance.",
+        "More rear droop typically benefits rough, loose, and low-grip conditions.",
+        "Less rear droop typically benefits smooth, high-grip conditions.",
+        "Rear droop primarily adjusts the balance between rear traction and vehicle responsiveness."
     ],
 
     quickSummary:
-        "More Rear Droop generally provides more traction, improved bump handling, better jump landings, and increased weight transfer under braking, but can reduce stability. Less Rear Droop generally provides greater precision, improved braking stability, and reduced chassis movement, but can reduce traction and rough-track performance."
-    },
+        "More Rear Droop generally increases rear grip, compliance, and rough-track performance but reduces precision and responsiveness. Less Rear Droop generally increases stability, responsiveness, and precision but reduces rear grip and bump-handling capability."
+},
 
     {
     id: "rearAntiRollBar",
@@ -3009,5 +2756,534 @@ export const setupDatabase = [
     quickSummary:
         "A Wider Track Width generally provides greater stability, responsiveness, and corner speed potential but can make the vehicle more aggressive and sensitive to bumps. A Narrower Track Width generally provides smoother handling, improved bump absorption, and greater forgiveness but reduces responsiveness and corner speed potential."
     },
+
+    {
+    id: "shockOil",
+
+    name: "Shock Oil",
+
+     category: "Hidden",
+
+    showInDatabase: false,
+
+    increaseTitle: "Use Heavier Shock Oil",
+    decreaseTitle: "Use Lighter Shock Oil",
+
+    whatItIs:
+        "Shock Oil controls suspension damping by regulating how quickly oil flows through the shock piston. Shock oil primarily affects the speed of suspension movement rather than the amount of movement. Heavier oils increase damping while lighter oils decrease damping.",
+
+    whyItMatters:
+        "Shock oil influences weight transfer speed, suspension response, bump handling, jump behavior, chassis control, stability, and overall vehicle feel. It determines how quickly the suspension reacts to track conditions and driver inputs.",
+
+    increase: {
+
+        effects: [
+            "Increases damping",
+            "Slows suspension movement",
+            "Slows weight transfer",
+            "Increases pack",
+            "Increases suspension support",
+            "Improves chassis control",
+            "Can improve jump takeoff and landing characteristics",
+            "Can make the vehicle feel more responsive"
+        ],
+
+        benefits: [
+            "Improved chassis support",
+            "Better stability",
+            "More controlled suspension movement",
+            "Can improve performance on smooth high-grip tracks",
+            "Can improve jump consistency"
+        ],
+
+        drawbacks: [
+            "Can reduce bump compliance",
+            "Can reduce grip on rough tracks",
+            "May cause the vehicle to skip across bumps",
+            "Can make the suspension less forgiving"
+        ]
+    },
+
+    decrease: {
+
+        effects: [
+            "Decreases damping",
+            "Allows suspension to move more freely",
+            "Speeds weight transfer",
+            "Reduces pack",
+            "Improves bump compliance",
+            "Allows the suspension to follow the track more easily",
+            "Can increase grip on rough surfaces",
+            "Can make the vehicle feel calmer"
+        ],
+
+        benefits: [
+            "Improved bump handling",
+            "Better rough-track performance",
+            "Increased compliance",
+            "Improved grip in difficult conditions",
+            "More forgiving handling characteristics"
+        ],
+
+        drawbacks: [
+            "Reduces suspension support",
+            "Can allow excessive chassis movement",
+            "May reduce stability on high-grip tracks",
+            "Can reduce jump consistency"
+        ]
+    },
+
+    tradeOffs: [
+        "Heavier shock oil generally increases support and control but reduces compliance.",
+        "Lighter shock oil generally increases compliance and grip but reduces support and control.",
+        "Shock oil primarily controls suspension speed, while springs primarily control suspension movement.",
+        "Shock oil should generally be matched to spring stiffness and piston configuration.",
+        "Smooth high-grip tracks often tolerate heavier oil, while rough tracks often benefit from lighter oil."
+    ],
+
+    quickSummary:
+        "Heavier Shock Oil generally provides more support, more pack, and better chassis control, but less compliance and bump handling. Lighter Shock Oil generally provides better compliance, improved rough-track performance, and increased forgiveness, but less support and control."
+},
+
+{
+    id: "springRate",
+
+    name: "Spring Rate",
+
+    category: "Hidden",
+
+    showInDatabase: false,
+
+    increaseTitle: "Use Stiffer Springs",
+    decreaseTitle: "Use Softer Springs",
+
+    whatItIs:
+        "Spring Rate determines how much the suspension compresses, rolls, and transfers weight. Springs support the vehicle and control how easily the chassis can move during braking, cornering, acceleration, bumps, and jumps.",
+
+    whyItMatters:
+        "Spring rate influences grip, chassis roll, weight transfer, responsiveness, bump handling, jump behavior, and overall vehicle balance. Springs are used to keep the chassis operating within its intended working range for the available traction level.",
+
+    increase: {
+
+        effects: [
+            "Increases spring stiffness",
+            "Reduces chassis roll",
+            "Reduces weight transfer",
+            "Increases chassis support",
+            "Increases responsiveness",
+            "Can improve jump takeoff characteristics",
+            "Can make the vehicle react more quickly",
+            "Generally reduces mechanical grip"
+        ],
+
+        benefits: [
+            "Improved chassis support",
+            "More responsive handling",
+            "Reduced chassis movement",
+            "Can improve performance on high-grip tracks",
+            "Can improve consistency during aggressive driving"
+        ],
+
+        drawbacks: [
+            "Can reduce mechanical grip",
+            "Can reduce bump compliance",
+            "May reduce traction on rough tracks",
+            "Can make the vehicle less forgiving"
+        ]
+    },
+
+    decrease: {
+
+        effects: [
+            "Decreases spring stiffness",
+            "Increases chassis roll",
+            "Increases weight transfer",
+            "Improves bump compliance",
+            "Increases mechanical grip",
+            "Allows the chassis to move more easily",
+            "Can make the vehicle feel calmer",
+            "Can improve traction in difficult conditions"
+        ],
+
+        benefits: [
+            "Increased grip",
+            "Improved bump handling",
+            "Better rough-track performance",
+            "More forgiving handling characteristics",
+            "Improved traction in low-grip conditions"
+        ],
+
+        drawbacks: [
+            "Reduces responsiveness",
+            "Can allow excessive chassis movement",
+            "May reduce support on high-grip tracks",
+            "Can make the vehicle feel less precise"
+        ]
+    },
+
+    tradeOffs: [
+        "Stiffer springs generally increase support and responsiveness but reduce mechanical grip.",
+        "Softer springs generally increase grip and compliance but reduce responsiveness.",
+        "High-grip conditions typically require stiffer springs to control chassis movement.",
+        "Low-grip conditions typically benefit from softer springs that allow the chassis to transfer weight more easily.",
+        "Spring changes should generally be matched with appropriate shock oil changes."
+    ],
+
+    quickSummary:
+        "Stiffer Springs generally provide more support, responsiveness, and chassis control but less grip and compliance. Softer Springs generally provide more grip, improved bump handling, and increased forgiveness but less support and responsiveness."
+},
+
+{
+    id: "rideHeight",
+
+    name: "Ride Height",
+
+    category: "Hidden",
+
+    showInDatabase: false,
+
+    increaseTitle: "Raise Ride Height",
+    decreaseTitle: "Lower Ride Height",
+
+    whatItIs:
+        "Ride Height is the distance between the chassis and the ground when the vehicle is at its natural settled position. Ride height affects ground clearance, center of gravity, weight transfer, bump handling, and overall vehicle stability.",
+
+    whyItMatters:
+        "Ride height influences bump handling, rollover resistance, corner speed, stability, jump behavior, and how well the vehicle handles rough track conditions. Small changes can significantly affect how aggressive or forgiving the vehicle feels.",
+
+    increase: {
+
+        effects: [
+            "Raises the chassis farther from the ground",
+            "Increases ground clearance",
+            "Raises the center of gravity",
+            "Can improve bump handling",
+            "Can improve rough-track performance",
+            "Allows the suspension more room to work",
+            "Can increase weight transfer",
+            "Can make the vehicle feel more forgiving"
+        ],
+
+        benefits: [
+            "Better performance on rough tracks",
+            "Improved handling over bumps",
+            "Reduced bottoming out",
+            "More forgiving handling characteristics",
+            "Increased ground clearance"
+        ],
+
+        drawbacks: [
+            "Can increase rollover tendency",
+            "May reduce corner speed potential",
+            "May feel less responsive on smooth tracks",
+            "Can increase chassis movement"
+        ]
+    },
+
+    decrease: {
+
+        effects: [
+            "Lowers the chassis closer to the ground",
+            "Lowers the center of gravity",
+            "Reduces ground clearance",
+            "Can improve corner speed potential",
+            "Can improve stability on smooth tracks",
+            "Can make the vehicle feel more responsive",
+            "Reduces chassis movement",
+            "Generally improves rollover resistance"
+        ],
+
+        benefits: [
+            "Improved corner speed",
+            "Improved stability",
+            "Reduced rollover tendency",
+            "More responsive handling",
+            "Improved performance on smooth tracks"
+        ],
+
+        drawbacks: [
+            "May handle rough tracks worse",
+            "Can bottom out on rough surfaces",
+            "Reduced ground clearance",
+            "May reduce bump compliance"
+        ]
+    },
+
+    tradeOffs: [
+        "Lower ride height generally improves stability and corner speed but reduces rough-track capability.",
+        "Higher ride height generally improves rough-track handling but can increase rollover tendency.",
+        "Lower ride height reduces chassis movement and lowers the center of gravity.",
+        "Higher ride height increases suspension travel utilization and ground clearance.",
+        "Ride height should be adjusted in small increments because even minor changes can significantly affect handling."
+    ],
+
+    quickSummary:
+        "Lower Ride Height generally improves stability, responsiveness, and corner speed on smooth tracks. Higher Ride Height generally improves bump handling, rough-track performance, and forgiveness, but may increase rollover tendency and reduce responsiveness."
+},
+
+{
+    id: "droop",
+
+    name: "Droop",
+
+    category: "Hidden",
+
+    showInDatabase: false,
+
+    increaseTitle: "Use More Droop",
+    decreaseTitle: "Use Less Droop",
+
+    whatItIs:
+        "Droop is the amount of suspension extension available from the vehicle's normal ride height. Increasing droop allows the suspension to extend further, while decreasing droop limits suspension extension.",
+
+    whyItMatters:
+        "Droop affects traction, weight transfer, chassis roll, bump handling, jump landings, stability, and overall vehicle responsiveness. It influences how well the tires maintain contact with the track over uneven surfaces.",
+
+    increase: {
+
+        effects: [
+            "Increases available suspension extension",
+            "Generally increases traction",
+            "Allows the tires to maintain contact with the track longer",
+            "Increases chassis roll potential",
+            "Improves bump handling",
+            "Improves jump landings",
+            "Allows the suspension to follow the track more easily",
+            "Can make the vehicle feel softer and more forgiving"
+        ],
+
+        benefits: [
+            "Improved traction",
+            "Better bump handling",
+            "Improved jump landing performance",
+            "Better performance on rough tracks",
+            "More forgiving handling"
+        ],
+
+        drawbacks: [
+            "Can increase chassis roll",
+            "Can reduce responsiveness",
+            "May make the vehicle feel less precise",
+            "Can make weight transfer feel slower",
+            "Too much droop can make the vehicle difficult to control"
+        ]
+    },
+
+    decrease: {
+
+        effects: [
+            "Reduces available suspension extension",
+            "Generally reduces traction",
+            "Reduces chassis roll potential",
+            "Increases responsiveness",
+            "Improves precision",
+            "Makes the vehicle feel more direct",
+            "Can reduce rollover tendency",
+            "May reduce bump and landing performance"
+        ],
+
+        benefits: [
+            "More responsive handling",
+            "Improved precision",
+            "Reduced chassis movement",
+            "Often beneficial on smooth high-grip tracks",
+            "Improved stability"
+        ],
+
+        drawbacks: [
+            "Reduced traction",
+            "Can worsen bump handling",
+            "Can worsen jump landings",
+            "May reduce performance on rough tracks",
+            "Can make the vehicle less forgiving"
+        ]
+    },
+
+    tradeOffs: [
+        "More droop generally increases traction and compliance but reduces responsiveness.",
+        "Less droop generally increases responsiveness and precision but reduces traction and compliance.",
+        "More droop typically benefits rough, loose, and jump-filled tracks.",
+        "Less droop typically benefits smoother, higher-grip tracks.",
+        "Droop should be checked regularly because it can change over time through suspension wear and setup adjustments."
+    ],
+
+    quickSummary:
+        "More Droop generally provides more traction, improved bump handling, better jump landings, and a more forgiving feel. Less Droop generally provides quicker response, greater precision, and reduced chassis movement, but can reduce traction and rough-track performance."
+},
+
+{
+    id: "shockPosition",
+
+    name: "Shock Position",
+
+    category: "Hidden",
+
+    showInDatabase: false,
+
+    increaseTitle: "Stand Shocks Up",
+    decreaseTitle: "Lay Shocks Down",
+
+    whatItIs:
+        "Shock Position refers to the mounting location of the upper shock mount on the shock tower. Moving the upper shock mount outward stands the shock up and reduces its angle. Moving the upper shock mount inward lays the shock down and increases its angle.",
+
+    whyItMatters:
+        "Shock position affects suspension progression, chassis roll, grip generation, bump handling, jump behavior, responsiveness, and overall vehicle balance. It is one of the most effective ways to tune suspension feel without changing springs or oil.",
+
+    increase: {
+
+        effects: [
+            "Stands the shocks up",
+            "Produces a more linear suspension action",
+            "Increases suspension support",
+            "Reduces chassis roll",
+            "Generally increases responsiveness",
+            "Makes the vehicle react more quickly",
+            "Can improve jump consistency",
+            "Can reduce overall grip"
+        ],
+
+        benefits: [
+            "More responsive handling",
+            "Improved chassis support",
+            "Reduced chassis roll",
+            "Improved jump consistency",
+            "Often beneficial on smooth high-grip tracks"
+        ],
+
+        drawbacks: [
+            "Can reduce overall grip",
+            "May reduce forgiveness",
+            "Can reduce compliance over bumps",
+            "May make the vehicle feel more aggressive"
+        ]
+    },
+
+    decrease: {
+
+        effects: [
+            "Lays the shocks down",
+            "Produces a more progressive suspension action",
+            "Increases chassis roll",
+            "Generally increases grip",
+            "Improves compliance over bumps",
+            "Allows the suspension to follow the track more easily",
+            "Makes the vehicle feel smoother",
+            "Increases forgiveness"
+        ],
+
+        benefits: [
+            "Increased traction",
+            "Improved bump handling",
+            "Better rough-track performance",
+            "More forgiving handling",
+            "Improved low-grip performance"
+        ],
+
+        drawbacks: [
+            "Reduced responsiveness",
+            "Can feel less precise",
+            "May reduce jump responsiveness",
+            "Can allow excessive chassis roll on high-grip tracks"
+        ]
+    },
+
+    tradeOffs: [
+        "Standing the shocks up generally increases support and responsiveness but reduces grip and compliance.",
+        "Laying the shocks down generally increases grip and compliance but reduces responsiveness.",
+        "Standing the shocks up produces a more linear suspension action, while laying the shocks down produces a more progressive suspension action.",
+        "Smooth high-grip tracks often favor more upright shock positions, while rough or low-grip tracks often favor more laid-down positions."
+    ],
+
+    quickSummary:
+        "Standing the Shocks Up generally increases support, responsiveness, and precision while reducing grip and compliance. Laying the Shocks Down generally increases traction, bump handling, and forgiveness while reducing responsiveness."
+},
+
+{
+    id: "shockPiston",
+
+    name: "Shock Piston",
+
+    category: "Hidden",
+
+    showInDatabase: false,
+
+    increaseTitle: "Use Higher-Pack Pistons",
+    decreaseTitle: "Use Lower-Pack Pistons",
+
+    whatItIs:
+        "Shock Pistons control how shock oil flows through the shocks during suspension movement. Piston tuning is primarily achieved by changing the number of holes, hole size, or piston design. While shock oil mainly determines damping level, pistons largely determine pack characteristics, suspension compliance, and high-speed suspension behavior.",
+
+    whyItMatters:
+        "Shock pistons influence bump handling, jump landings, bottoming resistance, chassis support, suspension compliance, and overall vehicle balance. Piston changes allow tuning of high-speed shock behavior while maintaining a desired damping level through oil adjustments.",
+
+    increase: {
+
+        effects: [
+            "Uses smaller holes or fewer holes",
+            "Increases damping resistance at high shaft speeds",
+            "Increases pack",
+            "Increases bottoming resistance",
+            "Increases suspension support",
+            "Can improve jump landings",
+            "Can make the vehicle feel more responsive",
+            "Can improve performance on smooth tracks"
+        ],
+
+        benefits: [
+            "Improved jump landing support",
+            "Reduced bottoming",
+            "Improved chassis support",
+            "More responsive handling",
+            "Can improve performance on smooth tracks"
+        ],
+
+        drawbacks: [
+            "Can reduce suspension compliance",
+            "Can reduce grip on rough tracks",
+            "May cause the vehicle to skip across bumps",
+            "Can make the vehicle feel less forgiving"
+        ]
+    },
+
+    decrease: {
+
+        effects: [
+            "Uses larger holes or more holes",
+            "Reduces damping resistance at high shaft speeds",
+            "Reduces pack",
+            "Improves suspension compliance",
+            "Allows the suspension to react more freely",
+            "Improves bump absorption",
+            "Can increase grip on rough surfaces",
+            "Can make the vehicle feel smoother"
+        ],
+
+        benefits: [
+            "Improved bump handling",
+            "Better rough-track performance",
+            "Increased suspension compliance",
+            "Can improve grip in difficult conditions",
+            "More forgiving handling characteristics"
+        ],
+
+        drawbacks: [
+            "Reduced jump landing support",
+            "Increased bottoming tendency",
+            "Reduced suspension support",
+            "May reduce performance on smooth tracks"
+        ]
+    },
+
+    tradeOffs: [
+        "Smaller or fewer piston holes generally increase pack and support but reduce compliance.",
+        "Larger or more piston holes generally improve compliance and bump handling but reduce support and pack.",
+        "Piston changes primarily affect high-speed suspension behavior, while shock oil changes primarily affect overall damping.",
+        "Piston and oil changes should typically be considered together when tuning shocks.",
+        "Smooth tracks and large jumps often benefit from more pack, while rough tracks often benefit from less pack."
+    ],
+
+    quickSummary:
+        "Higher-Pack Pistons generally provide more support, more pack, improved jump landings, and increased responsiveness. Lower-Pack Pistons generally provide better compliance, improved bump handling, increased rough-track grip, and a smoother, more forgiving feel."
+},
 
 ];
