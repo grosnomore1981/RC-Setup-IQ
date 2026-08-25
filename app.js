@@ -1236,13 +1236,20 @@ function updateBreadcrumb() {
 
 function handleSwipe() {
 
-    const swipeDistance =
+    const swipeDistanceX =
         touchEndX - touchStartX;
 
-    if (swipeDistance > 100) {
+    const swipeDistanceY =
+        Math.abs(touchEndY - touchStartY);
+
+    if (
+        touchStartX < 40 &&
+        swipeDistanceX > 120 &&
+        swipeDistanceY < 50
+    ) {
 
         if (
-    detailPage.classList.contains("show")
+            detailPage.classList.contains("show")
         ) {
 
             backButton.click();
@@ -1268,10 +1275,16 @@ function handleSwipe() {
 let touchStartX = 0;
 let touchEndX = 0;
 
+let touchStartY = 0;
+let touchEndY = 0;
+
 document.addEventListener("touchstart", (event) => {
 
     touchStartX =
         event.changedTouches[0].screenX;
+
+    touchStartY =
+        event.changedTouches[0].screenY;
 
 });
 
@@ -1279,6 +1292,9 @@ document.addEventListener("touchend", (event) => {
 
     touchEndX =
         event.changedTouches[0].screenX;
+
+    touchEndY =
+        event.changedTouches[0].screenY;
 
     handleSwipe();
 
