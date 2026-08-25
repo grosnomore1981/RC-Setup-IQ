@@ -1236,8 +1236,6 @@ function updateBreadcrumb() {
 
 function handleSwipe() {
 
-    alert("Swipe detected");
-
     const swipeDistanceX =
         touchEndX - touchStartX;
 
@@ -1245,7 +1243,6 @@ function handleSwipe() {
         Math.abs(touchEndY - touchStartY);
 
     if (
-        touchStartX < 75 &&
         swipeDistanceX > 100 &&
         swipeDistanceY < 60
     ) {
