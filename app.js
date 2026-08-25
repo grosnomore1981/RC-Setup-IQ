@@ -1243,9 +1243,9 @@ function handleSwipe() {
         Math.abs(touchEndY - touchStartY);
 
     if (
-        touchStartX < 40 &&
-        swipeDistanceX > 120 &&
-        swipeDistanceY < 50
+        touchStartX < 75 &&
+        swipeDistanceX > 100 &&
+        swipeDistanceY < 60
     ) {
 
         if (
@@ -1261,6 +1261,22 @@ function handleSwipe() {
         ) {
 
             handlingGuideBackButton.click();
+
+        }
+
+        else if (
+            setupNotesPage.style.display === "block"
+        ) {
+
+            notesHomeButton.click();
+
+        }
+
+        else if (
+            mainPage.style.display === "block"
+        ) {
+
+            homeButton.click();
 
         }
 
