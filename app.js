@@ -2,6 +2,8 @@ import { setupDatabase } from "./setupDatabase.js";
 
 import { handlingGuide } from "./handlingGuide.js";
 
+import { handlingGuide2wd } from "./handlingGuide2wd.js";
+
 const settingsContainer = document.getElementById("settingsContainer");
 
 const detailPage = document.getElementById("detailPage");
@@ -93,6 +95,8 @@ let scrollHistory = [];
 let activeTile = null;
 
 let handlingGuideHistory = [];
+
+let currentHandlingGuide = handlingGuide;
 
 /* ==========================================================
    Setup Notes Variables
@@ -620,6 +624,62 @@ function closeDetailPage() {
 }
 
 /* ==========================================================
+   Guide Selection
+========================================================== */
+
+function renderGuideSelection() {
+
+    handlingGuideContainer.innerHTML = "";
+
+    const cardsWrapper = document.createElement("div");
+
+    cardsWrapper.className = "homeCards";
+
+    const guides = [
+
+        {
+            name: "2WD Handling Guide",
+            guide: handlingGuide2wd
+        },
+
+        {
+            name: "4WD Handling Guide",
+            guide: handlingGuide
+        }
+
+    ];
+
+    guides.forEach(item => {
+
+        const card = document.createElement("div");
+
+        card.className = "homeCard";
+
+        card.innerHTML = `
+            <h2>${item.name}</h2>
+        `;
+
+        card.addEventListener("click", () => {
+
+            currentHandlingGuide = item.guide;
+
+            handlingGuideHistory.push(
+                renderGuideSelection
+            );
+
+            renderHandlingGuideAreas();
+
+        });
+
+        cardsWrapper.appendChild(card);
+
+    });
+
+    handlingGuideContainer.appendChild(cardsWrapper);
+
+}
+
+/* ==========================================================
    Render Handling Guide Areas
 ========================================================== */
 
@@ -633,7 +693,7 @@ function renderHandlingGuideAreas() {
 
     cardsWrapper.className = "homeCards";
 
-    handlingGuide.forEach(area => {
+    currentHandlingGuide.forEach(area => {
 
         const card = document.createElement("div");
 
@@ -825,7 +885,7 @@ function renderRecommendations() {
     handlingGuideContainer.innerHTML = "";
 
     const area =
-        handlingGuide.find(
+        currentHandlingGuide.find(
             item => item.id === selectedArea
         );
 
@@ -1045,11 +1105,15 @@ handlingGuideCard.addEventListener("click", () => {
 
     handlingGuideHistory = [];
 
-    renderHandlingGuideAreas();
+    selectedArea = null;
+    selectedIssue = null;
+    selectedGrip = null;
 
     homePage.style.display = "none";
 
     handlingGuidePage.style.display = "block";
+
+    renderGuideSelection();
 
 });
 
@@ -1181,7 +1245,7 @@ function updateBreadcrumb() {
     if (selectedArea) {
 
         const area =
-            handlingGuide.find(
+            currentHandlingGuide.find(
                 item => item.id === selectedArea
             );
 
@@ -1196,7 +1260,7 @@ function updateBreadcrumb() {
     if (selectedIssue) {
 
         const area =
-            handlingGuide.find(
+            currentHandlingGuide.find(
                 item => item.id === selectedArea
             );
 

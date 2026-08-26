@@ -2758,6 +2758,428 @@ export const setupDatabase = [
     },
 
     {
+    id: "ballDifferential",
+
+    name: "Ball Differential",
+
+    category: "Drivetrain",
+
+    increaseTitle: "Tighten Ball Differential",
+    decreaseTitle: "Loosen Ball Differential",
+
+    whatItIs:
+        "A Ball Differential allows the left and right rear wheels to rotate at different speeds through corners using a series of diff balls and thrust components. Adjusting the diff changes how much the differential slips under load.",
+
+    whyItMatters:
+        "Ball differential adjustment affects rear traction, corner rotation, acceleration consistency, stability, and overall vehicle balance. It is one of the most influential drivetrain tuning options on a 2WD buggy.",
+
+    increase: {
+
+        effects: [
+            "Reduces differential slip",
+            "Transfers power more evenly between both rear wheels",
+            "Increases differential locking effect",
+            "Generally increases forward drive",
+            "Generally increases rear stability",
+            "Can improve acceleration on high-grip tracks",
+            "Can make the vehicle feel more planted"
+        ],
+
+        benefits: [
+            "Improved forward traction",
+            "Increased acceleration consistency",
+            "More rear stability",
+            "Improved corner exit drive",
+            "Often beneficial on higher-grip tracks"
+        ],
+
+        drawbacks: [
+            "Can reduce corner rotation",
+            "May increase understeer",
+            "Can make the vehicle feel less agile",
+            "May reduce performance on very loose tracks"
+        ]
+    },
+
+    decrease: {
+
+        effects: [
+            "Increases differential slip",
+            "Allows greater speed difference between rear wheels",
+            "Reduces differential locking effect",
+            "Generally increases corner rotation",
+            "Can improve vehicle agility",
+            "Can make the vehicle rotate more freely",
+            "May reduce forward drive"
+        ],
+
+        benefits: [
+            "Improved corner rotation",
+            "More agile handling",
+            "Can improve steering through corners",
+            "Can improve performance on low-grip tracks",
+            "Helps free up a vehicle that feels tight"
+        ],
+
+        drawbacks: [
+            "Reduced forward traction",
+            "Less acceleration consistency",
+            "Can reduce rear stability",
+            "May increase wheel spin",
+            "Can make the vehicle feel less planted"
+        ]
+    },
+
+    tradeOffs: [
+        "A tighter ball differential generally increases forward drive and stability but reduces corner rotation.",
+        "A looser ball differential generally increases rotation and agility but reduces forward traction.",
+        "Ball differential tuning is often used to fine-tune the balance between corner speed and corner exit drive.",
+        "Excessively loose settings can cause excessive diff slip and accelerated wear.",
+        "Excessively tight settings can reduce the differential's ability to differentiate wheel speed in corners."
+    ],
+
+    quickSummary:
+        "A tighter Ball Differential generally increases forward traction, acceleration consistency, and stability but reduces corner rotation. A looser Ball Differential generally increases rotation and agility but reduces forward drive and rear stability."
+},
+
+{
+    id: "gearDifferential",
+
+    name: "2wd Gear Differential",
+
+    category: "Drivetrain",
+
+    increaseTitle: "Use Thicker Differential Oil",
+    decreaseTitle: "Use Thinner Differential Oil",
+
+    whatItIs:
+        "A Gear Differential uses internal gears and silicone oil to control how easily the left and right rear wheels can rotate at different speeds. Changing the oil viscosity alters the amount of differential action available under acceleration and cornering.",
+
+    whyItMatters:
+        "Gear differential oil affects rear traction, corner rotation, acceleration consistency, stability, and overall vehicle balance. It is one of the primary tuning tools for adjusting how freely the rear tires differentiate through corners.",
+
+    increase: {
+
+        effects: [
+            "Reduces differential action",
+            "Increases differential locking effect",
+            "Transfers power more evenly between rear wheels",
+            "Generally increases forward drive",
+            "Generally increases rear stability",
+            "Can improve corner exit traction",
+            "Can make the vehicle feel more planted"
+        ],
+
+        benefits: [
+            "Improved forward traction",
+            "Increased acceleration consistency",
+            "Improved corner exit drive",
+            "More rear stability",
+            "Often beneficial on higher-grip tracks"
+        ],
+
+        drawbacks: [
+            "Can reduce corner rotation",
+            "May increase understeer",
+            "Can make the vehicle feel less agile",
+            "May reduce performance on loose tracks"
+        ]
+    },
+
+    decrease: {
+
+        effects: [
+            "Increases differential action",
+            "Reduces differential locking effect",
+            "Allows greater speed difference between rear wheels",
+            "Generally increases corner rotation",
+            "Can improve agility",
+            "Can make the vehicle rotate more freely",
+            "May reduce forward drive"
+        ],
+
+        benefits: [
+            "Improved corner rotation",
+            "More agile handling",
+            "Can improve steering through corners",
+            "Can improve performance on low-grip tracks",
+            "Helps free up a vehicle that feels tight"
+        ],
+
+        drawbacks: [
+            "Reduced forward traction",
+            "Less acceleration consistency",
+            "Can reduce rear stability",
+            "May increase wheel spin",
+            "Can make the vehicle feel less planted"
+        ]
+    },
+
+    tradeOffs: [
+        "Thicker differential oil generally increases forward drive and stability but reduces corner rotation.",
+        "Thinner differential oil generally increases rotation and agility but reduces forward traction.",
+        "Gear differential tuning is often used to fine-tune the balance between corner speed and corner exit drive.",
+        "Extremely thin oil can make acceleration inconsistent on loose surfaces.",
+        "Extremely thick oil can reduce the differential's ability to differentiate wheel speed in corners."
+    ],
+
+    quickSummary:
+        "Thicker Differential Oil generally increases forward traction, acceleration consistency, and stability but reduces corner rotation. Thinner Differential Oil generally increases rotation and agility but reduces forward drive and rear stability."
+},
+
+{
+    id: "rearHubHeight",
+
+    name: "Rear Hub Height",
+
+    category: "Suspension",
+
+    increaseTitle: "Raise Rear Hub Height",
+    decreaseTitle: "Lower Rear Hub Height",
+
+    whatItIs:
+        "Rear Hub Height changes the position of the rear suspension arm and camber link relative to the rear hub. Although the wheel remains on the ground, changing hub height alters suspension geometry, roll center characteristics, and how the rear suspension behaves during cornering.",
+
+    whyItMatters:
+        "Rear hub height influences rear grip, rotation, chassis roll behavior, stability, and cornering balance. It is a powerful tuning adjustment that can significantly change how planted or free the rear of the vehicle feels through a corner.",
+
+    increase: {
+
+        effects: [
+            "Raises the rear suspension arm and camber link relative to the wheel",
+            "Generally raises the rear roll center",
+            "Reduces chassis roll",
+            "Allows the rear of the vehicle to stand up more in corners",
+            "Generally increases rotation",
+            "Can increase responsiveness",
+            "Can make the vehicle feel more reactive"
+        ],
+
+        benefits: [
+            "Improved corner rotation",
+            "More responsive handling",
+            "Reduced chassis roll",
+            "Can improve performance on higher-grip tracks",
+            "Can help free up a vehicle that feels stuck in corners"
+        ],
+
+        drawbacks: [
+            "Can reduce rear grip",
+            "Can reduce stability",
+            "May make the vehicle feel less forgiving",
+            "Can increase the likelihood of rear traction loss"
+        ]
+    },
+
+    decrease: {
+
+        effects: [
+            "Lowers the rear suspension arm and camber link relative to the wheel",
+            "Generally lowers the rear roll center",
+            "Allows the rear of the vehicle to settle more into corners",
+            "Generally increases rear grip",
+            "Generally reduces rotation",
+            "Can improve stability",
+            "Can make the vehicle feel calmer and more planted"
+        ],
+
+        benefits: [
+            "Increased rear traction",
+            "Improved stability",
+            "More forgiving handling",
+            "Improved corner consistency",
+            "Can improve performance on lower-grip tracks"
+        ],
+
+        drawbacks: [
+            "Reduces corner rotation",
+            "Can make the vehicle feel less responsive",
+            "May increase understeer",
+            "Can make direction changes feel slower"
+        ]
+    },
+
+    tradeOffs: [
+        "Higher rear hub height generally increases rotation and responsiveness but reduces rear grip.",
+        "Lower rear hub height generally increases rear grip and stability but reduces rotation.",
+        "Rear hub height primarily affects how much the rear of the vehicle settles and rotates through the middle of a corner.",
+        "This adjustment is often used to fine-tune rear traction after springs, shock settings, and ride height have been established.",
+        "Small hub height changes can produce noticeable handling differences."
+    ],
+
+    quickSummary:
+        "Higher Rear Hub Height generally increases rotation, responsiveness, and cornering agility but reduces rear grip and stability. Lower Rear Hub Height generally increases rear traction, stability, and forgiveness but reduces rotation and responsiveness."
+},
+
+{
+    id: "weightDistribution",
+
+    name: "Weight Distribution",
+
+    category: "Chassis",
+
+    increaseTitle: "Move Weight Rearward",
+    decreaseTitle: "Move Weight Forward",
+
+    whatItIs:
+        "Weight Distribution refers to how the vehicle's weight is balanced between the front and rear axles. Adjusting weight distribution changes how much load each end of the vehicle carries during acceleration, braking, and cornering.",
+
+    whyItMatters:
+        "Weight distribution affects steering response, rear traction, corner entry behavior, acceleration, stability, jump attitude, and overall vehicle balance. It is a powerful tuning tool for changing how aggressively or forgivingly a vehicle handles.",
+
+    increase: {
+
+        effects: [
+            "Increases rear weight bias",
+            "Generally increases rear traction",
+            "Generally reduces steering aggressiveness",
+            "Can improve forward drive",
+            "Can improve rear stability",
+            "Can make the vehicle feel calmer",
+            "Can improve performance in low-grip conditions"
+        ],
+
+        benefits: [
+            "Increased rear traction",
+            "Improved acceleration",
+            "Improved rear stability",
+            "More forgiving handling",
+            "Often beneficial on loose or low-grip tracks"
+        ],
+
+        drawbacks: [
+            "Reduces steering response",
+            "Can reduce corner rotation",
+            "May increase understeer",
+            "Can make direction changes feel slower"
+        ]
+    },
+
+    decrease: {
+
+        effects: [
+            "Increases front weight bias",
+            "Generally increases steering response",
+            "Generally increases corner rotation",
+            "Can improve turn-in",
+            "Can make the vehicle feel more aggressive",
+            "Can improve responsiveness",
+            "May reduce rear traction"
+        ],
+
+        benefits: [
+            "Improved steering response",
+            "Increased corner rotation",
+            "Faster direction changes",
+            "More aggressive handling",
+            "Can improve performance on high-grip tracks"
+        ],
+
+        drawbacks: [
+            "Reduces rear traction",
+            "Can reduce stability",
+            "May increase oversteer",
+            "Can make the vehicle less forgiving"
+        ]
+    },
+
+    tradeOffs: [
+        "More rear weight bias generally increases rear traction and stability but reduces steering response.",
+        "More front weight bias generally increases steering response and rotation but reduces rear traction.",
+        "Weight distribution influences nearly every phase of the corner, including entry, mid-corner, and exit.",
+        "This adjustment is often used to fine-tune overall vehicle balance after suspension settings have been established.",
+        "Small changes can produce noticeable handling differences."
+    ],
+
+    quickSummary:
+        "More Rear Weight Bias generally increases rear traction, acceleration, and stability but reduces steering response and rotation. More Front Weight Bias generally increases steering response, rotation, and responsiveness but reduces rear traction and stability."
+},
+
+{
+    id: "slipperClutch",
+
+    name: "Slipper Clutch",
+
+    category: "Drivetrain",
+
+    increaseTitle: "Tighten Slipper Clutch",
+    decreaseTitle: "Loosen Slipper Clutch",
+
+    whatItIs:
+        "The Slipper Clutch controls how much the drivetrain can slip under acceleration. Tightening the slipper reduces slip and transfers power more directly to the rear tires, while loosening the slipper allows more slip before full power is delivered.",
+
+    whyItMatters:
+        "Slipper clutch adjustment affects acceleration, rear traction, vehicle stability, jump behavior, and overall drivability. It is an important tuning tool for controlling how aggressively power reaches the rear tires.",
+
+    increase: {
+
+        effects: [
+            "Reduces slipper slip",
+            "Transfers power more directly to the rear tires",
+            "Increases acceleration response",
+            "Increases forward drive",
+            "Can improve jump face acceleration",
+            "Can make the vehicle feel more aggressive",
+            "Can increase wheel spin on low-grip surfaces"
+        ],
+
+        benefits: [
+            "Improved acceleration",
+            "Stronger forward drive",
+            "More immediate throttle response",
+            "Improved jump face consistency",
+            "Often beneficial on higher-grip tracks"
+        ],
+
+        drawbacks: [
+            "Can reduce rear traction on loose surfaces",
+            "Can increase wheel spin",
+            "May make the vehicle more difficult to drive",
+            "Can make power delivery feel abrupt"
+        ]
+    },
+
+    decrease: {
+
+        effects: [
+            "Increases slipper slip",
+            "Softens power delivery",
+            "Reduces acceleration aggressiveness",
+            "Can improve rear traction",
+            "Can improve vehicle stability",
+            "Can make the vehicle easier to drive",
+            "Can smooth throttle response"
+        ],
+
+        benefits: [
+            "Improved rear traction",
+            "Smoother power delivery",
+            "Improved stability",
+            "More forgiving handling",
+            "Often beneficial on low-grip tracks"
+        ],
+
+        drawbacks: [
+            "Reduces acceleration",
+            "Reduces forward drive",
+            "Can make throttle response feel lazy",
+            "May reduce jump face speed"
+        ]
+    },
+
+    tradeOffs: [
+        "A tighter slipper clutch generally increases acceleration and forward drive but reduces forgiveness.",
+        "A looser slipper clutch generally improves traction and drivability but reduces acceleration.",
+        "Slipper clutch tuning primarily affects how aggressively power is delivered to the rear tires.",
+        "This adjustment is often used to fine-tune traction and acceleration after differential and suspension settings have been established.",
+        "Excessively loose settings can waste power and reduce acceleration, while excessively tight settings can increase wheel spin and drivetrain stress."
+    ],
+
+    quickSummary:
+        "A tighter Slipper Clutch generally increases acceleration, throttle response, and forward drive but can reduce traction and forgiveness. A looser Slipper Clutch generally improves traction, stability, and drivability but reduces acceleration and throttle response."
+},
+
+    {
     id: "shockOil",
 
     name: "Shock Oil",
@@ -3284,6 +3706,96 @@ export const setupDatabase = [
 
     quickSummary:
         "Higher-Pack Pistons generally provide more support, more pack, improved jump landings, and increased responsiveness. Lower-Pack Pistons generally provide better compliance, improved bump handling, increased rough-track grip, and a smoother, more forgiving feel."
+},
+
+{
+    id: "antiRollBar",
+
+    name: "Anti-Roll Bars",
+
+    category: "Hidden",
+
+    showInDatabase: false,
+
+    increaseTitle: "Use Stiffer Anti-Roll Bar",
+    decreaseTitle: "Use Softer Anti-Roll Bar",
+
+    whatItIs:
+        "An Anti-Roll Bar (sway bar) connects the left and right suspension on an axle and resists chassis roll during cornering. Increasing bar stiffness reduces suspension roll, while decreasing bar stiffness allows more suspension roll.",
+
+    whyItMatters:
+        "Anti-roll bar stiffness influences grip, chassis roll, weight transfer distribution, responsiveness, stability, rotation, and overall vehicle balance. Anti-roll bars are commonly adjusted to adapt the vehicle to changing grip conditions and handling requirements.",
+
+    increase: {
+
+        effects: [
+            "Increases roll stiffness",
+            "Reduces chassis roll",
+            "Increases chassis support",
+            "Increases steering responsiveness",
+            "Can make the vehicle react more quickly",
+            "Can improve support on high-grip tracks",
+            "Transfers more cornering load across the axle",
+            "Generally reduces mechanical grip on that axle"
+        ],
+
+        benefits: [
+            "Improved chassis support",
+            "More responsive handling",
+            "Reduced chassis roll",
+            "Can improve performance on high-grip tracks",
+            "Can improve consistency during aggressive driving"
+        ],
+
+        drawbacks: [
+            "Can reduce grip on that axle",
+            "Can reduce bump compliance",
+            "May reduce traction on rough tracks",
+            "Can make the vehicle less forgiving",
+            "May make the vehicle harder to drive consistently"
+        ]
+    },
+
+    decrease: {
+
+        effects: [
+            "Decreases roll stiffness",
+            "Allows more chassis roll",
+            "Improves suspension independence",
+            "Improves bump compliance",
+            "Increases mechanical grip on that axle",
+            "Allows the chassis to move more easily",
+            "Can make the vehicle feel calmer",
+            "Can improve traction in difficult conditions"
+        ],
+
+        benefits: [
+            "Increased grip",
+            "Improved bump handling",
+            "Better rough-track performance",
+            "More forgiving handling characteristics",
+            "Improved traction in low-grip conditions"
+        ],
+
+        drawbacks: [
+            "Reduces responsiveness",
+            "Can allow excessive chassis movement",
+            "May reduce support on high-grip tracks",
+            "Can make the vehicle feel less precise"
+        ]
+    },
+
+    tradeOffs: [
+        "Stiffer anti-roll bars generally increase support and responsiveness but reduce mechanical grip.",
+        "Softer anti-roll bars generally increase grip and compliance but reduce responsiveness.",
+        "High-grip conditions often require stiffer anti-roll bars to control chassis roll.",
+        "Low-grip conditions often benefit from softer anti-roll bars that allow greater weight transfer and grip generation.",
+        "Front and rear anti-roll bars affect vehicle balance differently and should be evaluated as part of the overall setup package.",
+        "Excessively stiff anti-roll bars can reduce bump compliance and overall cornering performance."
+    ],
+
+    quickSummary:
+        "Stiffer Anti-Roll Bars generally provide more support, responsiveness, and chassis control but less grip and compliance. Softer Anti-Roll Bars generally provide more grip, improved bump handling, and increased forgiveness but less support and responsiveness."
 },
 
 ];

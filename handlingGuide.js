@@ -12,29 +12,29 @@ export const handlingGuide = [
             trackConditions: {
 
                 lowGrip: [
-                    { setting: "Front Caster: Less" },
                     { setting: "Front Anti Roll Bar: Softer" },
                     { setting: "Front Differential: Thinner" },
                     { setting: "Front Spring: Softer" },
                     { setting: "Front Ride Height: Lower" },
-                    { setting: "Front Camber Link: Lower Outside" }
+                    { setting: "Front Camber Link: Lower Outside" },
+                    { setting: "Front Caster: Less" }
                 ],
 
                 mediumGrip: [
-                    { setting: "Front Caster: Less" },
                     { setting: "Front Anti Roll Bar: Softer" },
                     { setting: "Front Differential: Thinner" },
                     { setting: "Front Spring: Softer" },
                     { setting: "Front Ride Height: Lower" },
-                    { setting: "Front Camber Link: Lower Outside" }
+                    { setting: "Front Camber Link: Lower Outside" },
+                    { setting: "Front Caster: Less" }                    
                 ],
 
                 highGrip: [
-                    { setting: "Front Caster: Less" },
                     { setting: "Front Differential: Thinner" },
                     { setting: "Front Anti Roll Bar: Softer" },
                     { setting: "Front Camber Link: Lower Outside" },
-                    { setting: "Front Ride Height: Lower" }
+                    { setting: "Front Ride Height: Lower" },
+                    { setting: "Front Caster: Less" }                    
                 ]
             }
         },
@@ -47,28 +47,28 @@ export const handlingGuide = [
 
                 lowGrip: [
                     { setting: "Rear Anti Roll Bar: Softer" },
-                    { setting: "Front Caster: More" },
                     { setting: "Rear Spring: Softer" },
                     { setting: "Front Differential: Thicker" },
                     { setting: "Rear Camber Link: Lower Outside" },
-                    { setting: "Rear Ride Height: Higher" }
+                    { setting: "Rear Ride Height: Higher" },
+                    { setting: "Front Caster: More" },                    
                 ],
 
                 mediumGrip: [
-                    { setting: "Front Caster: More" },
                     { setting: "Rear Anti Roll Bar: Softer" },
                     { setting: "Front Differential: Thicker" },
                     { setting: "Rear Spring: Softer" },
                     { setting: "Rear Camber Link: Lower Outside" },
-                    { setting: "Rear Ride Height: Higher" }
+                    { setting: "Rear Ride Height: Higher" },
+                    { setting: "Front Caster: More" }
                 ],
 
                 highGrip: [
-                    { setting: "Front Caster: More" },
                     { setting: "Rear Anti Roll Bar: Softer" },
                     { setting: "Front Differential: Thicker" },
                     { setting: "Rear Camber Link: Lower Outside" },
-                    { setting: "Rear Ride Height: Higher" }
+                    { setting: "Rear Ride Height: Higher" },
+                    { setting: "Front Caster: More" }
                 ]
             }
         }
@@ -91,27 +91,27 @@ export const handlingGuide = [
                 lowGrip: [
                     { setting: "Front Anti Roll Bar: Softer" },
                     { setting: "Front Spring: Softer" },
-                    { setting: "Front Caster: More" },
                     { setting: "Front Camber Link: Lower Outside" },
                     { setting: "Front Ride Height: Lower" },
-                    { setting: "Front Camber: More Negative" }
+                    { setting: "Front Camber: More Negative" },
+                    { setting: "Front Caster: More" }
                 ],
 
                 mediumGrip: [
                     { setting: "Front Anti Roll Bar: Softer" },
-                    { setting: "Front Caster: More" },
                     { setting: "Front Spring: Softer" },
                     { setting: "Front Camber Link: Lower Outside" },
                     { setting: "Front Ride Height: Lower" },
-                    { setting: "Front Camber: More Negative" }
+                    { setting: "Front Camber: More Negative" },
+                    { setting: "Front Caster: More" }
                 ],
 
                 highGrip: [
                     { setting: "Front Anti Roll Bar: Softer" },
-                    { setting: "Front Caster: More" },
                     { setting: "Front Camber Link: Lower Outside" },
                     { setting: "Front Ride Height: Lower" },
-                    { setting: "Front Camber: More Negative" }
+                    { setting: "Front Camber: More Negative" },
+                    { setting: "Front Caster: More" }
                 ]
             }
         },
@@ -168,27 +168,27 @@ export const handlingGuide = [
                 lowGrip: [
                     { setting: "Front Differential: Thicker" },
                     { setting: "Rear Toe: Less Toe In" },
-                    { setting: "Front Caster: More" },
                     { setting: "Rear Anti Roll Bar: Stiffer" },
                     { setting: "Rear Ride Height: Lower" },
-                    { setting: "Rear Camber Link: Raise Outside" }
+                    { setting: "Rear Camber Link: Raise Outside" },
+                    { setting: "Front Caster: More" }
                 ],
 
                 mediumGrip: [
                     { setting: "Front Differential: Thicker" },
-                    { setting: "Front Caster: More" },
                     { setting: "Rear Toe: Less Toe In" },
                     { setting: "Rear Anti Roll Bar: Stiffer" },
                     { setting: "Rear Ride Height: Lower" },
-                    { setting: "Rear Camber Link: Raise Outside" }
+                    { setting: "Rear Camber Link: Raise Outside" },
+                    { setting: "Front Caster: More" }
                 ],
 
                 highGrip: [
                     { setting: "Front Differential: Thicker" },
-                    { setting: "Front Caster: More" },
                     { setting: "Rear Toe: Less Toe In" },
                     { setting: "Rear Anti Roll Bar: Stiffer" },
-                    { setting: "Rear Camber Link: Raise Outside" }
+                    { setting: "Rear Camber Link: Raise Outside" },
+                    { setting: "Front Caster: More" }
                 ]
             }
         },
@@ -243,29 +243,29 @@ export const handlingGuide = [
             trackConditions: {
 
                 lowGrip: [
-                    { setting: "Front Caster: More" },
                     { setting: "Rear Toe: More Toe In" },
                     { setting: "Front Differential: Thicker" },
                     { setting: "Rear Anti Roll Bar: Softer" },
                     { setting: "Rear Ride Height: Higher" },
-                    { setting: "Rear Camber Link: Lower Outside" }
+                    { setting: "Rear Camber Link: Lower Outside" },
+                    { setting: "Front Caster: More" }
                 ],
 
                 mediumGrip: [
-                    { setting: "Front Caster: More" },
                     { setting: "Rear Toe: More Toe In" },
                     { setting: "Front Differential: Thicker" },
                     { setting: "Rear Anti Roll Bar: Softer" },
                     { setting: "Rear Ride Height: Higher" },
-                    { setting: "Rear Camber Link: Lower Outside" }
+                    { setting: "Rear Camber Link: Lower Outside" },
+                    { setting: "Front Caster: More" }
                 ],
 
                 highGrip: [
-                    { setting: "Front Caster: More" },
                     { setting: "Rear Toe: More Toe In" },
                     { setting: "Front Differential: Thicker" },
                     { setting: "Rear Anti Roll Bar: Softer" },
-                    { setting: "Rear Camber Link: Lower Outside" }
+                    { setting: "Rear Camber Link: Lower Outside" },
+                    { setting: "Front Caster: More" }                    
                 ]
             }
         }
@@ -339,19 +339,19 @@ export const handlingGuide = [
                 mediumGrip: [
                     { setting: "Front Anti Roll Bar: Stiffer" },
                     { setting: "Ride Height: Lower" },
-                    { setting: "Front Caster: Less" },
                     { setting: "Front Spring: Stiffer" },
                     { setting: "Front Camber Link: Raise Outside" },
-                    { setting: "Front Differential: Thicker" }
+                    { setting: "Front Differential: Thicker" },
+                    { setting: "Front Caster: Less" }
                 ],
 
                 highGrip: [
                     { setting: "Front Anti Roll Bar: Stiffer" },
-                    { setting: "Front Caster: Less" },
                     { setting: "Ride Height: Lower" },
                     { setting: "Front Spring: Stiffer" },
                     { setting: "Front Differential: Thicker" },
-                    { setting: "Front Camber Link: Raise Outside" }
+                    { setting: "Front Camber Link: Raise Outside" },
+                    { setting: "Front Caster: Less" }
                 ]
             }
         }
