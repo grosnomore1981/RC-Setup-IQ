@@ -238,13 +238,11 @@ export const handlingGuide2wd = [
 
     {
         id: "straights",
-        name: "Straights",
+        name: "Straight-Line Stability",
 
         sections: [
 
             {
-                id: "increaseStability",
-                name: "Increase Stability",
 
                 trackConditions: {
 
@@ -276,13 +274,11 @@ export const handlingGuide2wd = [
 
     {
         id: "bumps",
-        name: "Bumps",
+        name: "Improve Bump Handling",
 
         sections: [
 
             {
-                id: "improveBumpHandling",
-                name: "Improve Bump Handling",
 
                 trackConditions: {
 
@@ -325,13 +321,11 @@ export const handlingGuide2wd = [
 
     {
         id: "tractionRoll",
-        name: "Traction Roll",
+        name: "Reduce Traction Roll",
 
         sections: [
 
             {
-                id: "reduceTractionRoll",
-                name: "Reduce Traction Roll",
 
                 trackConditions: {
 
