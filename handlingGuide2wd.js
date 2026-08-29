@@ -1,333 +1,367 @@
 export const handlingGuide2wd = [
 
-   {
-    id: "cornerEntryOffPower",
-    name: "Corner Entry / Off Power",
+    {
+        id: "cornerEntryOffPower",
+        name: "Corner Entry / Off Power",
 
-    sections: [
+        sections: [
 
-        {
-            id: "reduceUndersteer",
-            name: "Reduce Understeer (Push)",
+            {
+                id: "reduceUndersteer",
+                name: "Reduce Understeer (Push)",
 
-            trackConditions: {
+                trackConditions: {
 
-                lowGrip: [
-                    { setting: "Front Anti Roll Bar: Softer" },
-                    { setting: "Ball / Gear Differential: Looser" },
-                    { setting: "Front Camber Link: Lower Outside" },
-                    { setting: "Front Spring: Softer" },
-                    { setting: "Front Ride Height: Lower" },
-                    { setting: "Front Toe: More Toe Out" },
-                    { setting: "Weight Distribution: More Forward" }
-                ],
+                    lowGrip: [
+                        { setting: "Front Camber Link: Lower Outside" },
+                        { setting: "Front Toe: More Toe Out" },
+                        { setting: "Ball / Gear Differential: Looser" },
+                        { setting: "Front Lower Shock Mount Position: More Laid Down" },
+                        { setting: "Front Anti Roll Bar: Softer" },
+                        { setting: "Weight Distribution: More Forward" },
+                        { setting: "Front Spring: Softer" },
+                        { setting: "Front Ride Height: Lower" }
+                    ],
 
-                mediumGrip: [
-                    { setting: "Front Anti Roll Bar: Softer" },
-                    { setting: "Ball / Gear Differential: Looser" },
-                    { setting: "Front Camber Link: Lower Outside" },
-                    { setting: "Front Spring: Softer" },
-                    { setting: "Front Ride Height: Lower" },
-                    { setting: "Front Toe: More Toe Out" }
-                ],
+                    mediumGrip: [
+                        { setting: "Front Camber Link: Lower Outside" },
+                        { setting: "Front Toe: More Toe Out" },
+                        { setting: "Ball / Gear Differential: Looser" },
+                        { setting: "Front Lower Shock Mount Position: More Laid Down" },
+                        { setting: "Front Anti Roll Bar: Softer" },
+                        { setting: "Front Spring: Softer" },
+                        { setting: "Front Ride Height: Lower" }
+                    ],
 
-                highGrip: [
-                    { setting: "Front Camber Link: Lower Outside" },
-                    { setting: "Front Anti Roll Bar: Softer" },
-                    { setting: "Front Ride Height: Lower" },
-                    { setting: "Front Toe: More Toe Out" },
-                    { setting: "Ball / Gear Differential: Looser" }
-                ]
+                    highGrip: [
+                        { setting: "Front Camber Link: Lower Outside" },
+                        { setting: "Front Toe: More Toe Out" },
+                        { setting: "Ball / Gear Differential: Looser" },
+                        { setting: "Front Anti Roll Bar: Softer" },
+                        { setting: "Front Lower Shock Mount Position: More Laid Down" },
+                        { setting: "Front Ride Height: Lower" }
+                    ]
+                }
+            },
+
+            {
+                id: "reduceOversteer",
+                name: "Reduce Oversteer (Loose)",
+
+                trackConditions: {
+
+                    lowGrip: [
+                        { setting: "Rear Camber Link: Lower Outside" },
+                        { setting: "Ball / Gear Differential: Tighter" },
+                        { setting: "Rear Anti Roll Bar: Softer" },
+                        { setting: "Rear Spring: Softer" },
+                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Weight Distribution: More Rearward" },
+                        { setting: "Rear Ride Height: Higher" }
+                    ],
+
+                    mediumGrip: [
+                        { setting: "Rear Anti Roll Bar: Softer" },
+                        { setting: "Ball / Gear Differential: Tighter" },
+                        { setting: "Rear Camber Link: Lower Outside" },
+                        { setting: "Rear Spring: Softer" },
+                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Ride Height: Higher" }
+                    ],
+
+                    highGrip: [
+                        { setting: "Ball / Gear Differential: Tighter" },
+                        { setting: "Rear Anti Roll Bar: Softer" },
+                        { setting: "Rear Camber Link: Lower Outside" },
+                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Ride Height: Higher" }
+                    ]
+                }
             }
-        },
 
-        {
-            id: "reduceOversteer",
-            name: "Reduce Oversteer (Loose)",
+        ]
+    },
 
-            trackConditions: {
+    {
+        id: "midCornerNeutralPower",
+        name: "Mid Corner / Neutral Power",
 
-                lowGrip: [
-                    { setting: "Rear Anti Roll Bar: Softer" },
-                    { setting: "Ball / Gear Differential: Tighter" },
-                    { setting: "Rear Spring: Softer" },
-                    { setting: "Rear Camber Link: Lower Outside" },
-                    { setting: "Rear Ride Height: Higher" },
-                    { setting: "Weight Distribution: More Rearward" }
-                ],
+        sections: [
 
-                mediumGrip: [
-                    { setting: "Rear Anti Roll Bar: Softer" },
-                    { setting: "Ball / Gear Differential: Tighter" },
-                    { setting: "Rear Spring: Softer" },
-                    { setting: "Rear Camber Link: Lower Outside" },
-                    { setting: "Rear Ride Height: Higher" }
-                ],
+            {
+                id: "reduceUndersteer",
+                name: "Reduce Understeer (Push)",
 
-                highGrip: [
-                    { setting: "Ball / Gear Differential: Tighter" },
-                    { setting: "Rear Anti Roll Bar: Softer" },
-                    { setting: "Rear Camber Link: Lower Outside" },
-                    { setting: "Rear Ride Height: Higher" }
-                ]
+                trackConditions: {
+
+                    lowGrip: [
+                        { setting: "Front Camber Link: Lower Outside" },
+                        { setting: "Front Anti Roll Bar: Softer" },
+                        { setting: "Front Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Hub Height: Higher" },
+                        { setting: "Front Spring: Softer" },
+                        { setting: "Ball / Gear Differential: Looser" },
+                        { setting: "Weight Distribution: More Forward" }
+                    ],
+
+                    mediumGrip: [
+                        { setting: "Front Camber Link: Lower Outside" },
+                        { setting: "Front Anti Roll Bar: Softer" },
+                        { setting: "Front Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Hub Height: Higher" },
+                        { setting: "Front Spring: Softer" },
+                        { setting: "Ball / Gear Differential: Looser" }
+                    ],
+
+                    highGrip: [
+                        { setting: "Front Camber Link: Lower Outside" },
+                        { setting: "Front Anti Roll Bar: Softer" },
+                        { setting: "Front Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Hub Height: Higher" },
+                        { setting: "Ball / Gear Differential: Looser" }
+                    ]
+                }
+            },
+
+            {
+                id: "reduceOversteer",
+                name: "Reduce Oversteer (Loose)",
+
+                trackConditions: {
+
+                    lowGrip: [
+                        { setting: "Rear Camber Link: Lower Outside" },
+                        { setting: "Rear Hub Height: Lower" },
+                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Anti Roll Bar: Softer" },
+                        { setting: "Rear Spring: Softer" },
+                        { setting: "Ball / Gear Differential: Tighter" },
+                        { setting: "Weight Distribution: More Rearward" }
+                    ],
+
+                    mediumGrip: [
+                        { setting: "Rear Camber Link: Lower Outside" },
+                        { setting: "Rear Hub Height: Lower" },
+                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Anti Roll Bar: Softer" },
+                        { setting: "Ball / Gear Differential: Tighter" },
+                        { setting: "Rear Spring: Softer" }
+                    ],
+
+                    highGrip: [
+                        { setting: "Rear Camber Link: Lower Outside" },
+                        { setting: "Rear Hub Height: Lower" },
+                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Anti Roll Bar: Softer" },
+                        { setting: "Ball / Gear Differential: Tighter" }
+                    ]
+                }
             }
-        }
 
-    ]
-},
+        ]
+    },
 
-{
-    id: "midCornerNeutralPower",
-    name: "Mid Corner / Neutral Power",
+    {
+        id: "cornerExitOnPower",
+        name: "Corner Exit / On Power",
 
-    sections: [
+        sections: [
 
-        {
-            id: "reduceUndersteer",
-            name: "Reduce Understeer (Push)",
+            {
+                id: "reduceUndersteer",
+                name: "Reduce Understeer (Push)",
 
-            trackConditions: {
+                trackConditions: {
 
-                lowGrip: [
-                    { setting: "Front Anti Roll Bar: Softer" },
-                    { setting: "Front Camber Link: Lower Outside" },
-                    { setting: "Rear Hub Height: Higher" },
-                    { setting: "Front Spring: Softer" },
-                    { setting: "Ball / Gear Differential: Looser" },
-                    { setting: "Weight Distribution: More Forward" }
-                ],
+                    lowGrip: [
+                        { setting: "Ball / Gear Differential: Looser" },
+                        { setting: "Rear Toe: Less Toe In" },
+                        { setting: "Rear Spring: Stiffer" },
+                        { setting: "Rear Anti Roll Bar: Stiffer" },
+                        { setting: "Front Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Hub Height: Higher" },
+                        { setting: "Weight Distribution: More Forward" }
+                    ],
 
-                mediumGrip: [
-                    { setting: "Front Anti Roll Bar: Softer" },
-                    { setting: "Front Camber Link: Lower Outside" },
-                    { setting: "Rear Hub Height: Higher" },
-                    { setting: "Front Spring: Softer" },
-                    { setting: "Ball / Gear Differential: Looser" }
-                ],
+                    mediumGrip: [
+                        { setting: "Ball / Gear Differential: Looser" },
+                        { setting: "Rear Spring: Stiffer" },
+                        { setting: "Rear Anti Roll Bar: Stiffer" },
+                        { setting: "Front Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Hub Height: Higher" }
+                    ],
 
-                highGrip: [
-                    { setting: "Front Camber Link: Lower Outside" },
-                    { setting: "Front Anti Roll Bar: Softer" },
-                    { setting: "Rear Hub Height: Higher" },
-                    { setting: "Ball / Gear Differential: Looser" }
-                ]
+                    highGrip: [
+                        { setting: "Ball / Gear Differential: Looser" },
+                        { setting: "Rear Anti Roll Bar: Stiffer" },
+                        { setting: "Front Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Hub Height: Higher" }
+                    ]
+                }
+            },
+
+            {
+                id: "reduceOversteer",
+                name: "Reduce Oversteer (Loose)",
+
+                trackConditions: {
+
+                    lowGrip: [
+                        { setting: "Ball / Gear Differential: Tighter" },
+                        { setting: "Rear Toe: More Toe In" },
+                        { setting: "Rear Anti Roll Bar: Softer" },
+                        { setting: "Rear Spring: Softer" },
+                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Hub Height: Lower" },
+                        { setting: "Weight Distribution: More Rearward" }
+                    ],
+
+                    mediumGrip: [
+                        { setting: "Ball / Gear Differential: Tighter" },
+                        { setting: "Rear Anti Roll Bar: Softer" },
+                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Spring: Softer" },
+                        { setting: "Rear Hub Height: Lower" }
+                    ],
+
+                    highGrip: [
+                        { setting: "Ball / Gear Differential: Tighter" },
+                        { setting: "Rear Anti Roll Bar: Softer" },
+                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Hub Height: Lower" }
+                    ]
+                }
             }
-        },
 
-        {
-            id: "reduceOversteer",
-            name: "Reduce Oversteer (Loose)",
+        ]
+    },
 
-            trackConditions: {
+    {
+        id: "straights",
+        name: "Straights",
 
-                lowGrip: [
-                    { setting: "Rear Anti Roll Bar: Softer" },
-                    { setting: "Rear Hub Height: Lower" },
-                    { setting: "Rear Camber Link: Lower Outside" },
-                    { setting: "Rear Spring: Softer" },
-                    { setting: "Ball / Gear Differential: Tighter" },
-                    { setting: "Weight Distribution: More Rearward" }
-                ],
+        sections: [
 
-                mediumGrip: [
-                    { setting: "Rear Anti Roll Bar: Softer" },
-                    { setting: "Rear Hub Height: Lower" },
-                    { setting: "Rear Camber Link: Lower Outside" },
-                    { setting: "Ball / Gear Differential: Tighter" },
-                    { setting: "Rear Spring: Softer" }
-                ],
+            {
+                id: "increaseStability",
+                name: "Increase Stability",
 
-                highGrip: [
-                    { setting: "Rear Anti Roll Bar: Softer" },
-                    { setting: "Rear Hub Height: Lower" },
-                    { setting: "Rear Camber Link: Lower Outside" },
-                    { setting: "Ball / Gear Differential: Tighter" }
-                ]
+                trackConditions: {
+
+                    lowGrip: [
+                        { setting: "Rear Toe: More Toe In" },
+                        { setting: "Ball / Gear Differential: Tighter" },
+                        { setting: "Weight Distribution: More Rearward" },
+                        { setting: "Rear Anti-Squat: More" },
+                        { setting: "Rear Anti Roll Bar: Softer" }
+                    ],
+
+                    mediumGrip: [
+                        { setting: "Rear Toe: More Toe In" },
+                        { setting: "Ball / Gear Differential: Tighter" },
+                        { setting: "Rear Anti-Squat: More" },
+                        { setting: "Rear Anti Roll Bar: Softer" }
+                    ],
+
+                    highGrip: [
+                        { setting: "Ball / Gear Differential: Tighter" },
+                        { setting: "Rear Toe: More Toe In" },
+                        { setting: "Rear Anti-Squat: More" }
+                    ]
+                }
             }
-        }
 
-    ]
-},
+        ]
+    },
 
-{
-    id: "cornerExitOnPower",
-    name: "Corner Exit / On Power",
+    {
+        id: "bumps",
+        name: "Bumps",
 
-    sections: [
+        sections: [
 
-        {
-            id: "reduceUndersteer",
-            name: "Reduce Understeer (Push)",
+            {
+                id: "improveBumpHandling",
+                name: "Improve Bump Handling",
 
-            trackConditions: {
+                trackConditions: {
 
-                lowGrip: [
-                    { setting: "Rear Hub Height: Higher" },
-                    { setting: "Ball / Gear Differential: Looser" },
-                    { setting: "Rear Anti Roll Bar: Stiffer" },
-                    { setting: "Rear Spring: Stiffer" },
-                    { setting: "Weight Distribution: More Forward" }
-                ],
+                    lowGrip: [
+                        { setting: "Ride Height: Higher" },
+                        { setting: "Spring Rate: Softer" },
+                        { setting: "Shock Oil: Lighter" },
+                        { setting: "Lower Shock Mount Position: More Laid Down" },
+                        { setting: "Front Camber Link: Raise Inside" },
+                        { setting: "Rear Camber Link: Raise Inside" },
+                        { setting: "Rear Anti-Squat: Less" },
+                        { setting: "Front Anti Roll Bar: Softer" }
+                    ],
 
-                mediumGrip: [
-                    { setting: "Rear Hub Height: Higher" },
-                    { setting: "Ball / Gear Differential: Looser" },
-                    { setting: "Rear Anti Roll Bar: Stiffer" },
-                    { setting: "Rear Spring: Stiffer" }
-                ],
+                    mediumGrip: [
+                        { setting: "Ride Height: Higher" },
+                        { setting: "Rear Spring: Softer" },
+                        { setting: "Shock Oil: Lighter" },
+                        { setting: "Lower Shock Mount Position: More Laid Down" },
+                        { setting: "Front Camber Link: Raise Inside" },
+                        { setting: "Rear Camber Link: Raise Inside" },
+                        { setting: "Rear Anti-Squat: Less" },
+                        { setting: "Front Anti Roll Bar: Softer" }
+                    ],
 
-                highGrip: [
-                    { setting: "Rear Hub Height: Higher" },
-                    { setting: "Ball / Gear Differential: Looser" },
-                    { setting: "Rear Anti Roll Bar: Stiffer" }
-                ]
+                    highGrip: [
+                        { setting: "Ride Height: Higher" },
+                        { setting: "Shock Oil: Lighter" },
+                        { setting: "Lower Shock Mount Position: More Laid Down" },
+                        { setting: "Front Camber Link: Raise Inside" },
+                        { setting: "Rear Camber Link: Raise Inside" },
+                        { setting: "Rear Anti-Squat: Less" },
+                        { setting: "Front Anti Roll Bar: Softer" }
+                    ]
+                }
             }
-        },
 
-        {
-            id: "reduceOversteer",
-            name: "Reduce Oversteer (Loose)",
+        ]
+    },
 
-            trackConditions: {
+    {
+        id: "tractionRoll",
+        name: "Traction Roll",
 
-                lowGrip: [
-                    { setting: "Ball / Gear Differential: Tighter" },
-                    { setting: "Rear Anti Roll Bar: Softer" },
-                    { setting: "Rear Spring: Softer" },
-                    { setting: "Rear Hub Height: Lower" },
-                    { setting: "Weight Distribution: More Rearward" }
-                ],
+        sections: [
 
-                mediumGrip: [
-                    { setting: "Ball / Gear Differential: Tighter" },
-                    { setting: "Rear Anti Roll Bar: Softer" },
-                    { setting: "Rear Spring: Softer" },
-                    { setting: "Rear Hub Height: Lower" }
-                ],
+            {
+                id: "reduceTractionRoll",
+                name: "Reduce Traction Roll",
 
-                highGrip: [
-                    { setting: "Ball / Gear Differential: Tighter" },
-                    { setting: "Rear Anti Roll Bar: Softer" },
-                    { setting: "Rear Hub Height: Lower" }
-                ]
+                trackConditions: {
+
+                    lowGrip: [
+                        { setting: "Ride Height: Lower" },
+                        { setting: "Anti Roll Bars: Stiffer" },
+                        { setting: "Spring Rate: Stiffer" },
+                        { setting: "Shock Position: More Laid Down" },
+                        { setting: "Rear Hub Height: Higher" }
+                    ],
+
+                    mediumGrip: [
+                        { setting: "Ride Height: Lower" },
+                        { setting: "Anti Roll Bars: Stiffer" },
+                        { setting: "Spring Rate: Stiffer" },
+                        { setting: "Shock Position: More Laid Down" },
+                        { setting: "Rear Hub Height: Higher" }
+                    ],
+
+                    highGrip: [
+                        { setting: "Ride Height: Lower" },
+                        { setting: "Anti Roll Bars: Stiffer" },
+                        { setting: "Shock Position: More Laid Down" },
+                        { setting: "Rear Hub Height: Higher" },
+                        { setting: "Spring Rate: Stiffer" }
+                    ]
+                }
             }
-        }
 
-    ]
-},
-
-{
-    id: "straights",
-    name: "Straights",
-
-    sections: [
-
-        {
-            id: "increaseStability",
-            name: "Increase Stability",
-
-            trackConditions: {
-
-                lowGrip: [
-                    { setting: "Weight Distribution: More Rearward" },
-                    { setting: "Rear Anti-Squat: More" },
-                    { setting: "Ball / Gear Differential: Tighter" },
-                    { setting: "Rear Toe: More Toe In" },
-                    { setting: "Rear Anti Roll Bar: Softer" }
-                ],
-
-                mediumGrip: [
-                    { setting: "Ball / Gear Differential: Tighter" },
-                    { setting: "Rear Anti-Squat: More" },
-                    { setting: "Rear Toe: More Toe In" },
-                    { setting: "Rear Anti Roll Bar: Softer" }
-                ],
-
-                highGrip: [
-                    { setting: "Ball / Gear Differential: Tighter" },
-                    { setting: "Rear Anti-Squat: More" },
-                    { setting: "Rear Toe: More Toe In" }
-                ]
-            }
-        },
-    ]
-},
-
-{
-     id: "bumps",
-    name: "Bumps",
-
-    sections: [
-
-        {
-            id: "improveBumpHandling",
-            name: "Improve Bump Handling",
-
-            trackConditions: {
-
-                lowGrip: [
-                    { setting: "Ride Height: Higher" },
-                    { setting: "Spring Rate: Softer" },
-                    { setting: "Shock Oil: Lighter" },
-                    { setting: "Front Anti Roll Bar: Softer" },
-                    { setting: "Rear Hub Height: Lower" }
-                ],
-
-                mediumGrip: [
-                    { setting: "Ride Height: Higher" },
-                    { setting: "Rear Spring: Softer" },
-                    { setting: "Shock Oil: Lighter" },
-                    { setting: "Front Anti Roll Bar: Softer" },
-                    { setting: "Rear Hub Height: Lower" }
-                ],
-
-                highGrip: [
-                    { setting: "Ride Height: Higher" },
-                    { setting: "Shock Oil: Lighter" },
-                    { setting: "Front Anti Roll Bar: Softer" },
-                    { setting: "Rear Hub Height: Lower" }
-                ]
-            }
-        } 
-    ]       
-},
-
-{
-    id: "tractionRoll",
-    name: "Traction Roll",
-
-    sections: [
-
-        {
-            id: "reduceTractionRoll",
-            name: "Reduce Traction Roll",
-
-            trackConditions: {
-
-                lowGrip: [
-                    { setting: "Anti Roll Bars: Stiffer" },
-                    { setting: "Spring Rate: Stiffer" },
-                    { setting: "Ride Height: Lower" },
-                    { setting: "Rear Hub Height: Higher" }
-                ],
-
-                mediumGrip: [
-                    { setting: "Anti Roll Bars: Stiffer" },
-                    { setting: "Ride Height: Lower" },
-                    { setting: "Spring Rate: Stiffer" },
-                    { setting: "Rear Hub Height: Higher" }
-                ],
-
-                highGrip: [
-                    { setting: "Anti Roll Bars: Stiffer" },
-                    { setting: "Ride Height: Lower" },
-                    { setting: "Rear Hub Height: Higher" },
-                    { setting: "Spring Rate: Stiffer" },
-                ]
-            }
-        },
-    ]
-},
-
+        ]
+    }
 
 ]

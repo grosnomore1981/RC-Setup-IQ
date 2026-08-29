@@ -7,6 +7,8 @@ export const setupDatabase = [
 
     category: "Ride Height",
 
+    image: "setupReference/frontrideheight.png",
+
     increaseTitle: "Raise Front Ride Height",
     decreaseTitle: "Lower Front Ride Height",
 
@@ -89,6 +91,8 @@ export const setupDatabase = [
     name: "Rear Ride Height",
 
     category: "Ride Height",
+
+    image: "setupReference/rearrideheight.png",
 
     increaseTitle: "Raise Rear Ride Height",
     decreaseTitle: "Lower Rear Ride Height",
@@ -173,6 +177,8 @@ export const setupDatabase = [
 
     category: "Geometry",
 
+    image: "setupReference/toe.png",
+
     increaseTitle: "Increase Positive Front Toe-Out",
     decreaseTitle: "Decrease Positive Front Toe-Out",
 
@@ -248,6 +254,8 @@ export const setupDatabase = [
     name: "Rear Toe",
 
     category: "Geometry",
+
+    image: "setupReference/toe.png",
 
     increaseTitle: "Increase Negative Rear Toe-In",
     decreaseTitle: "Decrease Negative Rear Toe-In",
@@ -327,6 +335,8 @@ export const setupDatabase = [
 
     category: "Geometry",
 
+    image: "setupReference/caster.png",
+
     whatItIs:
         "Caster is the angle between the steering axis (king pin axis) and vertical when viewed from the side of the vehicle. All RC vehicles use positive caster, meaning the top of the steering axis is positioned further rearward than the bottom. Caster is typically adjusted through the front hub, caster block, or upper suspension arm mounting positions.",
 
@@ -404,6 +414,8 @@ export const setupDatabase = [
     name: "Front Kick Up",
 
     category: "Geometry",
+
+    image: "setupReference/kickup.png",
 
     whatItIs:
         "Front kick up is the upward angle of the front suspension arms relative to the chassis when viewed from the side. It is created when the front suspension mounting point is positioned higher than the rear mounting point of the front arm. Front kick up is typically adjusted through suspension inserts, mounting blocks, or chassis geometry.",
@@ -487,6 +499,8 @@ export const setupDatabase = [
 
     category: "Geometry",
 
+    image: "setupReference/antisquat.png",
+
     whatItIs:
         "Rear anti-squat is the upward angle of the rear suspension arms relative to the chassis when viewed from the side. It is created when the front mounting point of the rear arm is positioned higher than the rear mounting point. Anti-squat is typically adjusted through suspension inserts, mounting blocks, or chassis geometry.",
 
@@ -564,6 +578,8 @@ export const setupDatabase = [
 
     category: "Geometry",
 
+    image: "setupReference/camber.png",
+
     increaseTitle: "Add Negative Front Camber",
     decreaseTitle: "Reduce Negative Front Camber",
 
@@ -640,6 +656,8 @@ export const setupDatabase = [
     name: "Rear Camber",
 
     category: "Geometry",
+
+    image: "setupReference/camber.png",
 
     increaseTitle: "Add Negative Rear Camber",
     decreaseTitle: "Reduce Negative Rear Camber",
@@ -722,6 +740,8 @@ export const setupDatabase = [
     name: "Front Camber Link",
 
     category: "Geometry",
+
+    image: "setupReference/frontcamberlink.png",
 
     whatItIs:
         "The Front Camber Link and its mounting positions influence front roll center height, camber gain, chassis roll, steering response, and front grip generation.",
@@ -842,6 +862,8 @@ export const setupDatabase = [
 
     category: "Geometry",
 
+    image: "setupReference/rearcamberlink.png",
+
     whatItIs:
         "The Rear Camber Link and its mounting positions influence rear roll center height, camber gain, chassis roll, rear grip generation, stability, and vehicle rotation.",
 
@@ -961,6 +983,8 @@ export const setupDatabase = [
 
     category: "Suspension",
 
+    image: "setupReference/springs.png",
+
     increaseTitle: "Use Stiffer Front Springs",
     decreaseTitle: "Use Softer Front Springs",
 
@@ -1046,6 +1070,8 @@ export const setupDatabase = [
     name: "Front Shock Oil",
 
     category: "Suspension",
+
+    image: "setupReference/shockoil.png",
 
     increaseTitle: "Use Thicker Front Shock Oil",
     decreaseTitle: "Use Thinner Front Shock Oil",
@@ -1133,6 +1159,8 @@ export const setupDatabase = [
 
     category: "Suspension",
 
+    image: "setupReference/shockpiston.png",
+
     increaseTitle: "Use a Higher-Pack Front Piston",
     decreaseTitle: "Use a Lower-Pack Front Piston",
 
@@ -1219,8 +1247,10 @@ export const setupDatabase = [
 
     category: "Suspension",
 
-    increaseTitle: "Move Shock In on Tower",
-    decreaseTitle: "Move Shock Out on Tower",
+    image: "setupReference/frontuppershockmount.png",
+
+    increaseTitle: "Move Shock Out on Tower",
+    decreaseTitle: "Move Shock In on Tower",
 
     whatItIs:
         "The Front Upper Shock Mount Position refers to the mounting location of the top of the front shock on the shock tower. Moving the shock inward lays the shock down and increases its angle. Moving the shock outward stands the shock up and reduces its angle.",
@@ -1304,8 +1334,10 @@ export const setupDatabase = [
 
     category: "Suspension",
 
-    increaseTitle: "Move Shock In on Arm",
-    decreaseTitle: "Move Shock Out on Arm",
+    image: "setupReference/frontlowershockmount.png",
+
+    increaseTitle: "Move Shock Out on Arm",
+    decreaseTitle: "Move Shock In on Arm",
 
     whatItIs:
         "The Front Lower Shock Mount Position refers to the mounting location of the bottom of the front shock on the suspension arm. Moving the shock inward places it closer to the hinge pin and reduces leverage on the shock. Moving the shock outward places it closer to the wheel and increases leverage on the shock.",
@@ -1390,6 +1422,8 @@ export const setupDatabase = [
     name: "Front Droop",
 
     category: "Suspension",
+
+    image: "setupReference/droop.png",
 
     increaseTitle: "Use More Front Droop",
     decreaseTitle: "Use Less Front Droop",
@@ -1564,6 +1598,8 @@ export const setupDatabase = [
 
     category: "Suspension",
 
+    image: "setupReference/springs.png",
+
     increaseTitle: "Use Stiffer Rear Springs",
     decreaseTitle: "Use Softer Rear Springs",
 
@@ -1652,6 +1688,8 @@ export const setupDatabase = [
 
     category: "Suspension",
 
+    image: "setupReference/shockoil.png",
+
     increaseTitle: "Use Thicker Rear Shock Oil",
     decreaseTitle: "Use Thinner Rear Shock Oil",
 
@@ -1737,6 +1775,8 @@ export const setupDatabase = [
     name: "Rear Shock Piston",
 
     category: "Suspension",
+
+    image: "setupReference/shockpiston.png",
 
     increaseTitle: "Use a Higher-Pack Rear Piston",
     decreaseTitle: "Use a Lower-Pack Rear Piston",
@@ -1824,8 +1864,10 @@ export const setupDatabase = [
 
     category: "Suspension",
 
-    increaseTitle: "Move Shock In on Tower",
-    decreaseTitle: "Move Shock Out on Tower",
+    image: "setupReference/rearuppershockmount.png",
+
+    increaseTitle: "Move Shock Out on Tower",
+    decreaseTitle: "Move Shock In on Tower",
 
     whatItIs:
         "The Rear Upper Shock Mount Position refers to the mounting location of the top of the rear shock on the shock tower. Moving the shock inward lays the shock down and increases its angle. Moving the shock outward stands the shock up and reduces its angle.",
@@ -1910,8 +1952,10 @@ export const setupDatabase = [
 
     category: "Suspension",
 
-    increaseTitle: "Move Shock In on Arm",
-    decreaseTitle: "Move Shock Out on Arm",
+    image: "setupReference/rearlowershockmount.png",
+
+    increaseTitle: "Move Shock Out on Arm",
+    decreaseTitle: "Move Shock In on Arm",
 
     whatItIs:
         "The Rear Lower Shock Mount Position refers to the mounting location of the bottom of the rear shock on the suspension arm. Moving the shock inward places it closer to the hinge pin and increases leverage on the shock. Moving the shock outward places it closer to the wheel and reduces leverage on the shock.",
@@ -2000,6 +2044,8 @@ export const setupDatabase = [
 
     increaseTitle: "Use More Rear Droop",
     decreaseTitle: "Use Less Rear Droop",
+
+    image: "setupReference/droop.png",
 
     whatItIs:
         "Rear droop is the amount of suspension extension available from the vehicle's normal ride height. Increasing droop allows the rear suspension to extend further, while decreasing droop limits suspension extension.",
@@ -2174,6 +2220,8 @@ export const setupDatabase = [
 
     category: "Steering",
 
+    image: "setupReference/ackermann.png",
+
     whatItIs:
         "Ackermann describes the difference in steering angle between the inside and outside front tires during cornering. The inside tire follows a smaller turning radius and therefore turns more than the outside tire. Ackermann geometry controls how this difference develops as steering lock increases.",
 
@@ -2256,6 +2304,8 @@ export const setupDatabase = [
 
     category: "Steering",
 
+    image: "setupReference/bumpsteer.png",
+
     whatItIs:
         "Bump Steer refers to changes in front wheel toe angle as the suspension moves through its travel. On off-road RC vehicles, bump steer is primarily adjusted through steering link geometry and is influenced by the relationship between the steering links, upper suspension links, and lower suspension arms.",
 
@@ -2335,7 +2385,9 @@ export const setupDatabase = [
 
     name: "Front Differential",
 
-    category: "Differentials",
+    category: "Drivetrain",
+
+    image: "setupReference/differential.png",
 
     increaseTitle: "Use Thicker Differential Oil",
     decreaseTitle: "Use Thinner Differential Oil",
@@ -2421,7 +2473,9 @@ export const setupDatabase = [
 
     name: "Center Differential",
 
-    category: "Differentials",
+    category: "Drivetrain",
+
+    image: "setupReference/centerdifferential.png",
 
     increaseTitle: "Use Thicker Differential Oil",
     decreaseTitle: "Use Thinner Differential Oil",
@@ -2512,7 +2566,9 @@ export const setupDatabase = [
 
     name: "Rear Differential",
 
-    category: "Differentials",
+    category: "Drivetrain",
+
+    image: "setupReference/differential.png",
 
     increaseTitle: "Use Thicker Differential Oil",
     decreaseTitle: "Use Thinner Differential Oil",
@@ -2762,6 +2818,8 @@ export const setupDatabase = [
 
     name: "Ball Differential",
 
+    image: "setupReference/balldifferential.png",
+
     category: "Drivetrain",
 
     increaseTitle: "Tighten Ball Differential",
@@ -2848,6 +2906,8 @@ export const setupDatabase = [
     name: "2wd Gear Differential",
 
     category: "Drivetrain",
+
+    image: "setupReference/2wdgeardifferential.png",
 
     increaseTitle: "Use Thicker Differential Oil",
     decreaseTitle: "Use Thinner Differential Oil",
@@ -3102,6 +3162,8 @@ export const setupDatabase = [
 
     category: "Drivetrain",
 
+    image: "setupReference/slipperclutch.png",
+
     increaseTitle: "Tighten Slipper Clutch",
     decreaseTitle: "Loosen Slipper Clutch",
 
@@ -3185,6 +3247,8 @@ export const setupDatabase = [
     name: "Shock Oil",
 
      category: "Hidden",
+
+     image: "setupReference/shockoil.png",
 
     showInDatabase: false,
 
@@ -3274,6 +3338,8 @@ export const setupDatabase = [
 
     category: "Hidden",
 
+    image: "setupReference/springs.png",
+
     showInDatabase: false,
 
     increaseTitle: "Use Stiffer Springs",
@@ -3362,6 +3428,8 @@ export const setupDatabase = [
 
     category: "Hidden",
 
+    image: "setupReference/frontrideheight.png",
+
     showInDatabase: false,
 
     increaseTitle: "Raise Ride Height",
@@ -3449,6 +3517,8 @@ export const setupDatabase = [
     name: "Droop",
 
     category: "Hidden",
+
+    image: "setupReference/droop.png",
 
     showInDatabase: false,
 
@@ -3540,6 +3610,8 @@ export const setupDatabase = [
 
     category: "Hidden",
 
+    image: "setupReference/shockposition.png",
+
     showInDatabase: false,
 
     increaseTitle: "Stand Shocks Up",
@@ -3626,6 +3698,8 @@ export const setupDatabase = [
     name: "Shock Piston",
 
     category: "Hidden",
+
+    image: "setupReference/shockpiston.png",
 
     showInDatabase: false,
 
@@ -3796,6 +3870,189 @@ export const setupDatabase = [
 
     quickSummary:
         "Stiffer Anti-Roll Bars generally provide more support, responsiveness, and chassis control but less grip and compliance. Softer Anti-Roll Bars generally provide more grip, improved bump handling, and increased forgiveness but less support and responsiveness."
+},
+
+{
+    id: "ballGearDifferential",
+
+    name: "Ball / Gear Differential",
+
+    category: "Hidden",
+
+    showInDatabase: false,
+
+    increaseTitle: "Tighten Differential",
+    decreaseTitle: "Loosen Differential",
+
+    whatItIs:
+        "A Ball Differential or Gear Differential allows the left and right rear wheels to rotate at different speeds through corners while controlling how much differential action occurs. A Ball Differential is adjusted mechanically, while a Gear Differential is adjusted by changing differential oil viscosity. Tightening the differential reduces differential action, while loosening it increases differential action.",
+
+    whyItMatters:
+        "Differential adjustment affects rear traction, corner rotation, acceleration consistency, stability, wheel spin, and overall vehicle balance. It is one of the most influential drivetrain tuning adjustments on a 2WD buggy.",
+
+    increase: {
+
+        effects: [
+            "Reduces differential action",
+            "Increases differential locking effect",
+            "Transfers power more evenly between the rear wheels",
+            "Generally increases forward drive",
+            "Generally increases rear stability",
+            "Can improve corner exit traction",
+            "Can make the vehicle feel more planted"
+        ],
+
+        benefits: [
+            "Improved forward traction",
+            "Increased acceleration consistency",
+            "Improved corner exit drive",
+            "More rear stability",
+            "Can reduce excessive wheel spin",
+            "Often beneficial when additional rear traction is needed"
+        ],
+
+        drawbacks: [
+            "Can reduce corner rotation",
+            "May increase understeer",
+            "Can make the vehicle feel less agile",
+            "May reduce performance on loose tracks",
+            "Can make the vehicle harder to rotate through corners"
+        ]
+    },
+
+    decrease: {
+
+        effects: [
+            "Increases differential action",
+            "Reduces differential locking effect",
+            "Allows greater speed difference between the rear wheels",
+            "Generally increases corner rotation",
+            "Can improve vehicle agility",
+            "Can make the vehicle rotate more freely",
+            "May reduce forward drive"
+        ],
+
+        benefits: [
+            "Improved corner rotation",
+            "More agile handling",
+            "Can improve steering through corners",
+            "Can improve performance on low-grip tracks",
+            "Helps free up a vehicle that feels tight"
+        ],
+
+        drawbacks: [
+            "Reduced forward traction",
+            "Less acceleration consistency",
+            "Can reduce rear stability",
+            "May increase wheel spin",
+            "Can make the vehicle feel less planted"
+        ]
+    },
+
+    tradeOffs: [
+        "A tighter differential generally increases forward drive, acceleration consistency, and rear stability but reduces corner rotation.",
+        "A looser differential generally increases corner rotation and agility but reduces forward traction and rear stability.",
+        "A Ball Differential is tightened or loosened mechanically, while a Gear Differential is tightened or loosened by increasing or decreasing oil viscosity.",
+        "Differential adjustment is commonly used to fine-tune the balance between corner rotation and corner exit drive.",
+        "Extremely loose settings can increase wheel spin and reduce acceleration consistency.",
+        "Extremely tight settings can reduce the differential's ability to accommodate different wheel speeds through corners."
+    ],
+
+    quickSummary:
+        "A tighter Ball / Gear Differential generally increases forward traction, acceleration consistency, and rear stability but reduces corner rotation. A looser Ball / Gear Differential generally increases rotation and agility but reduces forward drive and rear stability."
+},
+
+{
+    id: "lowerShockMount",
+
+    name: "Lower Shock Mount Position",
+
+    category: "Hidden",
+
+    image: "setupReference/frontlowershockmount.png",
+
+    showInDatabase: false,
+
+    increaseTitle: "Move Shock Out on Arm",
+    decreaseTitle: "Move Shock In on Arm",
+
+    whatItIs:
+        "Lower Shock Mount Position refers to the mounting location of the bottom of the shock on the suspension arm. Moving the shock outward on the arm increases the shock's leverage and wheel rate, while moving the shock inward reduces the wheel rate and allows the suspension to move more freely.",
+
+    whyItMatters:
+        "Lower shock mount position affects wheel rate, effective damping, suspension compliance, chassis roll, grip, responsiveness, bump handling, jump behavior, and overall vehicle support. It changes how much influence the spring and shock have at the wheel without changing the actual spring or shock oil.",
+
+    increase: {
+
+        effects: [
+            "Moves the shock outward on the arm",
+            "Increases wheel rate",
+            "Increases effective spring stiffness",
+            "Increases effective damping",
+            "Increases suspension support",
+            "Reduces chassis roll",
+            "Generally increases responsiveness",
+            "Generally reduces suspension compliance"
+        ],
+
+        benefits: [
+            "Increased suspension support",
+            "More responsive handling",
+            "Improved chassis control",
+            "Reduced chassis movement",
+            "Can improve performance on smooth, high-grip tracks"
+        ],
+
+        drawbacks: [
+            "Can reduce mechanical grip",
+            "Can reduce bump compliance",
+            "May reduce rough-track performance",
+            "Can make the vehicle less forgiving",
+            "May reduce traction in low-grip conditions"
+        ]
+    },
+
+    decrease: {
+
+        effects: [
+            "Moves the shock inward on the arm",
+            "Reduces wheel rate",
+            "Reduces effective spring stiffness",
+            "Reduces effective damping",
+            "Increases suspension compliance",
+            "Allows more chassis roll",
+            "Generally increases grip",
+            "Can improve bump handling"
+        ],
+
+        benefits: [
+            "Increased mechanical grip",
+            "Improved bump handling",
+            "Better rough-track performance",
+            "More forgiving handling",
+            "Improved low-grip performance"
+        ],
+
+        drawbacks: [
+            "Reduces suspension support",
+            "Can reduce responsiveness",
+            "May allow excessive chassis movement",
+            "Can reduce stability on high-grip tracks",
+            "May reduce jump landing control"
+        ]
+    },
+
+    tradeOffs: [
+        "Moving the shock outward increases wheel rate, support, and responsiveness but can reduce grip and compliance.",
+        "Moving the shock inward decreases wheel rate and increases compliance and grip but reduces support and responsiveness.",
+        "Outward positions generally suit smoother, higher-grip conditions.",
+        "Inward positions generally suit rougher, bumpier, or lower-grip conditions.",
+        "Lower shock mount changes affect both spring and damping effectiveness through changes in motion ratio.",
+        "Lower shock mount changes should be considered when evaluating spring and shock oil changes."
+    ],
+
+    quickSummary:
+        "Moving the shock outward on the arm generally increases support, responsiveness, and wheel rate while reducing grip and compliance. Moving the shock inward generally increases grip, compliance, and bump handling while reducing support and responsiveness."
 },
 
 ];

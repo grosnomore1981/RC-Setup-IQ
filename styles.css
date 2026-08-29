@@ -798,6 +798,103 @@ header h1 {
 }
 
 /* ==========================================================
+   Setup Reference Image
+========================================================== */
+
+.settingReferenceImage {
+    display: block;
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 0 auto 25px auto;
+
+    border-radius: 16px;
+
+    cursor: pointer;
+
+    object-fit: contain;
+}
+
+
+/* ==========================================================
+   Full Screen Image Overlay
+========================================================== */
+
+.imageOverlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: none;
+
+    background: rgba(0, 0, 0, 0.95);
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+}
+
+.imageOverlay.show {
+
+    display: flex;
+
+}
+
+.fullScreenImage {
+
+    max-width: 100%;
+
+    max-height: 100%;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+}
+
+.closeImageButton {
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 20px;
+
+    z-index: 10000;
+
+    border: none;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: white;
+
+    font-size: 18px;
+
+    padding: 10px 14px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+}
+
+.closeImageButton:active {
+
+    transform: scale(0.96);
+
+}
+
+/* ==========================================================
    Mobile
 ========================================================== */
 

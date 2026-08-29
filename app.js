@@ -12,6 +12,12 @@ const detailTitle = document.getElementById("detailTitle");
 
 const detailContent = document.getElementById("detailContent");
 
+const imageOverlay = document.getElementById("imageOverlay");
+
+const fullScreenImage = document.getElementById("fullScreenImage");
+
+const closeImageButton = document.getElementById("closeImageButton");
+
 const backButton = document.getElementById("backButton");
 
 const searchInput = document.getElementById("searchInput");
@@ -97,6 +103,8 @@ let activeTile = null;
 let handlingGuideHistory = [];
 
 let currentHandlingGuide = handlingGuide;
+
+let currentHandlingGuideName = "4WD Handling Guide";
 
 /* ==========================================================
    Setup Notes Variables
@@ -661,15 +669,16 @@ function renderGuideSelection() {
 
         card.addEventListener("click", () => {
 
-            currentHandlingGuide = item.guide;
+    currentHandlingGuide = item.guide;
+    currentHandlingGuideName = item.name;
 
-            handlingGuideHistory.push(
-                renderGuideSelection
-            );
+    handlingGuideHistory.push(
+        renderGuideSelection
+    );
 
-            renderHandlingGuideAreas();
+    renderHandlingGuideAreas();
 
-        });
+});
 
         cardsWrapper.appendChild(card);
 
@@ -993,65 +1002,102 @@ function displaySetting(setting) {
 
     detailTitle.textContent = setting.name;
 
+    const settingImage = setting.image
+        ? `
+            <img
+                src="${setting.image}"
+                alt="${setting.name}"
+                class="settingReferenceImage"
+                data-image="${setting.image}"
+            >
+        `
+        : "";
+
     detailContent.innerHTML = `
 
-        ${renderSection("What It Is", setting.whatItIs)}
+            ${settingImage}
 
-        ${renderSection("Why It Matters", setting.whyItMatters)}
+            ${renderSection("What It Is", setting.whatItIs)}
 
-        ${setting.increase ? `
-            <h3>${setting.increaseTitle || `Increase ${setting.name}`}</h3>
+            ${renderSection("Why It Matters", setting.whyItMatters)}
 
-            ${renderList("Effects", setting.increase.effects)}
+            ${setting.increase ? `
+                <h3>${setting.increaseTitle || `Increase ${setting.name}`}</h3>
 
-            ${renderList("Benefits", setting.increase.benefits)}
+                ${renderList("Effects", setting.increase.effects)}
 
-            ${renderList("Drawbacks", setting.increase.drawbacks)}
-        ` : ""}
+                ${renderList("Benefits", setting.increase.benefits)}
 
-        ${setting.decrease ? `
-            <h3>${setting.decreaseTitle || `Decrease ${setting.name}`}</h3>
+                ${renderList("Drawbacks", setting.increase.drawbacks)}
+            ` : ""}
 
-            ${renderList("Effects", setting.decrease.effects)}
+            ${setting.decrease ? `
+                <h3>${setting.decreaseTitle || `Decrease ${setting.name}`}</h3>
 
-            ${renderList("Benefits", setting.decrease.benefits)}
+                ${renderList("Effects", setting.decrease.effects)}
 
-            ${renderList("Drawbacks", setting.decrease.drawbacks)}
-        ` : ""}
+                ${renderList("Benefits", setting.decrease.benefits)}
 
-        ${setting.adjustments
-            ? setting.adjustments.map(adjustment => `
+                ${renderList("Drawbacks", setting.decrease.drawbacks)}
+            ` : ""}
 
-                <h3>${adjustment.title}</h3>
+            ${setting.adjustments
+                ? setting.adjustments.map(adjustment => `
 
-                ${renderList(
-                    "Effects",
-                    adjustment.effects
-                )}
+                    <h3>${adjustment.title}</h3>
 
-                ${renderList(
-                    "Benefits",
-                    adjustment.benefits
-                )}
+                    ${renderList(
+                        "Effects",
+                        adjustment.effects
+                    )}
 
-                ${renderList(
-                    "Drawbacks",
-                    adjustment.drawbacks
-                )}
+                    ${renderList(
+                        "Benefits",
+                        adjustment.benefits
+                    )}
 
-            `).join("")
-            : ""
+                    ${renderList(
+                        "Drawbacks",
+                        adjustment.drawbacks
+                    )}
+
+                `).join("")
+                : ""
+            }
+
+            ${renderList("Common Uses", setting.commonUses)}
+
+            ${renderTradeOffs(setting.tradeOffs)}
+
+            ${renderSection("Quick Summary", setting.quickSummary)}
+
+        `;
+
+        const settingImageElement =
+            detailContent.querySelector(
+                ".settingReferenceImage"
+            );
+
+        if (settingImageElement) {
+
+            settingImageElement.addEventListener(
+                "click",
+                () => {
+
+                    fullScreenImage.src =
+                        settingImageElement.dataset.image;
+
+                    fullScreenImage.alt =
+                        setting.name;
+
+                    imageOverlay.classList.add("show");
+
+                }
+            );
+
         }
 
-        ${renderList("Common Uses", setting.commonUses)}
-
-        ${renderTradeOffs(setting.tradeOffs)}
-
-        ${renderSection("Quick Summary", setting.quickSummary)}
-
-    `;
-
-    openDetailPage();
+        openDetailPage();
 }
 
 /* ==========================================================
@@ -1059,6 +1105,17 @@ function displaySetting(setting) {
 ========================================================== */
 
 backButton.addEventListener("click", closeDetailPage);
+
+closeImageButton.addEventListener(
+    "click",
+    () => {
+
+        imageOverlay.classList.remove("show");
+
+        fullScreenImage.src = "";
+
+    }
+);
 
 /* ==========================================================
    Search
@@ -1108,6 +1165,9 @@ handlingGuideCard.addEventListener("click", () => {
     selectedArea = null;
     selectedIssue = null;
     selectedGrip = null;
+
+    currentHandlingGuide = handlingGuide;
+    currentHandlingGuideName = null;
 
     homePage.style.display = "none";
 
@@ -1242,6 +1302,12 @@ function updateBreadcrumb() {
 
     const path = [];
 
+    if (currentHandlingGuideName) {
+
+        path.push(currentHandlingGuideName);
+
+    }
+
     if (selectedArea) {
 
         const area =
@@ -1299,6 +1365,16 @@ function updateBreadcrumb() {
 }
 
 function handleSwipe() {
+
+     if (
+        imageOverlay.classList.contains("show")
+    ) {
+
+        closeImageButton.click();
+
+        return;
+
+    }
 
     const swipeDistanceX =
         touchEndX - touchStartX;
