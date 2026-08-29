@@ -1243,7 +1243,7 @@ export const setupDatabase = [
     {
     id: "frontUpperShockMount",
 
-    name: "Front Upper Shock Mount Position",
+    name: "Front Upper Shock Mount",
 
     category: "Suspension",
 
@@ -1330,7 +1330,7 @@ export const setupDatabase = [
     {
     id: "frontLowerShockMount",
 
-    name: "Front Lower Shock Mount Position",
+    name: "Front Lower Shock Mount",
 
     category: "Suspension",
 
@@ -1512,6 +1512,8 @@ export const setupDatabase = [
     name: "Front Anti-Roll Bar",
 
     category: "Suspension",
+
+    image: "setupReference/frontswaybar.png",
 
     increaseTitle: "Use Stiffer Front Anti-Roll Bar",
     decreaseTitle: "Use Softer Front Anti-Roll Bar",
@@ -1860,7 +1862,7 @@ export const setupDatabase = [
     {
     id: "rearUpperShockMount",
 
-    name: "Rear Upper Shock Mount Position",
+    name: "Rear Upper Shock Mount",
 
     category: "Suspension",
 
@@ -1948,7 +1950,7 @@ export const setupDatabase = [
     {
     id: "rearLowerShockMount",
 
-    name: "Rear Lower Shock Mount Position",
+    name: "Rear Lower Shock Mount",
 
     category: "Suspension",
 
@@ -2131,6 +2133,8 @@ export const setupDatabase = [
     name: "Rear Anti-Roll Bar",
 
     category: "Suspension",
+
+    image: "setupReference/rearswaybar.png",
 
     increaseTitle: "Use Stiffer Rear Anti-Roll Bar",
     decreaseTitle: "Use Softer Rear Anti-Roll Bar",
@@ -2659,6 +2663,8 @@ export const setupDatabase = [
 
     category: "Geometry",
 
+    image: "setupReference/wheelbase.png",
+
     increaseTitle: "Lengthen Wheelbase",
     decreaseTitle: "Shorten Wheelbase",
 
@@ -2740,6 +2746,8 @@ export const setupDatabase = [
     name: "Track Width",
 
     category: "Geometry",
+
+    image: "setupReference/trackwidth.png",
 
     increaseTitle: "Widen Track Width",
     decreaseTitle: "Narrow Track Width",
@@ -2993,6 +3001,8 @@ export const setupDatabase = [
     name: "Rear Hub Height",
 
     category: "Suspension",
+
+    image: "setupReference/hubheight.png",
 
     increaseTitle: "Raise Rear Hub Height",
     decreaseTitle: "Lower Rear Hub Height",
@@ -3789,6 +3799,8 @@ export const setupDatabase = [
 
     category: "Hidden",
 
+    image: "setupReference/frontswaybar.png",
+
     showInDatabase: false,
 
     increaseTitle: "Use Stiffer Anti-Roll Bar",
@@ -3879,6 +3891,8 @@ export const setupDatabase = [
 
     category: "Hidden",
 
+    image: "setupReference/ballgeardifferential.png",
+
     showInDatabase: false,
 
     increaseTitle: "Tighten Differential",
@@ -3965,7 +3979,7 @@ export const setupDatabase = [
 {
     id: "lowerShockMount",
 
-    name: "Lower Shock Mount Position",
+    name: "Lower Shock Mount",
 
     category: "Hidden",
 

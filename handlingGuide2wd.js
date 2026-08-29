@@ -16,7 +16,7 @@ export const handlingGuide2wd = [
                         { setting: "Front Camber Link: Lower Outside" },
                         { setting: "Front Toe: More Toe Out" },
                         { setting: "Ball / Gear Differential: Looser" },
-                        { setting: "Front Lower Shock Mount Position: More Laid Down" },
+                        { setting: "Front Lower Shock Mount: More Laid Down" },
                         { setting: "Front Anti Roll Bar: Softer" },
                         { setting: "Weight Distribution: More Forward" },
                         { setting: "Front Spring: Softer" },
@@ -27,7 +27,7 @@ export const handlingGuide2wd = [
                         { setting: "Front Camber Link: Lower Outside" },
                         { setting: "Front Toe: More Toe Out" },
                         { setting: "Ball / Gear Differential: Looser" },
-                        { setting: "Front Lower Shock Mount Position: More Laid Down" },
+                        { setting: "Front Lower Shock Mount: More Laid Down" },
                         { setting: "Front Anti Roll Bar: Softer" },
                         { setting: "Front Spring: Softer" },
                         { setting: "Front Ride Height: Lower" }
@@ -38,7 +38,7 @@ export const handlingGuide2wd = [
                         { setting: "Front Toe: More Toe Out" },
                         { setting: "Ball / Gear Differential: Looser" },
                         { setting: "Front Anti Roll Bar: Softer" },
-                        { setting: "Front Lower Shock Mount Position: More Laid Down" },
+                        { setting: "Front Lower Shock Mount: More Laid Down" },
                         { setting: "Front Ride Height: Lower" }
                     ]
                 }
@@ -55,7 +55,7 @@ export const handlingGuide2wd = [
                         { setting: "Ball / Gear Differential: Tighter" },
                         { setting: "Rear Anti Roll Bar: Softer" },
                         { setting: "Rear Spring: Softer" },
-                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Upper Shock Mount: More Laid Down" },
                         { setting: "Weight Distribution: More Rearward" },
                         { setting: "Rear Ride Height: Higher" }
                     ],
@@ -65,7 +65,7 @@ export const handlingGuide2wd = [
                         { setting: "Ball / Gear Differential: Tighter" },
                         { setting: "Rear Camber Link: Lower Outside" },
                         { setting: "Rear Spring: Softer" },
-                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Upper Shock Mount: More Laid Down" },
                         { setting: "Rear Ride Height: Higher" }
                     ],
 
@@ -73,7 +73,7 @@ export const handlingGuide2wd = [
                         { setting: "Ball / Gear Differential: Tighter" },
                         { setting: "Rear Anti Roll Bar: Softer" },
                         { setting: "Rear Camber Link: Lower Outside" },
-                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Upper Shock Mount: More Laid Down" },
                         { setting: "Rear Ride Height: Higher" }
                     ]
                 }
@@ -97,7 +97,7 @@ export const handlingGuide2wd = [
                     lowGrip: [
                         { setting: "Front Camber Link: Lower Outside" },
                         { setting: "Front Anti Roll Bar: Softer" },
-                        { setting: "Front Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Front Upper Shock Mount: More Laid Down" },
                         { setting: "Rear Hub Height: Higher" },
                         { setting: "Front Spring: Softer" },
                         { setting: "Ball / Gear Differential: Looser" },
@@ -107,7 +107,7 @@ export const handlingGuide2wd = [
                     mediumGrip: [
                         { setting: "Front Camber Link: Lower Outside" },
                         { setting: "Front Anti Roll Bar: Softer" },
-                        { setting: "Front Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Front Upper Shock Mount: More Laid Down" },
                         { setting: "Rear Hub Height: Higher" },
                         { setting: "Front Spring: Softer" },
                         { setting: "Ball / Gear Differential: Looser" }
@@ -116,7 +116,7 @@ export const handlingGuide2wd = [
                     highGrip: [
                         { setting: "Front Camber Link: Lower Outside" },
                         { setting: "Front Anti Roll Bar: Softer" },
-                        { setting: "Front Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Front Upper Shock Mount: More Laid Down" },
                         { setting: "Rear Hub Height: Higher" },
                         { setting: "Ball / Gear Differential: Looser" }
                     ]
@@ -132,7 +132,7 @@ export const handlingGuide2wd = [
                     lowGrip: [
                         { setting: "Rear Camber Link: Lower Outside" },
                         { setting: "Rear Hub Height: Lower" },
-                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Upper Shock Mount: More Laid Down" },
                         { setting: "Rear Anti Roll Bar: Softer" },
                         { setting: "Rear Spring: Softer" },
                         { setting: "Ball / Gear Differential: Tighter" },
@@ -142,7 +142,7 @@ export const handlingGuide2wd = [
                     mediumGrip: [
                         { setting: "Rear Camber Link: Lower Outside" },
                         { setting: "Rear Hub Height: Lower" },
-                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Upper Shock Mount: More Laid Down" },
                         { setting: "Rear Anti Roll Bar: Softer" },
                         { setting: "Ball / Gear Differential: Tighter" },
                         { setting: "Rear Spring: Softer" }
@@ -151,7 +151,7 @@ export const handlingGuide2wd = [
                     highGrip: [
                         { setting: "Rear Camber Link: Lower Outside" },
                         { setting: "Rear Hub Height: Lower" },
-                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Upper Shock Mount: More Laid Down" },
                         { setting: "Rear Anti Roll Bar: Softer" },
                         { setting: "Ball / Gear Differential: Tighter" }
                     ]
@@ -178,7 +178,7 @@ export const handlingGuide2wd = [
                         { setting: "Rear Toe: Less Toe In" },
                         { setting: "Rear Spring: Stiffer" },
                         { setting: "Rear Anti Roll Bar: Stiffer" },
-                        { setting: "Front Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Front Upper Shock Mount: More Laid Down" },
                         { setting: "Rear Hub Height: Higher" },
                         { setting: "Weight Distribution: More Forward" }
                     ],
@@ -187,14 +187,14 @@ export const handlingGuide2wd = [
                         { setting: "Ball / Gear Differential: Looser" },
                         { setting: "Rear Spring: Stiffer" },
                         { setting: "Rear Anti Roll Bar: Stiffer" },
-                        { setting: "Front Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Front Upper Shock Mount: More Laid Down" },
                         { setting: "Rear Hub Height: Higher" }
                     ],
 
                     highGrip: [
                         { setting: "Ball / Gear Differential: Looser" },
                         { setting: "Rear Anti Roll Bar: Stiffer" },
-                        { setting: "Front Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Front Upper Shock Mount: More Laid Down" },
                         { setting: "Rear Hub Height: Higher" }
                     ]
                 }
@@ -211,7 +211,7 @@ export const handlingGuide2wd = [
                         { setting: "Rear Toe: More Toe In" },
                         { setting: "Rear Anti Roll Bar: Softer" },
                         { setting: "Rear Spring: Softer" },
-                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Upper Shock Mount: More Laid Down" },
                         { setting: "Rear Hub Height: Lower" },
                         { setting: "Weight Distribution: More Rearward" }
                     ],
@@ -219,7 +219,7 @@ export const handlingGuide2wd = [
                     mediumGrip: [
                         { setting: "Ball / Gear Differential: Tighter" },
                         { setting: "Rear Anti Roll Bar: Softer" },
-                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Upper Shock Mount: More Laid Down" },
                         { setting: "Rear Spring: Softer" },
                         { setting: "Rear Hub Height: Lower" }
                     ],
@@ -227,7 +227,7 @@ export const handlingGuide2wd = [
                     highGrip: [
                         { setting: "Ball / Gear Differential: Tighter" },
                         { setting: "Rear Anti Roll Bar: Softer" },
-                        { setting: "Rear Upper Shock Mount Position: More Laid Down" },
+                        { setting: "Rear Upper Shock Mount: More Laid Down" },
                         { setting: "Rear Hub Height: Lower" }
                     ]
                 }
@@ -290,7 +290,7 @@ export const handlingGuide2wd = [
                         { setting: "Ride Height: Higher" },
                         { setting: "Spring Rate: Softer" },
                         { setting: "Shock Oil: Lighter" },
-                        { setting: "Lower Shock Mount Position: More Laid Down" },
+                        { setting: "Lower Shock Mount: More Laid Down" },
                         { setting: "Front Camber Link: Raise Inside" },
                         { setting: "Rear Camber Link: Raise Inside" },
                         { setting: "Rear Anti-Squat: Less" },
@@ -301,7 +301,7 @@ export const handlingGuide2wd = [
                         { setting: "Ride Height: Higher" },
                         { setting: "Rear Spring: Softer" },
                         { setting: "Shock Oil: Lighter" },
-                        { setting: "Lower Shock Mount Position: More Laid Down" },
+                        { setting: "Lower Shock Mount: More Laid Down" },
                         { setting: "Front Camber Link: Raise Inside" },
                         { setting: "Rear Camber Link: Raise Inside" },
                         { setting: "Rear Anti-Squat: Less" },
@@ -311,7 +311,7 @@ export const handlingGuide2wd = [
                     highGrip: [
                         { setting: "Ride Height: Higher" },
                         { setting: "Shock Oil: Lighter" },
-                        { setting: "Lower Shock Mount Position: More Laid Down" },
+                        { setting: "Lower Shock Mount: More Laid Down" },
                         { setting: "Front Camber Link: Raise Inside" },
                         { setting: "Rear Camber Link: Raise Inside" },
                         { setting: "Rear Anti-Squat: Less" },

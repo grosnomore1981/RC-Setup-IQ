@@ -84,6 +84,14 @@ const conditionsList = document.getElementById("conditionsList");
 
 const deleteModal = document.getElementById("deleteModal"); 
 
+const messageModal = document.getElementById("messageModal");
+
+const messageModalTitle = document.getElementById("messageModalTitle");
+
+const messageModalText = document.getElementById("messageModalText");
+
+const closeMessageButton = document.getElementById("closeMessageButton");
+
 const cancelDeleteButton = document.getElementById("cancelDeleteButton");
 
 const confirmDeleteButton = document.getElementById("confirmDeleteButton");
@@ -168,25 +176,35 @@ function renderNotes(filter = "") {
     
         filteredNotes.forEach(note => {
 
-        const noteCard =
+    const noteItem =
             document.createElement("div");
 
-        noteCard.className = "settingTile";
+        noteItem.className = "noteListItem";
 
         if (note.id === currentNoteId) {
 
-            noteCard.classList.add("active");
+            noteItem.classList.add("active");
 
         }
 
-        noteCard.innerHTML = `
-            <h3>${note.sessionName}</h3>
-            <p>${note.vehicle}</p>
-            <p>${note.track}</p>
-            <p>${note.date}</p>
+        noteItem.innerHTML = `
+            <div class="noteListMain">
+
+                <h3>${note.sessionName}</h3>
+
+                <p>
+                    ${note.vehicle || "No vehicle"}
+                    ${note.track ? ` · ${note.track}` : ""}
+                </p>
+
+            </div>
+
+            <div class="noteListDate">
+                ${note.date || ""}
+            </div>
         `;
 
-        noteCard.addEventListener(
+        noteItem.addEventListener(
             "click",
             () => {
 
@@ -196,7 +214,7 @@ function renderNotes(filter = "") {
         );
 
         savedNotesContainer.appendChild(
-            noteCard
+            noteItem
         );
 
     });
@@ -236,13 +254,16 @@ function openNote(note) {
 
 function saveNote() {
 
-     if (!sessionNameInput.value.trim()) {
+    if (!sessionNameInput.value.trim()) {
 
-        alert("Please enter a Session Name before saving.");
+    showMessageModal(
+        "Missing Session Name",
+        "Please enter a Session Name before saving."
+    );
 
-        return;
+    return;
 
-    }
+}
 
 const note = {
 
@@ -332,7 +353,8 @@ function deleteNote() {
 
     if (!currentNoteId) {
 
-        alert(
+        showMessageModal(
+            "No Note Selected",
             "Open a note before deleting."
         );
 
@@ -340,8 +362,7 @@ function deleteNote() {
 
     }
 
-    deleteModal.style.display =
-        "flex";
+    deleteModal.style.display = "flex";
 
 }
 
@@ -469,6 +490,16 @@ function updateSaveButton() {
 
 }
 
+function showMessageModal(title, message) {
+
+    messageModalTitle.textContent = title;
+
+    messageModalText.textContent = message;
+
+    messageModal.style.display = "flex";
+
+}
+
 /* ==========================================================
    Render Categories
 ========================================================== */
@@ -522,13 +553,6 @@ function renderSettings(filter = "") {
                 `;
 
                 tile.addEventListener("click", () => {
-
-                    if (activeTile) {
-                        activeTile.classList.remove("active");
-                    }
-
-                    tile.classList.add("active");
-                    activeTile = tile;
 
                     displaySetting(setting);
 
@@ -1290,6 +1314,15 @@ notesSearchInput.addEventListener(
         renderNotes(
             notesSearchInput.value
         );
+
+    }
+);
+
+closeMessageButton.addEventListener(
+    "click",
+    () => {
+
+        messageModal.style.display = "none";
 
     }
 );
