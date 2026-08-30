@@ -1053,3 +1053,19 @@ header h1 {
     white-space: nowrap;
 
 }
+
+/* ==========================================================
+   Handling Guide Recommendation Instructions
+========================================================== */
+
+.recommendationInstruction {
+
+    margin: 0 0 20px 0;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    color: rgb(2, 46, 243);
+
+}

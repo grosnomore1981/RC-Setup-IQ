@@ -941,6 +941,15 @@ function renderRecommendations() {
 
     handlingGuideContainer.appendChild(title);
 
+    const instruction = document.createElement("p");
+
+    instruction.className = "recommendationInstruction";
+
+    instruction.textContent =
+        "Make one change at a time. The list is prioritized, not mandatory. Start where it makes sense based on your current setup."
+
+    handlingGuideContainer.appendChild(instruction);
+
     const cardsWrapper =
         document.createElement("div");
 
