@@ -862,17 +862,20 @@ function renderGripSelection() {
 
         {
             id: "lowGrip",
-            name: "Low Grip"
+            name: "Low Grip",
+            description: "Limited traction; tires break loose easily."
         },
 
         {
             id: "mediumGrip",
-            name: "Medium Grip"
+            name: "Medium Grip",
+            description: "Moderate, predictable traction."
         },
 
         {
             id: "highGrip",
-            name: "High Grip"
+            name: "High Grip",
+            description: "Good traction; car is heavily planted."
         }
 
     ];
@@ -885,6 +888,10 @@ function renderGripSelection() {
 
         card.innerHTML = `
             <h2>${grip.name}</h2>
+
+             <p class="gripDescription">
+                ${grip.description}
+            </p>
         `;
 
         card.addEventListener("click", () => {
