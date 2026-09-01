@@ -1340,7 +1340,7 @@ export const setupDatabase = [
     decreaseTitle: "Move Shock In on Arm",
 
     whatItIs:
-        "The Front Lower Shock Mount Position refers to the mounting location of the bottom of the front shock on the suspension arm. Moving the shock inward places it closer to the hinge pin and reduces leverage on the shock. Moving the shock outward places it closer to the wheel and increases leverage on the shock.",
+        "The Front Lower Shock Mount refers to the mounting location of the bottom of the front shock on the suspension arm. Moving the shock inward places it closer to the hinge pin and reduces leverage on the shock. Moving the shock outward places it closer to the wheel and increases leverage on the shock.",
 
     whyItMatters:
         "Front lower shock position affects wheel rate, damping effectiveness, chassis roll, steering response, front grip, bump handling, jump performance, and overall vehicle responsiveness. It changes how much influence the spring and shock have at the wheel without changing the actual spring or oil.",
@@ -1408,7 +1408,7 @@ export const setupDatabase = [
         "Moving the shock inward decreases wheel rate and increases compliance but can reduce responsiveness.",
         "Outward positions generally suit smoother, higher-grip conditions.",
         "Inward positions generally suit rougher or lower-grip conditions.",
-        "Lower shock mount position changes both spring effectiveness and damping effectiveness through motion ratio changes.",
+        "Lower shock mount changes both spring effectiveness and damping effectiveness through motion ratio changes.",
         "Shock position changes should be considered when evaluating spring and oil changes."
     ],
 
@@ -1509,20 +1509,20 @@ export const setupDatabase = [
     {
     id: "frontAntiRollBar",
 
-    name: "Front Anti-Roll Bar",
+    name: "Front Anti Roll Bar",
 
     category: "Suspension",
 
     image: "setupReference/frontswaybar.png",
 
-    increaseTitle: "Use Stiffer Front Anti-Roll Bar",
-    decreaseTitle: "Use Softer Front Anti-Roll Bar",
+    increaseTitle: "Use Stiffer Front Anti Roll Bar",
+    decreaseTitle: "Use Softer Front Anti Roll Bar",
 
     whatItIs:
-        "The Front Anti-Roll Bar (sway bar) connects the left and right front suspension and resists chassis roll during cornering. Increasing bar stiffness reduces front suspension roll, while decreasing bar stiffness allows more front suspension roll.",
+        "The Front Anti Roll Bar (sway bar) connects the left and right front suspension and resists chassis roll during cornering. Increasing bar stiffness reduces front suspension roll, while decreasing bar stiffness allows more front suspension roll.",
 
     whyItMatters:
-        "Front anti-roll bar stiffness affects front grip, steering balance, chassis roll, responsiveness, and overall vehicle handling. It is commonly used to adjust vehicle balance and adapt the suspension to changing grip conditions.",
+        "Front anti roll bar stiffness affects front grip, steering balance, chassis roll, responsiveness, and overall vehicle handling. It is commonly used to adjust vehicle balance and adapt the suspension to changing grip conditions.",
 
     increase: {
 
@@ -1582,15 +1582,15 @@ export const setupDatabase = [
     },
 
     tradeOffs: [
-        "A stiffer front anti-roll bar generally reduces front grip but increases steering responsiveness and support.",
-        "A softer front anti-roll bar generally increases front grip and mid-corner steering but reduces responsiveness.",
-        "Anti-roll bars are commonly adjusted together front and rear when adapting to major grip changes.",
-        "Higher grip conditions often require stiffer anti-roll bars to control chassis roll.",
-        "Extremely high-grip surfaces may sometimes benefit from softer anti-roll bars to keep all four tires in contact with the track."
+        "A stiffer front anti roll bar generally reduces front grip but increases steering responsiveness and support.",
+        "A softer front anti roll bar generally increases front grip and mid-corner steering but reduces responsiveness.",
+        "Anti roll bars are commonly adjusted together front and rear when adapting to major grip changes.",
+        "Higher grip conditions often require stiffer anti roll bars to control chassis roll.",
+        "Extremely high-grip surfaces may sometimes benefit from softer anti roll bars to keep all four tires in contact with the track."
     ],
 
     quickSummary:
-        "A Stiffer Front Anti-Roll Bar generally increases steering responsiveness and support while reducing front grip. A Softer Front Anti-Roll Bar generally increases front grip, mid-corner steering, and compliance while reducing responsiveness."
+        "A Stiffer Front Anti Roll Bar generally increases steering responsiveness and support while reducing front grip. A Softer Front Anti Roll Bar generally increases front grip, mid-corner steering, and compliance while reducing responsiveness."
     },
 
     {
@@ -1960,7 +1960,7 @@ export const setupDatabase = [
     decreaseTitle: "Move Shock In on Arm",
 
     whatItIs:
-        "The Rear Lower Shock Mount Position refers to the mounting location of the bottom of the rear shock on the suspension arm. Moving the shock inward places it closer to the hinge pin and increases leverage on the shock. Moving the shock outward places it closer to the wheel and reduces leverage on the shock.",
+        "The Rear Lower Shock Mount refers to the mounting location of the bottom of the rear shock on the suspension arm. Moving the shock inward places it closer to the hinge pin and increases leverage on the shock. Moving the shock outward places it closer to the wheel and reduces leverage on the shock.",
 
     whyItMatters:
         "Rear lower shock position affects wheel rate, damping effectiveness, rear traction, stability, bump handling, jump performance, chassis roll, and vehicle responsiveness. It changes how much influence the spring and shock have at the wheel without changing the actual spring or oil.",
@@ -2029,7 +2029,7 @@ export const setupDatabase = [
         "Moving the shock inward decreases wheel rate and increases compliance, traction, and bump absorption.",
         "Outward positions generally suit smoother, higher-grip conditions.",
         "Inward positions generally suit rougher, bumpier, or lower-grip conditions.",
-        "Lower shock mount position changes both spring effectiveness and damping effectiveness through motion ratio changes.",
+        "Lower shock mountchanges both spring effectiveness and damping effectiveness through motion ratio changes.",
         "Shock position changes should be considered when evaluating spring and oil changes."
     ],
 
@@ -2130,20 +2130,20 @@ export const setupDatabase = [
     {
     id: "rearAntiRollBar",
 
-    name: "Rear Anti-Roll Bar",
+    name: "Rear Anti Roll Bar",
 
     category: "Suspension",
 
     image: "setupReference/rearswaybar.png",
 
-    increaseTitle: "Use Stiffer Rear Anti-Roll Bar",
-    decreaseTitle: "Use Softer Rear Anti-Roll Bar",
+    increaseTitle: "Use Stiffer Rear Anti Roll Bar",
+    decreaseTitle: "Use Softer Rear Anti Roll Bar",
 
     whatItIs:
-        "The Rear Anti-Roll Bar (sway bar) connects the left and right rear suspension and resists chassis roll during cornering. Increasing bar stiffness reduces rear suspension roll, while decreasing bar stiffness allows more rear suspension roll.",
+        "The Rear Anti Roll Bar (sway bar) connects the left and right rear suspension and resists chassis roll during cornering. Increasing bar stiffness reduces rear suspension roll, while decreasing bar stiffness allows more rear suspension roll.",
 
     whyItMatters:
-        "Rear anti-roll bar stiffness affects rear grip, stability, vehicle rotation, corner entry balance, on-power handling, and overall vehicle balance. It is one of the most effective adjustments for tuning rear traction and cornering behavior.",
+        "Rear anti roll bar stiffness affects rear grip, stability, vehicle rotation, corner entry balance, on-power handling, and overall vehicle balance. It is one of the most effective adjustments for tuning rear traction and cornering behavior.",
 
     increase: {
 
@@ -2205,16 +2205,16 @@ export const setupDatabase = [
     },
 
     tradeOffs: [
-        "A stiffer rear anti-roll bar generally increases steering and rotation but reduces rear grip.",
-        "A softer rear anti-roll bar generally increases rear grip and stability but reduces steering response.",
+        "A stiffer rear anti roll bar generally increases steering and rotation but reduces rear grip.",
+        "A softer rear anti roll bar generally increases rear grip and stability but reduces steering response.",
         "Softer rear bars can improve rotation in low-speed hairpins by allowing the rear suspension to roll and help rotate the vehicle.",
         "Stiffer rear bars are often beneficial on smooth, high-grip tracks where additional rotation is needed.",
         "Softer rear bars are often beneficial on loose, rough, or inconsistent surfaces where maximum rear traction is needed.",
-        "Excessively stiff rear anti-roll bars can cause inside rear wheel lift and reduce overall cornering performance."
+        "Excessively stiff rear anti  roll bars can cause inside rear wheel lift and reduce overall cornering performance."
     ],
 
     quickSummary:
-        "A Stiffer Rear Anti-Roll Bar generally increases steering response, vehicle rotation, and responsiveness while reducing rear grip. A Softer Rear Anti-Roll Bar generally increases rear traction, stability, and forgiveness while reducing steering response and overall rotation."
+        "A Stiffer Rear Anti Roll Bar generally increases steering response, vehicle rotation, and responsiveness while reducing rear grip. A Softer Rear Anti Roll Bar generally increases rear traction, stability, and forgiveness while reducing steering response and overall rotation."
     },
 
     {
@@ -3795,7 +3795,7 @@ export const setupDatabase = [
 {
     id: "antiRollBar",
 
-    name: "Anti-Roll Bars",
+    name: "Anti Roll Bars",
 
     category: "Hidden",
 
@@ -3803,14 +3803,14 @@ export const setupDatabase = [
 
     showInDatabase: false,
 
-    increaseTitle: "Use Stiffer Anti-Roll Bar",
-    decreaseTitle: "Use Softer Anti-Roll Bar",
+    increaseTitle: "Use Stiffer Anti Roll Bar",
+    decreaseTitle: "Use Softer Anti Roll Bar",
 
     whatItIs:
-        "An Anti-Roll Bar (sway bar) connects the left and right suspension on an axle and resists chassis roll during cornering. Increasing bar stiffness reduces suspension roll, while decreasing bar stiffness allows more suspension roll.",
+        "An Anti Roll Bar (sway bar) connects the left and right suspension on an axle and resists chassis roll during cornering. Increasing bar stiffness reduces suspension roll, while decreasing bar stiffness allows more suspension roll.",
 
     whyItMatters:
-        "Anti-roll bar stiffness influences grip, chassis roll, weight transfer distribution, responsiveness, stability, rotation, and overall vehicle balance. Anti-roll bars are commonly adjusted to adapt the vehicle to changing grip conditions and handling requirements.",
+        "Anti roll bar stiffness influences grip, chassis roll, weight transfer distribution, responsiveness, stability, rotation, and overall vehicle balance. Anti roll bars are commonly adjusted to adapt the vehicle to changing grip conditions and handling requirements.",
 
     increase: {
 
@@ -3872,16 +3872,16 @@ export const setupDatabase = [
     },
 
     tradeOffs: [
-        "Stiffer anti-roll bars generally increase support and responsiveness but reduce mechanical grip.",
-        "Softer anti-roll bars generally increase grip and compliance but reduce responsiveness.",
-        "High-grip conditions often require stiffer anti-roll bars to control chassis roll.",
-        "Low-grip conditions often benefit from softer anti-roll bars that allow greater weight transfer and grip generation.",
-        "Front and rear anti-roll bars affect vehicle balance differently and should be evaluated as part of the overall setup package.",
-        "Excessively stiff anti-roll bars can reduce bump compliance and overall cornering performance."
+        "Stiffer anti roll bars generally increase support and responsiveness but reduce mechanical grip.",
+        "Softer anti roll bars generally increase grip and compliance but reduce responsiveness.",
+        "High-grip conditions often require stiffer anti roll bars to control chassis roll.",
+        "Low-grip conditions often benefit from softer anti roll bars that allow greater weight transfer and grip generation.",
+        "Front and rear anti roll bars affect vehicle balance differently and should be evaluated as part of the overall setup package.",
+        "Excessively stiff anti roll bars can reduce bump compliance and overall cornering performance."
     ],
 
     quickSummary:
-        "Stiffer Anti-Roll Bars generally provide more support, responsiveness, and chassis control but less grip and compliance. Softer Anti-Roll Bars generally provide more grip, improved bump handling, and increased forgiveness but less support and responsiveness."
+        "Stiffer Anti Roll Bars generally provide more support, responsiveness, and chassis control but less grip and compliance. Softer Anti Roll Bars generally provide more grip, improved bump handling, and increased forgiveness but less support and responsiveness."
 },
 
 {
@@ -3991,10 +3991,10 @@ export const setupDatabase = [
     decreaseTitle: "Move Shock In on Arm",
 
     whatItIs:
-        "Lower Shock Mount Position refers to the mounting location of the bottom of the shock on the suspension arm. Moving the shock outward on the arm increases the shock's leverage and wheel rate, while moving the shock inward reduces the wheel rate and allows the suspension to move more freely.",
+        "Lower Shock Mount refers to the mounting location of the bottom of the shock on the suspension arm. Moving the shock outward on the arm increases the shock's leverage and wheel rate, while moving the shock inward reduces the wheel rate and allows the suspension to move more freely.",
 
     whyItMatters:
-        "Lower shock mount position affects wheel rate, effective damping, suspension compliance, chassis roll, grip, responsiveness, bump handling, jump behavior, and overall vehicle support. It changes how much influence the spring and shock have at the wheel without changing the actual spring or shock oil.",
+        "Lower shock mount affects wheel rate, effective damping, suspension compliance, chassis roll, grip, responsiveness, bump handling, jump behavior, and overall vehicle support. It changes how much influence the spring and shock have at the wheel without changing the actual spring or shock oil.",
 
     increase: {
 

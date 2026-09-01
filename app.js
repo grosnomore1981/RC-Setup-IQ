@@ -60,8 +60,6 @@ const adjustmentsInput = document.getElementById("adjustmentsInput");
 
 const resultInput = document.getElementById("resultInput");
 
-const ratingInput = document.getElementById("ratingInput");
-
 const notesSearchInput = document.getElementById("notesSearchInput");
 
 const saveNoteButton = document.getElementById("saveNoteButton");
